@@ -4,10 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>MineWriter Team</title>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <link type="text/css" href="css/custom-theme/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
-    <link href="bootstrap/bootstrap.css" rel="stylesheet">
-    <link href="css/def.css" rel="stylesheet">
+	<?php headIncludes(); ?>
   </head>
   <body>
     <?php navigation(); ?>
