@@ -16,9 +16,11 @@ Pull requests should follow these guidelines:
 * K&R Coding style for PHP
 For example:
 ````php
+
 if ($variable == "foo") {
 	die("Test");
 }
+
 ````
 * Use TABS, not spaces for indentation. Your tab width should be 4
 * HTML tags should be nested with 2 spaces.
