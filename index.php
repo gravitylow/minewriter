@@ -14,7 +14,7 @@
         <div class="page-header">
           <h1>MineWriter <small>Author downloadable books for minecraft!</small></h1>
         </div>      
-        <img class="logo" src="img/minewriter.png" alt="Minewriter logo">         
+        <img class="mwlogo" src="img/minewriter.png" alt="Minewriter logo">         
               <div>
               	<h2 class="big">What is MineWriter?</h2>     
 					<ul>
@@ -25,7 +25,7 @@
 				<h2 class="big">Why use MineWriter</h2>     
 					<ul>
 						<li class="big">You can write extremely large books very easily.</li>
-						<li class="big">Your book is saved and your given a permanent link, never loose your work!</li>            
+						<li class="big">Your book is saved and your given a permanent link, never lose your work!</li>            
 						<li class="big">You can make unlimited copies of your book.</li>
 						<li class="big">You can make revisions after it's 'published'.</li>
 					</ul>     
