@@ -13,8 +13,7 @@
       <div class="content">
         <div class="page-header">
           <h1>MineWriter <small>Author downloadable books for minecraft!</small></h1>
-        </div>      
-        <img class="mwlogo" src="img/minewriter.png" alt="Minewriter logo">          
+        </div>         
               <div>
               	<h2 class="big">Meet the MineWriter Developers</h2>   
               	<h4>Team members</h3>

@@ -15,7 +15,6 @@
           <h1>MineWriter <small>Author downloadable books on the web!</small></h1>
         </div>        
         <div>
-        <img class="mwlogo" src="img/minewriter.png" alt="Minewriter logo"> 
               <h2 class="big">Plans</h2>     
 					<ul>
 						<li class="big">Open source most stuff on github</li>
