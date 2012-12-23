@@ -42,10 +42,8 @@ $parent = basename($_SERVER['PHP_SELF']);
 <?php } 
 function headIncludes() {?>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <link href="//netdna.bootstrapcdn.com/bootswatch/2.1.1/cerulean/bootstrap.min.css" rel="stylesheet">
 <link href="//netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome-more.css" rel="stylesheet">
-<link type="text/css" href="css/custom-theme/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
 <link href="css/def.css" rel="stylesheet">
 <?php }
 ?>
