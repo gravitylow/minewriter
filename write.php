@@ -15,7 +15,7 @@
           <h1>MineWriter <small>Author downloadable books for minecraft!</small></h1>
         </div> 
         <form name="myform" action="post.php" method="POST">
-       <textarea rows="50" cols="60" onKeyPress="update(this.value);" onkeydown="update(this.value);"></textarea>
+       <textarea rows="40" cols="80" onKeyPress="update(this.value);" onkeydown="update(this.value);"></textarea>
             </div>
         </form>
       </div>
