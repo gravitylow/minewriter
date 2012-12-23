@@ -1,3 +1,4 @@
+<?php require("functions.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,21 +10,7 @@
     <link href="css/def.css" rel="stylesheet">
   </head>
   <body>
-    <div class="topbar">
-      <div class="fill">
-        <div class="container">
-          <a class="brand" href="index.html">Book Writer</a>
-          <ul class="nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="write.html">Write</a></li>
-            <li><a href="">Signup/Login</a></li>
-            <li><a href="">Browse</a></li>
-            <li><a href="about.html">About</a></li>
-            <li class="active"><a href="team.html">Team</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <?php navigation(); ?>
     <div class="container">
 
       <div class="content">
