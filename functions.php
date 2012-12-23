@@ -41,6 +41,7 @@ $parent = basename($_SERVER['PHP_SELF']);
     </div>
 <?php } 
 function headIncludes() {?>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap.no-icons.min.css" rel="stylesheet">
 <link href="//netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome-more.css" rel="stylesheet">
