@@ -1,9 +1,10 @@
-<html>
-<body>
 
-Welcome <?php echo $_POST["author"]; ?>!<br>
-Book Title: <?php echo $_POST["title"]; ?>
-Content: <?php echo $_POST["content"]; ?> 
-
-</body>
-</html>
+<?php
+$Author=$_POST["author"];
+$Title =$_POST["title"];
+$Content=$_POST["content"];
+$file="/books/" . rand().".txt";
+//This is where we format the entire book
+$book = "!Author-" . $Author . "\n" . "!Title-" . $Title . "\n" . $Content;
+file_put_contents($file, $book);
+?>
