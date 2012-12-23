@@ -23,7 +23,7 @@ if ($variable == "foo") {
 * Use TABS, not spaces for indentation. Your tab width should be 4
 * HTML tags should be nested with 2 spaces.
 * Don't use inline CSS if you can help it - use def.css
-* All changes should be discussed via IRC ideally before making a PR
+* All changes should be discussed via IRC ideally before making a PR (#minewriter on EsperNet)
 * Code changes are automatically deployed to the site: http://minewriter.net
 * CSS should be K&R with a space before starting braces and after properties:
 ````css
