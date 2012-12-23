@@ -1,3 +1,3 @@
-?pphphp
-pphphpinfov((b();
-?>
+<?php 
+phpinfo();
+ ?>
