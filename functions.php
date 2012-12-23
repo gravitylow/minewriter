@@ -1,4 +1,19 @@
 <?php
+session_start();
+//Authentication functions
+function isLoggedIn() {
+	return isset($_SESSION['username']);
+}
+
+function loginLink() {
+	if (isLoggedIn()) {
+		return "<a href 'login.php'>Login</a>";
+	} else {
+		return "<a href 'signup.php'>Register</a>";
+	}
+}
+
+//Page structure functions
 function navigation() {
 $parent = basename($_SERVER['PHP_SELF']);
 ?>
@@ -9,10 +24,12 @@ $parent = basename($_SERVER['PHP_SELF']);
           <ul class="nav">
             <li <?php if ($parent == "index.php") {?>class="active"<?php } ?>><a href="index.php">Home</a></li>
             <li <?php if ($parent == "write.php") {?>class="active"<?php } ?>><a href="write.php">Write</a></li>
-            <li <?php if ($parent == "login.php" || $parent == "signup.php") {?>class="active"<?php } ?>><a href="login.php">Signup/Login</a></li>
             <li <?php if ($parent == "browse.php") {?>class="active"<?php } ?>><a href="browse.php">Browse</a></li>
             <li <?php if ($parent == "about.php") {?>class="active"<?php } ?>><a href="about.php">About</a></li>
-            <li <?php if ($parent == "teamphp") {?>class="active"<?php } ?>><a href="team.php">Team</a></li>
+            <li <?php if ($parent == "team.php") {?>class="active"<?php } ?>><a href="team.php">Team</a></li>
+          </ul>
+          <ul class = "nav pull-right">
+          	<li <?php if ($parent == "login.php" || $parent == "signup.php") {?>class="active"<?php } ?>><?php echo (loginLink()); ?></li>
           </ul>
         </div>
       </div>
