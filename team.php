@@ -17,11 +17,12 @@
         <img class="mwlogo" src="img/minewriter.png" alt="Minewriter logo">          
               <div>
               	<h2 class="big">Meet the MineWriter Developer Team / Contributors</h2>   
-              	<ul>
-              	<!--Syntax=Name with link to github - Persons job / place-->
-              	<li class="big"><a href="https://github.com/milkywayz"><img src = "http://forums.bukkit.org/data/avatars/s/90728/90728305.jpg?1354849565" />Milkywayz</a> - Project lead</li>
+              	<ul class = "team">
+              	<!--Syntax=Name with link to github - Persons job / place-->http://forums.bukkit.org/data/avatars/s/90595/90595764.jpg?1351914681
+              	http://forums.bukkit.org/data/avatars/s/90728/90728305.jpg?1354849565
+              	<li class="big"><a href="https://github.com/milkywayz"><img src = "http://forums.bukkit.org/data/avatars/s/90686/90686461.jpg?1354215989" />Milkywayz</a> - Project lead</li>
               	<li class="big"><a href="https://github.com/lol768"><img src = "http://forums.bukkit.org/data/avatars/s/90595/90595764.jpg?1351914681" /> Lol768</a> - Project Developer </li>
-              	<li class="big"><a href="https://github.com/gomeow"><img src = "http://forums.bukkit.org/data/avatars/s/90686/90686461.jpg?1354215989" />Gomeow</a> - Project Contributor</li>
+              	<li class="big"><a href="https://github.com/gomeow"><img src = "http://forums.bukkit.org/data/avatars/s/90728/90728305.jpg?1354849565" />Gomeow</a> - Project Contributor</li>
               	</ul>              
                </div>
             </div>
