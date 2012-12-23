@@ -1,29 +1,13 @@
+<?php require("functions.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <title>MineWriter Team</title>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <link type="text/css" href="css/custom-theme/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
-    <link href="bootstrap/bootstrap.css" rel="stylesheet">
-    <link href="css/def.css" rel="stylesheet">
+	<?php headIncludes(); ?>
   </head>
   <body>
-    <div class="topbar">
-      <div class="fill">
-        <div class="container">
-          <a class="brand" href="index.html">Book Writer</a>
-          <ul class="nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="write.html">Write</a></li>
-            <li><a href="">Signup/Login</a></li>
-            <li><a href="">Browse</a></li>
-            <li><a href="about.html">About</a></li>
-            <li class="active"><a href="team.html">Team</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <?php navigation(); ?>
     <div class="container">
 
       <div class="content">
