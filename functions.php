@@ -25,7 +25,7 @@ $parent = basename($_SERVER['PHP_SELF']);
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="index.php"><img src = "img/logo.png" class = "logo" /> Book Writer</a>
+          <a class="brand" href="index.php"><img src = "img/books.gif" class = "logo" /> MineWriter</a>
           <ul class="nav">
             <li <?php if ($parent == "index.php") {?>class="active"<?php } ?>><a href="index.php">Home</a></li>
             <li <?php if ($parent == "write.php") {?>class="active"<?php } ?>><a href="write.php">Write</a></li>
