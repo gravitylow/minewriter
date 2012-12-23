@@ -27,6 +27,7 @@ if ($variable == "foo") {
 * All changes should be discussed via IRC ideally before making a PR (#minewriter on EsperNet)
 * Code changes are automatically deployed to the site: http://minewriter.net
 * CSS should be K&R with a space before starting braces and after properties:
+* 
 ````css
 .container {
   width: 860px; 
