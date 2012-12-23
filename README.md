@@ -1,4 +1,4 @@
-<p style = "float: right"><img src = "http://minewriter.net./img/logo.png" /></p>
+<p style = "float: right"><a href = "http://minewriter.net"><img src = "http://minewriter.net./img/logo.png" align = "right" style = "display: inline"/></a></p>
 
 Welcome to the MineWriter project
 ====================
