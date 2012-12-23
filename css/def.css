@@ -4,10 +4,11 @@ html, body {
       body {
         padding-top: 40px; 
       }
-      .logo {
-     	margin-bottom: -10px;
-	    margin-right: 3px;
-	    margin-top: -10px;
+      img.logo {   
+      	margin-bottom: -14px;
+	    margin-top: -14px;
+      	margin-left: auto;   
+      	margin-right: auto;
       }
       .container > footer p {
         text-align: center; 
