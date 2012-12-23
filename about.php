@@ -23,7 +23,7 @@
 					</ul>   
 				<h2 class="big">Contact</h2>     
 						<a href="http://forums.bukkit.org/members/milkywayz.90595764/">Bukkit</a> |
-						<a href="https://github.com/milkywayz">Github</a> |
+						<a href="https://github.com/milkywayz/minewriter">Github</a> |
 						<a href="http://forums.bukkit.org/threads/online-book-writer-ingame-book-downloader.117371/">Bukkit Thread Page</a>
 				<h2 class="big">When will it launch?</h2>     
 					<ul>
