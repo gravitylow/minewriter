@@ -19,7 +19,7 @@
               	<h2 class="big">What is MineWriter?</h2>     
 					<ul>
 						<li class="big">MineWriter is the service where you can write books for minecraft!</li>
-						<li class="big">This site will be used to generate special text files which can be porting into minecraft.</li>            
+						<li class="big">This site will be used to generate special text files which can be easily imported into minecraft.</li>            
 						<li class="big">In order to port the books you write into minecraft, you need the plugin.</li>
 					</ul>   
 				<h2 class="big">Why use MineWriter</h2>     
