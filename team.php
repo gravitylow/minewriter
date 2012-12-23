@@ -20,6 +20,7 @@
               	<ul>
               	<!--Syntax=Name with link to github - Persons job / place-->
               	<li class="big"><a href="https://github.com/milkywayz">Milkywayz</a> - Project lead</li>
+              	<li class="big"><a href="https://github.com/lol768">Lol768</a> - Project Deveoper </li>
               	<li class="big"><a href="https://github.com/gomeow">Gomeow</a> - Project Contributor</li>
               	</ul>              
                </div>
