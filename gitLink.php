@@ -5,6 +5,7 @@ if ($ip == "207.97.227.253" || $ip == "50.57.128.197" || $ip == "108.171.174.178
 $auth = true;
 }
 if (!$auth) {
+file_put_contents("gitLinkLog.txt", date("Y-m-d H:i:s") . ": Unauthorised deploy attempt from $ip", FILE_APPEND | LOCK_EX);
 die("Not authorised.");
 }
 function recurse_copy($src,$dst) { 
@@ -39,10 +40,12 @@ if ($zip->open('master.zip') === TRUE) {
     recurse_copy(getcwd() . "/minewriter-master/", getcwd());
     unlink("master.zip");
     rmdir_recursive(getcwd() . "/minewriter-master/");
+    file_put_contents("gitLinkLog.txt", date("Y-m-d H:i:s") . ": Successful deploy from $ip", FILE_APPEND | LOCK_EX);
     echo "DONE";
     
 } else {
     echo 'failed';
+    file_put_contents("gitLinkLog.txt", date("Y-m-d H:i:s") . ": FAILED deploy from $ip", FILE_APPEND | LOCK_EX);
 }
 ?>
 
