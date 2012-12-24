@@ -5,22 +5,25 @@ $Title=$_GET["title"];
 $Type=$_GET["type"];
 $ID=$_GET['id'];
 $Ip = $_SERVER['REMOTE_ADDR'];
-
-$link = mysql_connect($dbHost, $dbUser, $dbPass) or die('Connection to MySQL has failed!'); 
+/*
+Error Codes:
+100 - Database connection failed
+101 - No ID, Author null
+102 - No ID, Title null
+103 - Table selection failed
+104 - No / Invalid File Type
+*/
+$link = mysql_connect($dbHost, $dbUser, $dbPass) or die('100'); 
 if(is_null($id)) {
 	if(is_null($Author)) {
-		die("Query is missing the author");
+		die("101");
 	} else if(is_null($Title)) {
-		die("Query is missing the title");
+		die("102");
 	} else if(is_null($Type)) {
-		die("Query is missing the type");
+		die("104");
 	}	
-	mysql_select_db($dbName) or die("Could not select database"); 
-			if(is_null($id)) {
-				$rs = mysql_query("SELECT * FROM `Books` WHERE `Author`='$Author' AND `Title`='$Title' LIMIT 1"); 
-			} else {							
-				$rs = mysql_query("SELECT * FROM `Books` WHERE `ID`='$ID'"); 
-			}
+	mysql_select_db($dbName) or die("103"); 
+		$rs = mysql_query("SELECT * FROM `Books` WHERE `Author`='$Author' AND `Title`='$Title' LIMIT 1"); 
 		$row = mysql_fetch_array($rs);
 	
 		switch($Type) {
@@ -38,14 +41,14 @@ if(is_null($id)) {
 				echo "Title: \"" .$row['Title']. "\"<br />";
 				echo "Content: \"".$row['Content']."\"<br />";
 			default:	
-				echo "You queried an ID but didn't specify the type!";		
+				echo "104";		
 			break;
 		}
 } else {
 	if(is_null($Type)) {
-		die("Query is missing the type");
+		die("104");
 	} else {		
-		mysql_select_db($dbName) or die("Could not select database"); 
+		mysql_select_db($dbName) or die("104"); 
 			if(is_null($id)) {
 				$rs = mysql_query("SELECT * FROM `Books` WHERE `Author`='$Author' AND `Title`='$Title' LIMIT 1"); 
 			} else {							
@@ -68,7 +71,7 @@ if(is_null($id)) {
 				echo "Title: \"" .$row['Title']. "\"<br />";
 				echo "Content: \"".$row['Content']."\"<br />";
 			default:	
-				echo "You queried an ID but didn't specify the type!";		
+				echo "104";		
 			break;
 		}
 	}
