@@ -31,9 +31,9 @@ switch($Type) {
 		break;
 	case "YAML":
 			$row = mysql_fetch_array($rs);
-			echo "Author: '" .$row['Author']. "'<br />";
-			echo "Title: '" .$row['Title']. "'<br />";
-			echo "Content: '".$row['Content']."'<br />";
+			echo "Author: \"" .$row['Author']."\"<br />";
+			echo "Title: \"" .$row['Title']. "\"<br />";
+			echo "Content: \"".$row['Content']."\"<br />";
 	default:
 		break;
 }
