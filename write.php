@@ -12,7 +12,7 @@
 
       <div class="content">
         <div class="page-header">
-          <h1>MineWriter <small>Author downloadable books for minecraft!</small></h1>
+          <h1>Write <small>Submit your book here!</small></h1>
         </div> 
         <form name="myform" action="post.php" method="POST">
        <textarea rows="40" cols="80" onKeyPress="update(this.value);" onkeydown="update(this.value);"></textarea>
