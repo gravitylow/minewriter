@@ -45,7 +45,10 @@ if($author = null || $title == null || $license == null || $content == null) {?>
 <?php }
 
 
-
+$db = connectDB($dbUser, $dbPass, $dbName);
+if ($db instanceof PDOException) {
+	die ($db->getMessage());
+}
 $sql = "INSERT INTO books VALUES(NULL,:author,:title,:content,:license,NOW(),:username,:ip,0)";
 $stmt = $db->prepare($sql);
 $stmt->bindParam(':author', $author);
