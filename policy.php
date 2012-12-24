@@ -20,8 +20,13 @@
 <p>We collect information from you when you register on our site, create a book, fill out a form or join or use our services.</p>
 <p>When registering on our site, as appropriate, you may be asked to enter a username and/or e-mail address. Much of this information can be publicly hidden and will be kept secure. In addition, as there is no requirement to register, You may visit our site anonymously.</p>
 <b>Information use</b>
-<p>Any of the information we collect from you may be used in one of the following ways:</p>
+<p>Any of the information we collect from you (with the exception of your email address, IP and user agent and other sensitive information) may be used in one of the following ways:</p>
 <ul>
+	<li>Made accessible via the developer API</li>
+	<li>Showcased on the website</li>
+	<li>Made available to users using the MineWriter plugin</li>
+	<li>Distributed to other networks</li>
+</ul>
 <br>
 <b>Information protection</b>
 <p>Passwords and other sensitive pieces of information are stored in a protected database and transformed with a salted cryptographic hash function which is irreversible and ensures data can not be retrieved.</p>
