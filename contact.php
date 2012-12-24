@@ -20,7 +20,7 @@
 						<li class="big">Fill out the form below and push submit!</li>
 					</ul>   
 					<div id="contactTable">
-               			<form id="contact" action="mail.php">
+               			<form id="contact" action="mail.php" method="POST">
                				<table id="contactTable">
                				<br />
                					<tr><td class="left">UserName:</td><td><input class="contactInputs" type="text" name="name"/></td></tr>

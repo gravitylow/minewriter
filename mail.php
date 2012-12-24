@@ -1,3 +1,5 @@
+<?php
+
 function hasHtml($str){
   if(strlen($str) != strlen(strip_tags($str))) {
       return true;
@@ -6,37 +8,44 @@ function hasHtml($str){
   	return false;
   }
 }
-
-
-
-function contactMail() {
 	$subject = "MineWriter Contact Results";
-	$to = "webmaster@aeroplanearea.us";
-
+	$to = "team@minewriter.net";
 	$name = $_POST['name'];
 	$email = $_POST['email'];
-	if(!preg_match('/^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$/',$_POST['email'])) {
-		?><script type="text/javascript">
-			window.alert("Invalid email proved, the email must be in valid email format (such as name@domain.com).");
-		</script><?php
-		return;
-	}
-	if(!preg_match('/^[-_ 0-9a-z]$/i',$_POST['name'])) {
-		?><script type="text/javascript">
-			window.alert("Invalid name, the name may only contain a-z, A-Z, 0-9, "-", "_" and spaces.");
-		</script><?php
-		return;
-	}
 	$content = $_POST['content'];
-	if(hasHtml($content)) {
+	if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 		?><script type="text/javascript">
-			window.alert("You cannot use Html in this!");
-		</script><?php
+			window.alert("Invalid email, it must be example@domain.com");
+		</script>
+		<meta http-equiv="Refresh" content="1; url=http://www.minewriter.net/contact.php">
+		<?php
 		return;
 	}
-
+	if($name == null) {
+		?><script type="text/javascript">
+			window.alert("Invalid name, the name may only contain a-z, A-Z, 0-9, \"-\", \"_\" and spaces.");
+		</script>
+		<meta http-equiv="Refresh" content="1; url=http://www.minewriter.net/contact.php">
+		<?php
+		return;
+	}
+	if(hasHtml($content) || hasHtml($email) || hasHtml($name)) {
+		?><script type="text/javascript">
+			window.alert("You cannot use Html in this form!");
+		</script>
+		<meta http-equiv="Refresh" content="1; url=http://www.minewriter.net/contact.php">
+		<?php
+		return;
+	}
 	$message = "Name: " . $name . "\nEmail: " . $email . "\nContent: " . $content;
 	mail($to,
 		$subject,
 		$message);
-}
+		?>
+		<meta http-equiv="Refresh" content="0; url=http://www.minewriter.net/contact.php">
+		<script type="text/javascript">
+			window.alert("Success");
+		</script>
+		<?php
+		
+?>
