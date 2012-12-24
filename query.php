@@ -16,7 +16,7 @@ if(is_null($id)) {
 	} else if(is_null($Type)) {
 		die("Query is missing the type");
 	}	
-	doDbWork(, $id);
+	doDbWork(, null);
 } else {
 	//ID is present, check for file type
 	if(is_null($Type)) {
