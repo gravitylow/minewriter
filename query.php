@@ -1,8 +1,8 @@
 <?php include "../private/config.php";
 
-$Author=$_POST["author"];
-$Title=$_POST["title"];
-$Type=$_POST["type"];
+$Author=$_GET["author"];
+$Title=$_GET["title"];
+$Type=$_GET["type"];
 $Ip = $_SERVER['REMOTE_ADDR'];
 
 
