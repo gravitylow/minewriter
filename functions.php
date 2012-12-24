@@ -13,6 +13,15 @@ function loginLink() {
 	}
 }
 
+function loginLinkSubFolder() {
+	if (isLoggedIn()) {
+		return "<a href='../panel.php'>Panel</a>";
+	} else {
+		return "<a href='../login.php'>Register/Login</a>";
+	}
+}
+
+
 //Page structure functions
 function navigation() {
 $parent = basename($_SERVER['PHP_SELF']);
@@ -65,7 +74,7 @@ $parent = basename($_SERVER['PHP_SELF']);
             <li><a href="devs.php">Developers</a></li>
           </ul>
           <ul class = "nav pull-right">
-          	<li <?php if ($parent == "login.php" || $parent == "signup.php") {?>class="active"<?php } ?>><?php echo (loginLink()); ?></li>
+          	<li <?php if ($parent == "login.php" || $parent == "signup.php") {?>class="active"<?php } ?>><?php echo (loginLinkSubFolder()); ?></li>
           </ul>
         </div>
       </div>
