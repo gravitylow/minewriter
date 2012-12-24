@@ -16,24 +16,25 @@ function hasHtml($str){
 	if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 		?><script type="text/javascript">
 			window.alert("Invalid email, it must be example@domain.com");
+			history.go(-1);
 		</script>
-		<meta http-equiv="Refresh" content="1; url=http://www.minewriter.net/contact.php">
 		<?php
 		return;
 	}
 	if($name == null) {
 		?><script type="text/javascript">
 			window.alert("Invalid name, the name may only contain a-z, A-Z, 0-9, \"-\", \"_\" and spaces.");
+			history.go(-1);
 		</script>
-		<meta http-equiv="Refresh" content="1; url=http://www.minewriter.net/contact.php">
 		<?php
 		return;
 	}
 	if(hasHtml($content) || hasHtml($email) || hasHtml($name)) {
 		?><script type="text/javascript">
 			window.alert("You cannot use Html in this form!");
+			history.go(-1);
 		</script>
-		<meta http-equiv="Refresh" content="1; url=http://www.minewriter.net/contact.php">
+		
 		<?php
 		return;
 	}
