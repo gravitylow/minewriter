@@ -1,3 +1,10 @@
+<?php
+function require_multi($files) {
+    $files = func_get_args();
+    foreach($files as $file)
+        require_once($file);
+}
+?>
 <?php require_multi("functions.php", "../private/config.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,9 +36,5 @@
 function search() {
 	//STUFF
 }
-function require_multi($files) {
-    $files = func_get_args();
-    foreach($files as $file)
-        require_once($file);
-}
+
 ?>
