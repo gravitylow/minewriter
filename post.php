@@ -1,13 +1,24 @@
-<?php
-$Author=$_POST["author"];
-$Title =$_POST["title"];
-$Content=$_POST["content"];
-$file="/books/" . uniqid().".txt";
-//This is where we format the entire book
-//Sanatise the author and title variables
-//This allows alphanumeric, underscores and some punctuation, stripping out new lines etc
-$Title = preg_replace('/[^a-zA-Z0-9_ \\\.\(\)-\]/s', '', $Title);
-$Author = preg_replace('/#[^a-z0-9_.-]#i/', '', str_replace(".", "", $author));
-$book = "!Author-" . $Author . "\n" . "!Title-" . $Title . "\n" . $Content;
-file_put_contents($file, $book);
-?>
+<?php require("functions.php"); ?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Post</title>
+  <?php headIncludes(); ?>
+  </head>
+  <body>
+    <?php navigation(); ?>
+    <div class="container">
+      <div class="content">
+        <div class="page-header">
+          <h1>Post <small>View your posted book!</small></h1>
+        </div>
+        	<h2 class="big">Post</h2>     
+        	Page holder, we need auth here
+        	We need some limitations
+        	We need to use Sessions for page limiting
+        	We need to open the DB connection with DEFINITE sanitation / formatting
+      </div>
+    </div>
+  </body>
+</html>
