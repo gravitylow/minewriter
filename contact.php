@@ -28,7 +28,7 @@
                					<tr><td class="left">Email:</td><td><input class="contactInputs" type="text" name="email"/></td></tr>
                					<tr><td class="left">Comments:</td><td><textarea class="contactInputs" cols="100" style="height: 70px;" id="contactText" name="content"></textarea></td></tr>
                				</table>
-               				<input type="submit" style="margin-left:180px;"/>
+               				<a href = "#" id = "submitBtn" class = "btn btn-success"><i class = "icon-mail"></i> Send email</a>
                			</form>
                		</div>
       </div>
