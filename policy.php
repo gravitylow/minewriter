@@ -13,7 +13,7 @@
 
 	  <div class="content">
 		<div class="page-header">
-		  <h1>Policy <small>Private Policy</small></h1>
+		  <h1>Policy <small>Privacy Policy</small></h1>
 		</div>		   
 	  		  <h3>Privacy Policy</h3>
 <b>Information collected</b>

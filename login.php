@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Post</title>
+    <title>Login/Register</title>
   <?php headIncludes(); ?>
   </head>
   <body>
