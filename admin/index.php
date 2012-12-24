@@ -35,7 +35,7 @@
           <!-- Text input-->
           <label class="control-label" for="input01">Password</label>
           <div class="controls">
-            <input type="text" placeholder="Password" class="input-xlarge">
+            <input type="password" placeholder="Password" class="input-xlarge">
             <p class="help-block">Your password</p>
           </div>
         </div>
