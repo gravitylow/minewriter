@@ -5,6 +5,38 @@
     <meta charset="utf-8">
     <title>Contact</title>
   <?php headIncludes(); ?>
+  <script type = "text/javascript" src = "//cdnjs.cloudflare.com/ajax/libs/jquery.form/3.20/jquery.form.js"></script>
+  <script type = "text/javascript">
+  	$(document).ready(function() { 
+    var options = { 
+        target:        '#hidden',   // target element(s) to be updated with server response 
+        beforeSubmit:  showRequest,  // pre-submit callback 
+        success:       showResponse  // post-submit callback 
+ 
+        // other available options: 
+        //url:       url         // override for form's 'action' attribute 
+        //type:      type        // 'get' or 'post', override for form's 'method' attribute 
+        //dataType:  null        // 'xml', 'script', or 'json' (expected server response type) 
+        //clearForm: true        // clear all form fields after successful submit 
+        //resetForm: true        // reset the form after successful submit 
+ 
+        // $.ajax options can be used here too, for example: 
+        //timeout:   3000 
+    }; 
+ 
+    // bind to the form's submit event 
+    $('#contact').submit(function() { 
+        // inside event callbacks 'this' is the DOM element so we first 
+        // wrap it in a jQuery object and then invoke ajaxSubmit 
+        $("#hidden").html("load.gif");
+        $(this).ajaxSubmit(options); 
+ 
+        // !!! Important !!! 
+        // always return false to prevent standard browser submit and page navigation 
+        return false; 
+    }); 
+	}); 
+  </script>
   </head>
   <body>
     <?php navigation(); ?>
@@ -46,6 +78,7 @@
 						    	</div>
 						    </div>
 					    </form>
+					    <div id = "hidden"></div>
 				
       </div>
     </div>
