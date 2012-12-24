@@ -1,9 +1,9 @@
-<?php require("../private/config.php");
+<?php include '../private/config.php';
 //Absolute crude API file, WIP
 $Author=$_GET["author"];
 $Title =$_GET["title"];
 //Don't expose any DB details
-$link = mysql_connect("localhost", $dbUser, $dbPass); 
+$link = mysql_connect($dbName, $dbUser, $dbPass); 
 if (!$link) {
     die('Could not connect: ' . mysql_error());
 }
