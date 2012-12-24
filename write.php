@@ -33,11 +33,11 @@
           </div>
           
             <div class = "well" style = "position: absolute; right: 0; top: 220px; width: 220px;">
-          	<input type = "text" placeholder = "Title" />
+          	<input type = "text" placeholder = "Title" name = "title" />
           	<br />
-          	<input type = "text" placeholder = "Author" />
+          	<input type = "text" placeholder = "Author" name = "author"/>
           	<br />
-          	<select size='8'>
+          	<select size='8' name = "license">
           		<optgroup label='Licensing'>
           			<option value = "reserved">All rights reserved</option>
           			<option value = "BY-NC-ND">CC-BY-NC-ND</option>
@@ -55,14 +55,25 @@
           </div>
           
           <div class = "well" style = "position: absolute; right: 0; top: 535px; width: 220px;">
-          	<a href = "#" class = "btn btn-primary centred" style = "width: 110px; margin-left: 37px;">Submission Info</a>
+          	<a href = "#" role="button" data-toggle="modal" class = "btn btn-primary centred" style = "width: 110px; margin-left: 37px;">Submission Info</a>
           	</div>
-       <textarea class = "book" id = "writing" style = ""></textarea>
+       <textarea class = "book" id = "writing" name = "bookContent" style = ""></textarea>
        
           <br /> 
         </form>
       </div>
 	</div><br />
+	<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+<h3 id="myModalLabel">Submission information</h3>
+</div>
+<div class="modal-body">
+<p>To ensure all submissions are accessible, we require some information from you before we are able to add your entry to the database. Firstly, we ask for a title and author. These are displayed in-game, so make sure you think </p>
+</div>
+
+</div>
 	<?php footer(); ?>
   </body>
 </html>
