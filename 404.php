@@ -21,6 +21,7 @@
 </html>
 <?php 
 function req() {
+	//Without this, 404ing inside a directory messes up CSS
 	$root = realpath($_SERVER["DOCUMENT_ROOT"]);
 	include "$root/functions.php";
 }
