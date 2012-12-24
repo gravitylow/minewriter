@@ -1,3 +1,8 @@
+[class^="icon-"], [class*=" icon-"] {
+  background-image: none;
+  margin-top: 0 !important;
+  vertical-align: baseline !important;
+}
 html, body {
 	background-color: #eee;
 	text-align: left;
@@ -18,15 +23,24 @@ img.mwlogo {
 	list-style: none;
 	padding: 5px;
 }
-
+@font-face { 
+font-family: "Minecraft Regular"; 
+src: url("../minecraft.ttf") format("truetype"); 
+font-weight:normal;
+font-style:normal;
+}
+ 
 .book { /*Book styles*/
 	font-family:"Minecraft Regular";
-	src:url("minecraft_font_by_pwnage_block-d37t6nb.eot?") format("eot"),url("minecraft_font_by_pwnage_block-d37t6nb.woff") format("woff"),url("minecraft_font_by_pwnage_block-d37t6nb.ttf") format("truetype"),url("minecraft_font_by_pwnage_block-d37t6nb.svg#Minecraft") format("svg");
 	font-weight:normal;
 	font-style:normal;
 	font-size: 14px;
 	box-sizing: border-box;
-	padding: 40px;
+	padding: 60px;
+	box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	outline: 0 !important;
 }
   
 img.logo {
