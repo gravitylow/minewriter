@@ -29,7 +29,7 @@ $content = $_POST["bookContent"];
 $ip = $_SERVER['REMOTE_ADDR'];
 $username = "anonymous";
 
-if(hastHtml($author) || hasHtml() || hasHtml()) {
+if(hasHtml($author) || hasHtml() || hasHtml()) {
 	?>
 		<script type="text/javascript">
 			window.alert("You are not allowed to use html on this form!");
