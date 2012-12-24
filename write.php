@@ -37,6 +37,18 @@
           	<br />
           	<input type = "text" placeholder = "Author" />
           	<br />
+          	<select size = 5>
+          		<optgroup label='Licensing'>
+          			<option value = "reserved">All rights reserved</option>
+          			<option value = "BY-NC-ND">CC-BY-NC-ND</option>
+          			<option value = "BY-NC-SA">CC-BY-NC-SA</option>
+          			<option value = "BY-NC">CC-BY-NC</option>
+          			<option value = "BY-SA">CC-BY-SA</option>
+          			<option vlaue = "BY">CC-BY</option>
+          			<option vlaue = "pd">Public domain</option>
+          			
+          		</optgroup>
+          	</select><br />
           	<a class = "btn btn-success">
           		<i class = "icon-plus"></i> Add book
           	</a>
