@@ -24,6 +24,7 @@ if(is_null(id)) {
 	} else {
 		$rs = mysql_query("SELECT * FROM `Books` WHERE `ID`='$ID' LIMIT 1"); 
 	}	
+	echo "Fetching...";
 	$row = mysql_fetch_array($rs);
 	
 switch($Type) {
