@@ -45,7 +45,7 @@
           <!-- Text input-->
           <label class="control-label" for="input01">Key</label>
           <div class="controls">
-            <input type="text" placeholder="Key" class="input-xlarge">
+            <input type="password" placeholder="Key" class="input-xlarge">
             <p class="help-block">Your special key</p>
           </div>
         </div>
