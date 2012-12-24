@@ -3,11 +3,11 @@
 require("../private/config.php");
 //die ($dbUser);
 //Functions
-function connectDB() {
+function connectDB($user, $pass, $db) {
 	try {	
-		return(new PDO("mysql:host=localhost;dbname=" . $dbName . ";charset=UTF-8", $dbUser, $dbPass));
+		return(new PDO("mysql:host=localhost;dbname=" . $db . ";charset=UTF-8", $user, $pass));
 	} catch(PDOException $ex) {
-		die($dbUser);
+		die($user);
 		return $ex;
 	}
 	
@@ -41,7 +41,7 @@ if(is_null($id)) {
 	} else if(is_null($Type)) {
 		die("104");
 	}	
-		$db = connectDB();
+		$db = connectDB($dbUser, $dbPass, $dbName);
 		if ($db instanceof PDOException) {
 			die ($db->getMessage());
 		}
@@ -73,7 +73,7 @@ if(is_null($id)) {
 	if(is_null($Type)) {
 		die("104");
 	} else {		
-		$db = connectDB();
+		$db = connectDB($dbUser, $dbPass, $dbName);
 		if ($db instanceof PDOException) {
 			die ($db->getMessage());
 		}
