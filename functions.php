@@ -50,9 +50,12 @@ function headIncludes() {?>
 
 
 function hasHtml($str){
-  if(strlen($str) != strlen(strip_tags($str)))
-      return true;  
-  return false;
+  if(strlen($str) != strlen(strip_tags($str))) {
+      return true;
+	}
+  else {	 
+  	return false;
+  }
 }
 
 
