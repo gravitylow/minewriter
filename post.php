@@ -1,24 +1,52 @@
-<?php require("functions.php"); ?>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Post</title>
-  <?php headIncludes(); ?>
-  </head>
-  <body>
-    <?php navigation(); ?>
-    <div class="container">
-      <div class="content">
-        <div class="page-header">
-          <h1>Post <small>View your posted book!</small></h1>
-        </div>
-        	<h2 class="big">Post</h2>     
-        	Page holder, we need auth here
-        	We need some limitations
-        	We need to use Sessions for page limiting
-        	We need to open the DB connection with DEFINITE sanitation / formatting
-      </div>
-    </div>
-  </body>
-</html>
+<?php 
+require("functions.php"); 
+require("../private/config.php");
+
+function connectDB($user, $pass, $db) {
+	try {	
+		return(new PDO("mysql:host=localhost;dbname=" . $db . ";charset=UTF-8", $user, $pass));
+	} catch(PDOException $ex) {
+		die($user);
+		return $ex;
+	}
+	
+}
+
+function hasHtml($str){
+  if(strlen($str) != strlen(strip_tags($str))) {
+      return true;
+	}
+  else {	 
+  	return false;
+  }
+}
+
+
+$author = $_POST["author"];
+$title = $_POST["title"];
+$license = $_POST["license"];
+$content = $_POST["bookContent"];
+$ip = $_SERVER['REMOTE_ADDR'];
+$username = "anonymous";
+
+if(hastHtml($author) || hasHtml() || hasHtml()) {
+	?>
+		<script type="text/javascript">
+			window.alert("You are not allowed to use html on this form!");
+			history.go(-1);
+		</script>
+	<?php
+	return;
+}
+if($author = null || $title == null || $license == null || $content == null) {?>
+		<script type="text/javascript">
+			window.alert("Please fill in all the fields!");
+		</script>
+<?php }
+
+
+
+mysql_query("INSERT INTO books VALUES(NULL, $author, $title, $content, $license,NOW(), $username, $ip,0)");
+
+
+?>
