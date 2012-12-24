@@ -61,7 +61,9 @@
 
     </fieldset>
   </form>
+      </div><div style="text-align: center;">
+      	<?php footer(); ?>
       </div>
-      </div>
+    </div>
   </body>
 </html>
