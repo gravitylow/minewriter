@@ -28,6 +28,7 @@ Error Codes:
 102 - No ID, Title null
 103 - Table selection failed
 104 - No / Invalid File Type
+105 - No results found
 */
 
 
@@ -51,6 +52,9 @@ if(is_null($id)) {
 		$stmt->bindParam(':title', $Title);
 		$stmt->execute();
 		$row = $stmt->fetch();
+		if ($row['ID'] == null) {
+			die("105");
+		}
 		switch($Type) {
 			case "JSON":
 				$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'Content' => $row['Content']);
@@ -89,7 +93,9 @@ if(is_null($id)) {
 		}
 		$stmt->execute();
 		$row = $stmt->fetch();
-	
+		if ($row['ID'] == null) {
+			die("105");
+		}
 		switch($Type) {
 			case "JSON":
 				$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'Content' => $row['Content']);
