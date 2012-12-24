@@ -20,17 +20,28 @@
 						<li class="big">Do you need to contact the team?</li>
 						<li class="big">Fill out the form below and push submit!</li>
 					</ul>   
-					<div id="contactTable">
-               			<form id="contact" action="mail.php" method="POST">
-               				<table id="contactTable">
-               				<br />
-               					<tr><td class="left">UserName:</td><td><input class="contactInputs" type="text" name="name"/></td></tr>
-               					<tr><td class="left">Email:</td><td><input class="contactInputs" type="text" name="email"/></td></tr>
-               					<tr><td class="left">Comments:</td><td><textarea class="contactInputs" cols="100" style="height: 70px;" id="contactText" name="content"></textarea></td></tr>
-               				</table>
-               				<a href = "#" id = "submitBtn" class = "btn btn-success"><i class = "icon-mail"></i> Send email</a>
-               			</form>
-               		</div>
+					    <form class="form-horizontal" id="contact" action="mail.php" method="POST">
+						    <div class="control-group">
+							    <label class="control-label" for="inputName">Username</label>
+							    <div class="controls">
+							    	<input type="text" id="inputName" placeholder="Username" name = "name">
+							    </div>
+							</div>
+							<div class="control-group">
+							    <label class="control-label" for="inputEmail">Email</label>
+							    <div class="controls">
+							    	<input type="password" id="inputEmail" placeholder="Email" name = "email">
+							    </div>
+							</div>
+							<div class="control-group">
+							    <label class="control-label" for="inputMsg">Message</label>
+							    <div class="controls">
+							    	<textarea class="contactInputs" cols="100" style="height: 70px;" id="inputMsg" name="content"></textarea>
+							    	<button type="submit" class = "btn btn-success"><i class = "icon-mail"></i> Send email</button>
+								</div>
+						    </div>
+					    </form>
+				
       </div>
     </div>
     	<?php footer(); ?>
