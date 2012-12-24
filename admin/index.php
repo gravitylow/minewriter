@@ -18,7 +18,7 @@
       <form class="form-horizontal">
     <fieldset>
       <div id="legend" class="">
-        <legend class="">Form Name</legend>
+        <legend class="">Admin Login</legend>
       </div>
     <div class="control-group">
 
