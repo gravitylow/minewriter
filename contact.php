@@ -37,8 +37,13 @@
 							    <label class="control-label" for="inputMsg">Message</label>
 							    <div class="controls">
 							    	<textarea class="contactInputs" cols="100" style="height: 70px;" id="inputMsg" name="content"></textarea>
-							    	<button type="submit" class = "btn btn-success"><i class = "icon-mail"></i> Send email</button>
+							    	
 								</div>
+						    </div>
+						    <div class="control-group">
+						    	<div class="controls">
+						    		<button type="submit" class = "btn btn-success"><i class = "icon-envelope"></i> Send email</button>
+						    	</div>
 						    </div>
 					    </form>
 				
