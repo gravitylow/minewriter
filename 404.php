@@ -8,6 +8,7 @@
   </head>
   <body>
     <?php subFolderNavigationURL(); ?>
+    <div id = "wrap">
     <div class="container">
 
       <div class="content">
