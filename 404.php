@@ -7,7 +7,7 @@
 	<?php headIncludes(); ?>
   </head>
   <body>
-    <?php navigation(); ?>
+    <?php subFolderNavigationURL(); ?>
     <div class="container">
 
       <div class="content">
@@ -15,6 +15,9 @@
           <h1>404 <small>We couldn't find that page :(</small></h1>
         </div>      
         <p>Sorry, but that page could not be found on the server</p>
+            </div>
+            <div class="footer">
+            	<?php footerURL(); ?>
             </div>
       </div>
   </body>
