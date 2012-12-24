@@ -12,7 +12,7 @@
 
       <div class="content">
         <div class="page-header">
-          <h1>MineWriter <small>Author downloadable books on the web!</small></h1>
+          <h1>About <small>Learn about MineWriter!</small></h1>
         </div>        
         <div>
               <h2 class="big">Plans</h2>     
