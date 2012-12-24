@@ -16,7 +16,7 @@
         </div>
         	<h2 class="big">Contact</h2>     
 					<ul>
-						<li class="big">You need to contact me?</li>
+						<li class="big">Do you need to contact the team?</li>
 						<li class="big">Fill out the form below and push submit!</li>
 					</ul>   
 					<div id="contactTable">
