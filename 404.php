@@ -1,4 +1,4 @@
-<?php require("../public_html/functions.php"); ?>
+<?php require("public_html/functions.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
