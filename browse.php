@@ -16,8 +16,8 @@
         </div> 
         	<form method="post" class="form-search" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 	        	<input type="text" name="author" class="input-medium search-query" placeholder="Author">
-	        	<input type="text" name="title" class="input-medium search-query" placeholder=="Title">
-	        	<input type="text" name="date" class="input-medium search-query" placeholder=="Date">
+	        	<input type="text" name="title" class="input-medium search-query" placeholder="Title">
+	        	<input type="text" name="date" class="input-medium search-query" placeholder="Date">
 	        	<button type="submit" class="btn">Search</button>
 	        	</form>
             </div>
