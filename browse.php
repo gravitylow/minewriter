@@ -1,4 +1,4 @@
-<?php require("functions.php"); ?>
+<?php require_multi("functions.php", "../private/config.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,8 +14,20 @@
         <div class="page-header">
           <h1>Browse <small>Look at other MineWriter books!</small></h1>
         </div> 
-        	Browse page placeholder     
+        	<form method="post" class="form-search" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+	        	<input type="text" name="author" class="input-medium search-query" title="Author">
+	        	<input type="text" name="title" class="input-medium search-query" title="Title">
+	        	<button type="submit" class="btn">Search</button>
+	        	</form>
             </div>
       </div>
   </body>
 </html>
+<?php
+
+function require_multi($files) {
+    $files = func_get_args();
+    foreach($files as $file)
+        require_once($file);
+}
+?>
