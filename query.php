@@ -69,6 +69,7 @@ if(is_null($id)) {
 				echo "Author: \"" .$row['Author']."\"<br />";
 				echo "Title: \"" .$row['Title']. "\"<br />";
 				echo "Content: \"".$row['Content']."\"<br />";
+				break;
 			default:	
 				die("104");	
 			break;
@@ -110,6 +111,7 @@ if(is_null($id)) {
 				echo "Author: \"" .$row['Author']."\"<br />";
 				echo "Title: \"" .$row['Title']. "\"<br />";
 				echo "Content: \"".$row['Content']."\"<br />";
+				break;
 			default:	
 				die("104");	
 			break;
