@@ -27,7 +27,7 @@
     $('#contact').submit(function() { 
         // inside event callbacks 'this' is the DOM element so we first 
         // wrap it in a jQuery object and then invoke ajaxSubmit 
-        $("#hidden").html("load.gif");
+        $("#hidden").html("<img src = 'img/load.gif' />");
         $(this).ajaxSubmit(options); 
  
         // !!! Important !!! 
@@ -44,7 +44,7 @@
     <?php navigation(); ?>
     <div id = "wrap">
     <div class="container">
-<div class = "hide hidden"><img src = "load.gif" /></div>
+<div class = "hide hidden"><img src = "img/load.gif" /></div>
       <div class="content">
         <div class="page-header">
           <h1>Contact <small>Have any questions?</small></h1>
