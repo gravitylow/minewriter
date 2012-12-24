@@ -44,7 +44,7 @@
     <?php navigation(); ?>
     <div id = "wrap">
     <div class="container">
-
+<div class = "hide hidden"><img src = "load.gif" /></div>
       <div class="content">
         <div class="page-header">
           <h1>Contact <small>Have any questions?</small></h1>
