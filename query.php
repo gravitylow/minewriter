@@ -25,10 +25,15 @@ switch($Type) {
 		break;
 	case "TEXT":
 			$row = mysql_fetch_array($rs);
-			echo "{!Author-"}{$row['Author']}{"\n"}";
-			echo "{!Title-"}{$row['Title']}{"\n";
+			echo "!Author-" .$row['Author']. "\n";
+			echo "!Title-" .$row['Title']. "\n";
 			echo $row['Content'];
 		break;
+	case "YAML":
+			$row = mysql_fetch_array($rs);
+			echo "Author: " .$row['Author']. "\n";
+			echo "Title: " .$row['Title']. "\n";
+			echo "Content: " . "\n". "  ".$row['Content'];
 	default:
 		break;
 }
