@@ -17,9 +17,9 @@
         </div>      
         <p>Sorry, but that page could not be found on the server</p>
             </div>
-            <div class="footer">
+           
             	<?php footerURL(); ?>
-            </div>
+       
       </div>
   </body>
 </html>
