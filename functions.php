@@ -75,7 +75,7 @@ function headIncludes() {?>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <link href="//netdna.bootstrapcdn.com/bootswatch/2.1.1/cerulean/bootstrap.min.css" rel="stylesheet">
 <link href="//netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome-more.css" rel="stylesheet">
-<link href="css/def.css" rel="stylesheet">
+<link href="css/def.css?<?php echo (time()); ?>" rel="stylesheet">
 <?php }
 
 function subFolderNavigationURL() {
