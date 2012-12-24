@@ -98,8 +98,3 @@ function contactMail() {
 }
 
 ?>
-<script type="text/javascript">
-	window.alert("Success!");
-</script>
-<?php
-?>
