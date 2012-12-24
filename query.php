@@ -25,6 +25,8 @@ switch($Type) {
 		break;
 	case "TEXT":
 			$row = mysql_fetch_array($rs);
+			echo "!Author-". $row['Author'];
+			echo "!Title-".$row['Title'];
 			echo $row['Content'];
 		break;
 	default:
