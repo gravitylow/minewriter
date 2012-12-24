@@ -1,21 +1,18 @@
-<?php 
+<?php require("../private/config.php");
 //Absolute crude API file, WIP
-$Author=$_POST["author"];
-$Title =$_POST["title"];
+$Author=$_GET["author"];
+$Title =$_GET["title"];
 //Don't expose any DB details
-$link = mysql_pconnect("x", "x", "x") or die("Could not connect"); 
-mysql_select_db("x") or die("Could not select database"); 
+$link = mysql_pconnect($dbHost, "$dbUser, $dbPass) or die("Could not connect"); 
+mysql_select_db($dbName) or die("Could not select database"); 
 
 $arr = array(); 
 //Make this PRECISE!
-$rs = mysql_query("SELECT ". $Title . " FROM x"); 
+$rs = mysql_query("SELECT * FROM `Books` WHERE `Author`='$Author' AND `Title`='$Title' LIMIT 1"); 
 
-//Do magic?
-while($obj = mysql_fetch_array($rs)) { 
-$arr[] = $obj; 
-
-} 
-//Echo the json they need! This is wrong, just a template!
-$json = '{"blah":'.json_encode($arr).'}'; 
-echo $json; 
+$rows = array();
+while($r = mysql_fetch_assoc($rs)) {
+    $rows[] = $r;
+}
+print json_encode($rows);
 ?> 
