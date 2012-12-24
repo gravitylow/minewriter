@@ -78,11 +78,54 @@ function headIncludes() {?>
 <link href="css/def.css" rel="stylesheet">
 <?php }
 
+function subFolderNavigationURL() {
+$parent = basename($_SERVER['PHP_SELF']);
+?>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="http://www.minewriter.net/index.php"><img src = "../img/books.gif" class = "logo" /> MineWriter</a>
+          <ul class="nav">
+            <li><a href="http://www.minewriter.net/index.php">Home</a></li>
+            <li><a href="http://www.minewriter.net/write.php">Write</a></li>
+            <li><a href="http://www.minewriter.net/browse.php">Browse</a></li>
+            <li><a href="http://www.minewriter.net/about.php">About</a></li>
+            <li><a href="http://www.minewriter.net/contact.php">Contact</a></li>
+            <li><a href="http://www.minewriter.net/team.php">Team</a></li>
+            <li><a href="http://www.minewriter.net/devs.php">Developers</a></li>
+          </ul>
+          <ul class = "nav pull-right">
+          	<li <?php if ($parent == "login.php" || $parent == "signup.php") {?>class="active"<?php } ?>><?php echo (loginLink()); ?></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+<?php } 
+function headIncludes() {?>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link href="//netdna.bootstrapcdn.com/bootswatch/2.1.1/cerulean/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome-more.css" rel="stylesheet">
+<link href="http://www.minewriter.net/css/def.css" rel="stylesheet">
+<?php }
+
 function headIncludesSubFolders() {?>
 <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
 <link href="//netdna.bootstrapcdn.com/bootswatch/2.1.1/cerulean/bootstrap.min.css" rel="stylesheet">
 <link href="//netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome-more.css" rel="stylesheet">
 <link href="../css/def.css" rel="stylesheet">
+<?php }
+
+function footerURL() {?>
+	<a href="http://www.minewriter.net/termsofservice.php">Terms of Service</a> | <a href="http://www.minewriter.net/privacypolicy.php">Privacy Policy</a>
+<?php }
+
+function footer() {?>
+	<a href="termsofservice.php">Terms of Service</a> | <a href="privacypolicy.php">Privacy Policy</a>
 <?php }
 
 ?>
