@@ -12,7 +12,7 @@
 
       <div class="content">
         <div class="page-header">
-          <h1>MineWriter <small>Author downloadable books for minecraft!</small></h1>
+          <h1>Browse <small>Look at other MineWriter books!</small></h1>
         </div> 
         	Browse page placeholder     
             </div>
