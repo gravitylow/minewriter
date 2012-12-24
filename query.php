@@ -12,25 +12,20 @@ if (empty($_GET)) {
 }
 	file_put_contents("api_requests.txt", "\n" . date("Y-m-d H:i:s") . ": Recieved API request from $Ip for $Author, $Title", FILE_APPEND | LOCK_EX);
 	mysql_select_db($dbName) or die("Could not select database"); 
-	$arr = array(); 
 	$rs = mysql_query("SELECT * FROM `Books` WHERE `Author`='$Author' AND `Title`='$Title' LIMIT 1"); 
+	$row = mysql_fetch_array($rs);
 	
 switch($Type) {
 	case "JSON":
-			$rows = array();
-			while($r = mysql_fetch_assoc($rs)) {
-				$rows[] = $r;
-			}
-			echo json_encode($rows);		
+			$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'Content' => $row['Content']);
+			echo json_encode($array);		
 		break;
-	case "TEXT":
-			$row = mysql_fetch_array($rs);
+	case "TEXT":			
 			echo "!Author-" .$row['Author']. "<br />";
 			echo "!Title-" .$row['Title']. "<br />";
 			echo $row['Content'];
 		break;
 	case "YAML":
-			$row = mysql_fetch_array($rs);
 			echo "Author: \"" .$row['Author']."\"<br />";
 			echo "Title: \"" .$row['Title']. "\"<br />";
 			echo "Content: \"".$row['Content']."\"<br />";
