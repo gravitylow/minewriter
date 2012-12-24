@@ -33,6 +33,7 @@ $parent = basename($_SERVER['PHP_SELF']);
             <li <?php if ($parent == "about.php") {?>class="active"<?php } ?>><a href="about.php">About</a></li>
             <li <?php if ($parent == "contact.php") {?>class="active"<?php } ?>><a href="contact.php">Contact</a></li>
             <li <?php if ($parent == "team.php") {?>class="active"<?php } ?>><a href="team.php">Team</a></li>
+            <li <?php if ($parent == "devs.php") {?>class="active"<?php } ?>><a href="devs.php">Developers</a></li>
           </ul>
           <ul class = "nav pull-right">
           	<li <?php if ($parent == "login.php" || $parent == "signup.php") {?>class="active"<?php } ?>><?php echo (loginLink()); ?></li>
@@ -61,6 +62,7 @@ $parent = basename($_SERVER['PHP_SELF']);
             <li><a href="../about.php">About</a></li>
             <li><a href="../contact.php">Contact</a></li>
             <li><a href="../team.php">Team</a></li>
+            <li><a href="devs.php">Developers</a></li>
           </ul>
           <ul class = "nav pull-right">
           	<li <?php if ($parent == "login.php" || $parent == "signup.php") {?>class="active"<?php } ?>><?php echo (loginLink()); ?></li>
