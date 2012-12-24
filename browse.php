@@ -1,5 +1,5 @@
 //Add this in later, when we don't need to use this page locally.
-//<?php require_multi("functions.php", "../private/config.php"); ?>
+<!--<?php require_multi("functions.php", "../private/config.php"); ?>-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
