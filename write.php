@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>MineWriter</title>
+    <title>Write</title>
 	<?php headIncludes(); ?>
   </head>
   <body>

@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>MineAuthor</title>
+    <title>Browse</title>
 	<?php headIncludes(); ?>
   </head>
   <body>
