@@ -126,7 +126,7 @@ function footerURL() {?>
 
     <div id="footer">
       <div class="container" style = "position: relative; top: 20px;">
-        <p class="muted credit"><a href="termsofservice.php">Terms of Service</a> | <a href="privacypolicy.php">Privacy Policy</a></p>
+        <p class="muted credit"><a href="tos.php">Terms of Service</a> | <a href="policy.php">Privacy Policy</a></p>
       </div>
       <?php }
 
@@ -136,7 +136,7 @@ function footer() {?>
 
     <div id="footer">
       <div class="container" style = "position: relative; top: 20px;">
-        <p class="muted credit"><a href="termsofservice.php">Terms of Service</a> | <a href="privacypolicy.php">Privacy Policy</a></p>
+        <p class="muted credit"><a href="tos.php">Terms of Service</a> | <a href="policy.php">Privacy Policy</a></p>
       </div>
 <?php }
 
