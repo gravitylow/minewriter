@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>MineWriter</title>
-	<?php headIncludes(); ?>
+	<?php headIncludesURL(); ?>
   </head>
   <body>
     <?php subFolderNavigationURL(); ?>
