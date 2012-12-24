@@ -28,6 +28,12 @@ if(is_null($id)) {
 mysql_close($link);
 
 function doDbWork($link) {
+		//Copy vars to avoid passing them?
+		$Author=$_GET["author"];
+		$Title=$_GET["title"];
+		$Type=$_GET["type"];
+		$ID=$_GET['id'];
+		$Ip = $_SERVER['REMOTE_ADDR'];
 		file_put_contents("logs/api_requests.txt", "\n" . date("Y-m-d H:i:s") . ": Recieved API request from $Ip : Querying '$Author - $Title'", FILE_APPEND | LOCK_EX);
 		mysql_select_db($dbName) or die("Could not select database"); 
 			if(is_null($id)) {
