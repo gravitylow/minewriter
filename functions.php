@@ -121,11 +121,23 @@ function headIncludesSubFolders() {?>
 <?php }
 
 function footerURL() {?>
-	<a href="http://www.minewriter.net/termsofservice.php">Terms of Service</a> | <a href="http://www.minewriter.net/privacypolicy.php">Privacy Policy</a>
-<?php }
+	   <div id="push"></div>
+    </div>
+
+    <div id="footer">
+      <div class="container" style = "position: relative; top: 20px;">
+        <p class="muted credit"><a href="termsofservice.php">Terms of Service</a> | <a href="privacypolicy.php">Privacy Policy</a></p>
+      </div>
+      <?php }
 
 function footer() {?>
-	<a href="termsofservice.php">Terms of Service</a> | <a href="privacypolicy.php">Privacy Policy</a>
+	   <div id="push"></div>
+    </div>
+
+    <div id="footer">
+      <div class="container" style = "position: relative; top: 20px;">
+        <p class="muted credit"><a href="termsofservice.php">Terms of Service</a> | <a href="privacypolicy.php">Privacy Policy</a></p>
+      </div>
 <?php }
 
 ?>

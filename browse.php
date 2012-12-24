@@ -15,6 +15,7 @@ function require_multi($files) {
   </head>
   <body>
     <?php navigation(); ?>
+    <div id = "wrap">
     <div class="container">
 
       <div class="content">
@@ -28,7 +29,7 @@ function require_multi($files) {
 	        	<button type="submit" class="btn">Search</button>
 	        	</form>
             </div>
-      </div>
+    </div><?php footer(); ?>
   </body>
 </html>
 <?php

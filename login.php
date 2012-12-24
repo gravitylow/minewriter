@@ -8,6 +8,7 @@
   </head>
   <body>
     <?php navigation(); ?>
+    <div id = "wrap">
     <div class="container">
       <div class="content">
         <div class="page-header">
@@ -20,5 +21,7 @@
         	</form>
       </div>
     </div>
+    <?php footer(); ?>
+
   </body>
 </html>
