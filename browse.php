@@ -1,5 +1,4 @@
-//Add this in later, when we don't need to use this page locally.
-<!--<?php require_multi("functions.php", "../private/config.php"); ?>-->
+<?php require_multi("functions.php", "../private/config.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,7 +24,7 @@
       </div>
   </body>
 </html>
-<?php/*
+<?php
 // DO a DB search and make it pretty :D
 function search() {
 	//STUFF
@@ -34,5 +33,5 @@ function require_multi($files) {
     $files = func_get_args();
     foreach($files as $file)
         require_once($file);
-}*/
+}
 ?>
