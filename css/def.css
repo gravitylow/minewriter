@@ -72,6 +72,8 @@ font-style:normal;
 	font-style:normal;
 	font-size: 14px;
 	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	padding: 60px;
 	box-shadow: none !important;
 	-moz-box-shadow: none !important;
