@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Contact</title>
   <?php headIncludes(); ?>
+  <script type = "text/javascript" src = "//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type = "text/javascript" src = "//cdnjs.cloudflare.com/ajax/libs/jquery.form/3.20/jquery.form.js"></script>
   <script type = "text/javascript">
   	$(document).ready(function() { 
