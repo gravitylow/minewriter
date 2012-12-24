@@ -18,9 +18,10 @@
         <p>Sorry, but that page could not be found on the server</p>
             </div>
            
-            	<?php footerURL(); ?>
+            	
        
       </div>
+      <?php footerURL(); ?>
   </body>
 </html>
 <?php 
