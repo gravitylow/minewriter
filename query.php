@@ -8,7 +8,6 @@ if (!$link) {
     die('Could not connect: ' . mysql_error());
 }
 echo 'Connected successfully';
-mysql_close($link);
 mysql_select_db($dbName) or die("Could not select database"); 
 
 $arr = array(); 
