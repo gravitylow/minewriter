@@ -22,7 +22,7 @@ if(is_null($id)) {
 	} else if(is_null($Type)) {
 		die("104");
 	}	
-	mysql_select_db($dbName) or die("103"); 
+		mysql_select_db($dbName) or die("103"); 
 		$rs = mysql_query("SELECT * FROM `Books` WHERE `Author`='$Author' AND `Title`='$Title' LIMIT 1"); 
 		$row = mysql_fetch_array($rs);
 	
@@ -41,14 +41,14 @@ if(is_null($id)) {
 				echo "Title: \"" .$row['Title']. "\"<br />";
 				echo "Content: \"".$row['Content']."\"<br />";
 			default:	
-				echo "104";		
+				die("104");	
 			break;
 		}
 } else {
 	if(is_null($Type)) {
 		die("104");
 	} else {		
-		mysql_select_db($dbName) or die("104"); 
+		mysql_select_db($dbName) or die("103"); 
 			if(is_null($id)) {
 				$rs = mysql_query("SELECT * FROM `Books` WHERE `Author`='$Author' AND `Title`='$Title' LIMIT 1"); 
 			} else {							
@@ -71,11 +71,10 @@ if(is_null($id)) {
 				echo "Title: \"" .$row['Title']. "\"<br />";
 				echo "Content: \"".$row['Content']."\"<br />";
 			default:	
-				echo "104";		
+				die("104");	
 			break;
 		}
 	}
 }
-file_put_contents("logs/api_requests.txt", "\n" . date("Y-m-d H:i:s") . ": Recieved API request from $Ip : Querying '$Author - $Title'", FILE_APPEND | LOCK_EX);
 mysql_close($link);
 ?> 
