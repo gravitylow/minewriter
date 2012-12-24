@@ -14,14 +14,53 @@
         <div class="page-header">
           <h1>Admins <small>Admin Control Panel</small></h1>
           </div class="admin"> 
-        	    <form class="form-inline">
-        	    <input type="text" class="input-small" placeholder="Username" name="user">
-        	    <input type="password" class="input-small" placeholder="Password" name="pass">
-        	    <label class="checkbox">
-        	    <input type="checkbox"> Remember me
-        	    </label>
-        	    <button type="submit" class="btn">Sign in</button>
-        	    </form>
+        	      <form class="form-horizontal">
+      <form class="form-horizontal">
+    <fieldset>
+      <div id="legend" class="">
+        <legend class="">Form Name</legend>
+      </div>
+    <div class="control-group">
+
+          <!-- Text input-->
+          <label class="control-label" for="input01">Username</label>
+          <div class="controls">
+            <input type="text" placeholder="Username" class="input-xlarge">
+            <p class="help-block">Your username</p>
+          </div>
+        </div>
+
+    <div class="control-group">
+
+          <!-- Text input-->
+          <label class="control-label" for="input01">Password</label>
+          <div class="controls">
+            <input type="text" placeholder="Password" class="input-xlarge">
+            <p class="help-block">Your password</p>
+          </div>
+        </div>
+
+    <div class="control-group">
+
+          <!-- Text input-->
+          <label class="control-label" for="input01">Key</label>
+          <div class="controls">
+            <input type="text" placeholder="Key" class="input-xlarge">
+            <p class="help-block">Your special key</p>
+          </div>
+        </div>
+
+    <div class="control-group">
+          <label class="control-label"></label>
+
+          <!-- Button -->
+          <div class="controls">
+            <button class="btn btn-default">Login</button>
+          </div>
+        </div>
+
+    </fieldset>
+  </form>
       </div>
       </div>
   </body>
