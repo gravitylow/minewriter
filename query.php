@@ -7,8 +7,12 @@ $Ip = $_SERVER['REMOTE_ADDR'];
 
 
 $link = mysql_connect($dbHost, $dbUser, $dbPass) or die('Connection to MySQL has failed!'); 
-if (empty($_GET)) {
-	die('Invalid request');
+if(isset($Author)) {
+	die("Query is missing the author");
+} else if(isset($Title)) {
+	die("Query is missing the title");
+} else if(isset($Type)) {
+	die("Query is missing the type");
 }
 	file_put_contents("logs/api_requests.txt", "\n" . date("Y-m-d H:i:s") . ": Recieved API request from $Ip : Querying '$Author - $Title'", FILE_APPEND | LOCK_EX);
 	mysql_select_db($dbName) or die("Could not select database"); 
@@ -29,8 +33,7 @@ switch($Type) {
 			echo "Author: \"" .$row['Author']."\"<br />";
 			echo "Title: \"" .$row['Title']. "\"<br />";
 			echo "Content: \"".$row['Content']."\"<br />";
-	default:
-			
+	default:			
 		break;
 }
 mysql_close($link);
