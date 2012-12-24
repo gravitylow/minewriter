@@ -1,7 +1,7 @@
 <?php 
 //Includes
 require("../private/config.php");
-
+die ($dbName);
 //Functions
 function connectDB() {
 	try {	
