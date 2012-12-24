@@ -46,7 +46,13 @@ if($author = null || $title == null || $license == null || $content == null) {?>
 
 
 
-mysql_query("INSERT INTO books VALUES(NULL, $author, $title, $content, $license,NOW(), $username, $ip,0)");
-
-
+$sql = "INSERT INTO books VALUES(NULL,:author,:title,:content,:license,NOW(),:username,:ip,0)";
+$stmt = $db->prepare($sql);
+$stmt->bindParam(':author', $author);
+$stmt->bindParam(':title', $title);
+$stmt->bindParam(':content', $content);
+$stmt->bindParam(':license', $license);
+$stmt->bindParam(':username', $username);
+$stmt->bindParam(':ip', $ip);
+$stmt->execute();
 ?>
