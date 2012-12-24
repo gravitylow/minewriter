@@ -6,7 +6,7 @@ if ($ip == "207.97.227.253" || $ip == "50.57.128.197" || $ip == "108.171.174.178
 $auth = true;
 }
 if (!$auth) {
-file_put_contents("gitLinkLog.txt", "\n" . date("Y-m-d H:i:s") . ": Unauthorised deploy attempt from $ip", FILE_APPEND | LOCK_EX);
+file_put_contents("logs/gitlog.txt", "\n" . date("Y-m-d H:i:s") . ": Unauthorised deploy attempt from $ip", FILE_APPEND | LOCK_EX);
 die("Not authorised.");
 }
 function recurse_copy($src,$dst) { 
