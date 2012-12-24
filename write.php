@@ -33,11 +33,11 @@
           </div>
           
             <div class = "well" style = "position: absolute; right: 0; top: 220px; width: 220px;">
-          	<input type = "text" placeholder = "Title" name = "title" />
+          	<input type = "text" placeholder = "Title" name = "title" required />
           	<br />
-          	<input type = "text" placeholder = "Author" name = "author"/>
+          	<input type = "text" placeholder = "Author" name = "author" required />
           	<br />
-          	<select size='8' name = "license">
+          	<select size='8' name = "license" required>
           		<optgroup label='Licensing'>
           			<option value = "reserved">All rights reserved</option>
           			<option value = "BY-NC-ND">CC-BY-NC-ND</option>
@@ -49,7 +49,7 @@
           			
           		</optgroup>
           	</select><br />
-          	<a class = "btn btn-success">
+          	<input type = "submit" class = "btn btn-success">
           		<i class = "icon-plus"></i> Add book
           	</a>
           </div>
@@ -57,7 +57,7 @@
           <div class = "well" style = "position: absolute; right: 0; top: 535px; width: 220px;">
           	<a href = "#" role="button" data-toggle="modal" class = "btn btn-primary centred" style = "width: 110px; margin-left: 37px;">Submission Info</a>
           	</div>
-       <textarea class = "book" id = "writing" name = "bookContent" style = ""></textarea>
+       <textarea class = "book" id = "writing" name = "bookContent" style = "" required></textarea>
        
           <br /> 
         </form>
