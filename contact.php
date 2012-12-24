@@ -27,7 +27,7 @@
     $('#contact').submit(function() { 
         // inside event callbacks 'this' is the DOM element so we first 
         // wrap it in a jQuery object and then invoke ajaxSubmit 
-        $("#hidden").html("load.gif");
+        $("#hidden").html("img/load.gif");
         $(this).ajaxSubmit(options); 
  
         // !!! Important !!! 
