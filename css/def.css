@@ -32,6 +32,7 @@ font-style:normal;
  
 .book { /*Book styles*/
 	font-family:"Minecraft Regular";
+	resize: none;
 	font-weight:normal;
 	font-style:normal;
 	font-size: 14px;
