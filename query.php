@@ -1,12 +1,13 @@
 <?php 
 //Includes
 require("../private/config.php");
-die ($dbUser);
+//die ($dbUser);
 //Functions
 function connectDB() {
 	try {	
 		return(new PDO("mysql:host=localhost;dbname=" . $dbName . ";charset=UTF-8", $dbUser, $dbPass));
 	} catch(PDOException $ex) {
+		die($dbUser);
 		return $ex;
 	}
 	
