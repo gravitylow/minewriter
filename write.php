@@ -37,7 +37,7 @@
           	<br />
           	<input type = "text" placeholder = "Author" />
           	<br />
-          	<select size='7'>
+          	<select size='8'>
           		<optgroup label='Licensing'>
           			<option value = "reserved">All rights reserved</option>
           			<option value = "BY-NC-ND">CC-BY-NC-ND</option>
