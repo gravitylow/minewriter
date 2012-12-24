@@ -1,10 +1,25 @@
-<?php include "../private/config.php";
+<?php 
+//Includes
+require("../private/config.php");
 
+//Functions
+function connectDB() {
+	try {	
+		return(new PDO("mysql:host=localhost;dbname=$dbName;charset=UTF-8", $dbUser, $dbPass));
+	} catch(PDOException $ex) {
+		return $ex;
+	}
+	
+}
+
+//User-supplied vars
 $Author=$_GET["author"];
 $Title=$_GET["title"];
 $Type=$_GET["type"];
 $ID=$_GET['id'];
 $Ip = $_SERVER['REMOTE_ADDR'];
+
+
 /*
 Error Codes:
 100 - Database connection failed
@@ -13,7 +28,10 @@ Error Codes:
 103 - Table selection failed
 104 - No / Invalid File Type
 */
-$link = mysql_connect($dbHost, $dbUser, $dbPass) or die('100'); 
+
+
+
+
 if(is_null($id)) {
 	if(is_null($Author)) {
 		die("101");
@@ -22,10 +40,16 @@ if(is_null($id)) {
 	} else if(is_null($Type)) {
 		die("104");
 	}	
-		mysql_select_db($dbName) or die("103"); 
-		$rs = mysql_query("SELECT * FROM `Books` WHERE `Author`='$Author' AND `Title`='$Title' LIMIT 1"); 
-		$row = mysql_fetch_array($rs);
-	
+		$db = connectDB();
+		if ($db instanceof PDOException) {
+			die ($db->errorInfo());
+		}
+		$query = "SELECT * FROM `Books` WHERE `Author` = :author AND `Title` = :title LIMIT 1";
+		$stmt = $db->prepare($query);
+		$stmt->bindParam(':author', $Author);
+		$stmt->bindParam(':title', $Title);
+		$stmt->execute();
+		$row = $stmt->fetch();
 		switch($Type) {
 			case "JSON":
 				$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'Content' => $row['Content']);
@@ -48,13 +72,22 @@ if(is_null($id)) {
 	if(is_null($Type)) {
 		die("104");
 	} else {		
-		mysql_select_db($dbName) or die("103"); 
-			if(is_null($id)) {
-				$rs = mysql_query("SELECT * FROM `Books` WHERE `Author`='$Author' AND `Title`='$Title' LIMIT 1"); 
-			} else {							
-				$rs = mysql_query("SELECT * FROM `Books` WHERE `ID`='$ID'"); 
-			}
-		$row = mysql_fetch_array($rs);
+		$db = connectDB();
+		if ($db instanceof PDOException) {
+			die ($db->errorInfo());
+		}
+		if(is_null($id)) {
+			$sql = "SELECT * FROM `Books` WHERE `Author` = :author AND `Title` = :title LIMIT 1"; 
+			$stmt = $db->prepare($sql);
+			$stmt->bindParam(':author', $Author);
+			$stmt->bindParam(':title', $Title);
+		} else {							
+			$sql = "SELECT * FROM `Books` WHERE `ID` = :id LIMIT 1"; 
+			$stmt = $db->prepare($sql);
+			$stmt->bindParam(':id', $ID);
+		}
+		$stmt->execute();
+		$row = $stmt->fetch();
 	
 		switch($Type) {
 			case "JSON":
@@ -76,5 +109,4 @@ if(is_null($id)) {
 		}
 	}
 }
-mysql_close($link);
 ?> 
