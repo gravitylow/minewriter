@@ -59,7 +59,7 @@ function hasHtml($str){
 
 function contactMail() {
 	$subject = "MineWriter Contact Results";
-	$to = "team@minewriter.net";
+	$to = "webmaster@aeroplanearea.us";
 
 	$name = $_POST['name'];
 	$email = $_POST['email'];
@@ -93,4 +93,10 @@ function contactMail() {
 		$subject,
 		$message);
 }
+
+?>
+<script type="text/javascript">
+	window.alert("Success!");
+</script>
+<?php
 ?>
