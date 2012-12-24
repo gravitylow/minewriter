@@ -86,12 +86,7 @@ function contactMail() {
 		return;
 	}
 
-	$message = <<<EOT
-	Name: $name
-	Email: $email
-	
-	Content: $content
-	EOT;
+	$message = "Name: " . $name . "\nEmail: " . $email . "\nContent: " . $content
 	mail($to,
 		$subject,
 		$message);
