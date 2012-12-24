@@ -17,6 +17,7 @@
 		</div>		   
 	  		  Terms here
 	  </div>
+	 </div>
 	  	<?php footer(); ?>
 
   </body>

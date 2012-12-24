@@ -41,6 +41,7 @@
 <b>Changes to our Privacy Policy</b>
 <p>We may change this policy at any time with or without notice.</p>
 	  </div>
+	  </div>
 	  	<?php footer(); ?>
 
   </body>
