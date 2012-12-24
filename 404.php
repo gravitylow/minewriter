@@ -1,4 +1,4 @@
-<?php require("public_html/functions.php"); ?>
+<?php req() ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,3 +19,9 @@
       </div>
   </body>
 </html>
+<?php 
+function req() {
+	$root = realpath($_SERVER["DOCUMENT_ROOT"]);
+	include "$root/public_html/functions.php";
+}
+?>
