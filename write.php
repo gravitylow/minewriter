@@ -49,7 +49,7 @@
           			
           		</optgroup>
           	</select><br />
-          	<input type = "submit" class = "btn btn-success">
+          	<button type = "submit" class = "btn btn-success">
           		<i class = "icon-plus"></i> Add book
           	</a>
           </div>
