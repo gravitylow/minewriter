@@ -25,7 +25,7 @@
       </div>
   </body>
 </html>
-<?php
+<?php/*
 // DO a DB search and make it pretty :D
 function search() {
 	//STUFF
@@ -34,5 +34,5 @@ function require_multi($files) {
     $files = func_get_args();
     foreach($files as $file)
         require_once($file);
-}
+}*/
 ?>
