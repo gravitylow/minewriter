@@ -17,25 +17,18 @@ if (empty($_GET)) {
 	
 switch($Type) {
 	case "JSON":
-		json();
+			$rows = array();
+			while($r = mysql_fetch_assoc($rs)) {
+				$rows[] = $r;
+			}
+			echo json_encode($rows);		
 		break;
 	case "TEXT":
-		text();
+			$row = mysql_fetch_array($rs);
+			echo $row['Content'];
 		break;
 	default:
 		break;
 }
-function json() {
-	$rows = array();
-	while($r = mysql_fetch_assoc($rs)) {
-		$rows[] = $r;
-	}
-	print json_encode($rows);
-	mysql_close($link);
-}
-
-function text() {
-	$row = mysql_fetch_array($rs);
-	echo $row['Content'];
-}
+mysql_close($link);
 ?> 
