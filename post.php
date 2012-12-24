@@ -19,9 +19,6 @@
         	We need to use Sessions for page limiting
         	We need to open the DB connection with DEFINITE sanitation / formatting
       </div>
-      </div><div class="footer">
-      	<?php footer(); ?>
-      </div>
     </div>
   </body>
 </html>

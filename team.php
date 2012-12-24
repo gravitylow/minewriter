@@ -29,9 +29,6 @@
               	</ul>              
                </div>
             </div>
-            </div><div class="footer">
-      	<?php footer(); ?>
-      </div>
       </div>
   </body>
 </html>

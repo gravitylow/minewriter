@@ -19,9 +19,7 @@
             </div>
         </form>
       </div>
-</div><div class="footer">
-      	<?php footer(); ?>
-      </div>
+
   </body>
 </html>
 <script>

@@ -84,10 +84,5 @@ function headIncludesSubFolders() {?>
 <link href="//netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome-more.css" rel="stylesheet">
 <link href="../css/def.css" rel="stylesheet">
 <?php }
-function footer() {?>
-	<a href="termsofservice.php">Terms of Service</a> | <a href="privacypolicy.php">Privacy Policy</a>
-<?php }
-
-
 
 ?>
