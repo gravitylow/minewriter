@@ -18,9 +18,9 @@
               	<h2 class="big">Meet the MineWriter Developers</h2>   
               	<h4>Team members</h3>
               	<ul class = "team">
-              	<li class="big team"><a href="https://github.com/milkywayz"><img src = "http://forums.bukkit.org/data/avatars/s/90595/90595764.jpg?1351914681" /></a> <a href="https://github.com/milkywayz">Milkywayz</a> - Project lead</li>
-              	<li class="big team"><a href="https://github.com/lol768"><img src = "http://forums.bukkit.org/data/avatars/s/90686/90686461.jpg?1354215989" /></a> <a href="https://github.com/lol768">Lol768</a> - Project Developer </li>
-              	<li class="big team"><a href="https://github.com/gomeow"><img src = "http://forums.bukkit.org/data/avatars/s/90728/90728305.jpg?1354849565" /></a> <a href="https://github.com/gomeow">Gomeow</a> - Project Contributor</li>
+              	<li class="big team"><a href="https://github.com/milkywayz"><img src = "http://forums.bukkit.org/data/avatars/s/90595/90595764.jpg?1351914681" /></a> <a href="https://github.com/milkywayz">Milkywayz</a> - Project lead | Plugin Developer</li>
+              	<li class="big team"><a href="https://github.com/lol768"><img src = "http://forums.bukkit.org/data/avatars/s/90686/90686461.jpg?1354215989" /></a> <a href="https://github.com/lol768">Lol768</a> - Lead Web Developer </li>
+              	<li class="big team"><a href="https://github.com/gomeow"><img src = "http://forums.bukkit.org/data/avatars/s/90728/90728305.jpg?1354849565" /></a> <a href="https://github.com/gomeow">Gomeow</a> - Web Developer</li>
               	</ul>
               	<h4>Contributors</h3>
               	<ul class = "team">
