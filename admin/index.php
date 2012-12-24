@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>Admin</title>
-	<?php headIncludes(); ?>
+	<?php headIncludesSubFolders(); ?>
   </head>
   <body>
     <?php navigation(); ?>
