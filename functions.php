@@ -86,7 +86,7 @@ function contactMail() {
 		return;
 	}
 
-	$message = "Name: " . $name . "\nEmail: " . $email . "\nContent: " . $content
+	$message = "Name: " . $name . "\nEmail: " . $email . "\nContent: " . $content;
 	mail($to,
 		$subject,
 		$message);
