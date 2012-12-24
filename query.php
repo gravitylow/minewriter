@@ -42,7 +42,7 @@ if(is_null($id)) {
 	}	
 		$db = connectDB();
 		if ($db instanceof PDOException) {
-			die ($db->errorInfo());
+			die ($db->getMessage());
 		}
 		$query = "SELECT * FROM `Books` WHERE `Author` = :author AND `Title` = :title LIMIT 1";
 		$stmt = $db->prepare($query);
@@ -74,7 +74,7 @@ if(is_null($id)) {
 	} else {		
 		$db = connectDB();
 		if ($db instanceof PDOException) {
-			die ($db->errorInfo());
+			die ($db->getMessage());
 		}
 		if(is_null($id)) {
 			$sql = "SELECT * FROM `Books` WHERE `Author` = :author AND `Title` = :title LIMIT 1"; 
