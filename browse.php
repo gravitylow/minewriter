@@ -15,8 +15,9 @@
           <h1>Browse <small>Look at other MineWriter books!</small></h1>
         </div> 
         	<form method="post" class="form-search" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-	        	<input type="text" name="author" class="input-medium search-query" title="Author">
-	        	<input type="text" name="title" class="input-medium search-query" title="Title">
+	        	<input type="text" name="author" class="input-medium search-query" value="Author">
+	        	<input type="text" name="title" class="input-medium search-query" value="Title">
+	        	<input type="text" name="date" class="input-medium search-query" value="Date">
 	        	<button type="submit" class="btn">Search</button>
 	        	</form>
             </div>
@@ -24,7 +25,10 @@
   </body>
 </html>
 <?php
-
+// DO a DB search and make it pretty :D
+function search() {
+	//STUFF
+}
 function require_multi($files) {
     $files = func_get_args();
     foreach($files as $file)
