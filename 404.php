@@ -22,6 +22,6 @@
 <?php 
 function req() {
 	$root = realpath($_SERVER["DOCUMENT_ROOT"]);
-	include "$root/public_html/functions.php";
+	include "$root/functions.php";
 }
 ?>
