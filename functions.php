@@ -55,12 +55,12 @@ $parent = basename($_SERVER['PHP_SELF']);
           </a>
           <a class="brand" href="../index.php"><img src = "../img/books.gif" class = "logo" /> MineWriter</a>
           <ul class="nav">
-            <li <?php if ($parent == "index.php") {?>class="active"<?php } ?>><a href="../index.php">Home</a></li>
-            <li <?php if ($parent == "write.php") {?>class="active"<?php } ?>><a href="../write.php">Write</a></li>
-            <li <?php if ($parent == "browse.php") {?>class="active"<?php } ?>><a href="../browse.php">Browse</a></li>
-            <li <?php if ($parent == "about.php") {?>class="active"<?php } ?>><a href="../about.php">About</a></li>
-            <li <?php if ($parent == "contact.php") {?>class="active"<?php } ?>><a href="../contact.php">Contact</a></li>
-            <li <?php if ($parent == "team.php") {?>class="active"<?php } ?>><a href="../team.php">Team</a></li>
+            <li><a href="../index.php">Home</a></li>
+            <li><a href="../write.php">Write</a></li>
+            <li><a href="../browse.php">Browse</a></li>
+            <li><a href="../about.php">About</a></li>
+            <li><a href="../contact.php">Contact</a></li>
+            <li><a href="../team.php">Team</a></li>
           </ul>
           <ul class = "nav pull-right">
           	<li <?php if ($parent == "login.php" || $parent == "signup.php") {?>class="active"<?php } ?>><?php echo (loginLink()); ?></li>
