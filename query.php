@@ -16,18 +16,18 @@ if(is_null($id)) {
 	} else if(is_null($Type)) {
 		die("Query is missing the type");
 	}	
-	doDbWork(, null);
+	doDbWork();
 } else {
 	//ID is present, check for file type
 	if(is_null($Type)) {
 		die("Query is missing the type");
 	} else {
-		doDbWork(, $id);
+		doDbWork();
 	}
 }
 mysql_close($link);
 
-function doDbWork($link, $id) {
+function doDbWork($link) {
 		file_put_contents("logs/api_requests.txt", "\n" . date("Y-m-d H:i:s") . ": Recieved API request from $Ip : Querying '$Author - $Title'", FILE_APPEND | LOCK_EX);
 		mysql_select_db($dbName) or die("Could not select database"); 
 			if(is_null($id)) {
