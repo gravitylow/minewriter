@@ -7,9 +7,9 @@ function isLoggedIn() {
 
 function loginLink() {
 	if (isLoggedIn()) {
-		return "<a href 'login.php'>Login</a>";
+		return "<a href='login.php'>Panel</a>";
 	} else {
-		return "<a href 'signup.php'>Register</a>";
+		return "<a href='signup.php'>Register/Login</a>";
 	}
 }
 
