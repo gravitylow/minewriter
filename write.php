@@ -54,7 +54,7 @@
           	</a>
           </div>
           
-          <div class = "well" style = "position: absolute; right: 0; top: 538px; width: 220px;">
+          <div class = "well" style = "position: absolute; right: 0; top: 535px; width: 220px;">
           	<a href = "#" class = "btn btn-primary">Submission Info</a>
           	</div>
        <textarea class = "book" id = "writing" style = ""></textarea>
