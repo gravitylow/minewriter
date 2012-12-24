@@ -16,8 +16,7 @@
         	<h2 class="big">Post</h2>     
         	<form action="someAction" method="POST">
         		Login/Register<br /><br />
-        		Are you already a member? <input type="checkbox" value="checked"/>
-        		
+        		Are you already a member? <input type="checkbox" value="checked"/>      		
         	</form>
       </div>
     </div>
