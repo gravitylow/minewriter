@@ -45,7 +45,7 @@ $parent = basename($_SERVER['PHP_SELF']);
             <li <?php if ($parent == "devs.php") {?>class="active"<?php } ?>><a href="devs.php">Developers</a></li>
           </ul>
           <ul class = "nav pull-right">
-          	<li <?php if ($parent == "login.php" || $parent == "signup.php") {?>class="active"<?php } ?>><?php echo (loginLink()); ?></li>
+          	<li <?php if ($parent == "login.php") {?>class="active"<?php } ?>><?php echo (loginLink()); ?></li>
           </ul>
         </div>
       </div>
@@ -74,7 +74,7 @@ $parent = basename($_SERVER['PHP_SELF']);
             <li><a href="devs.php">Developers</a></li>
           </ul>
           <ul class = "nav pull-right">
-          	<li <?php if ($parent == "login.php" || $parent == "signup.php") {?>class="active"<?php } ?>><?php echo (loginLinkSubFolder()); ?></li>
+          	<li <?php if ($parent == "login.php") {?>class="active"<?php } ?>><?php echo (loginLinkSubFolder()); ?></li>
           </ul>
         </div>
       </div>
@@ -109,7 +109,7 @@ $parent = basename($_SERVER['PHP_SELF']);
             <li><a href="http://www.minewriter.net/devs.php">Developers</a></li>
           </ul>
           <ul class = "nav pull-right">
-          	<li <?php if ($parent == "login.php" || $parent == "signup.php") {?>class="active"<?php } ?>><?php echo (loginLink()); ?></li>
+          	<li <?php if ($parent == "login.php") {?>class="active"<?php } ?>><?php echo (loginLink()); ?></li>
           </ul>
         </div>
       </div>
