@@ -23,7 +23,7 @@
 		    <div class="control-group">
 		      <label class="control-label" for="username">Username</label>
 		      <div class="controls">
-		        <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
+		        <input type="text" id="username" name="username" placeholder="Username" class="input-xlarge">
 		        <!--TODO: Add link for account recovery-->
 		        <p class="help-block">Forget your username?</p>
 		      </div>
@@ -34,7 +34,7 @@
 		      <!-- Password-->
 		      <label class="control-label" for="password">Password</label>
 		      <div class="controls">
-		        <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+		        <input type="password" id="password" name="password" placeholder="Password" class="input-xlarge">
 		        <!--TODO: Add link for account recovery-->
 		        <p class="help-block">Forget your password?</p>
 		      </div>
@@ -64,7 +64,7 @@
 		    <div class="control-group">
 		      <label class="control-label" for="email">E-mail</label>
 		      <div class="controls">
-		        <input type="text" id="email" name="email" placeholder="" class="input-xlarge">
+		        <input type="text" id="email" name="email" placeholder="Email" class="input-xlarge">
 		        <p class="help-block">Please provide your E-mail (Must be a valid E-mail)</p>
 		      </div>
 		    </div>
@@ -72,7 +72,7 @@
 		    <div class="control-group">
 		      <label class="control-label" for="password">Password</label>
 		      <div class="controls">
-		        <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+		        <input type="password" id="password" name="password" placeholder="Password" class="input-xlarge">
 		        <p class="help-block">Password should be at least 6 characters</p>
 		      </div>
 		    </div>
@@ -80,7 +80,7 @@
 		    <div class="control-group">
 		      <label class="control-label"  for="password_confirm">Password (Confirm)</label>
 		      <div class="controls">
-		        <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="input-xlarge">
+		        <input type="password" id="password_confirm" name="password_confirm" placeholder="Confirm Password" class="input-xlarge">
 		        <p class="help-block">Please confirm your password</p>
 		      </div>
 		    </div>
