@@ -65,7 +65,7 @@
 		      <label class="control-label" for="email">E-mail</label>
 		      <div class="controls">
 		        <input type="text" id="email" name="email" placeholder="" class="input-xlarge">
-		        <p class="help-block">Please provide your E-mail</p>
+		        <p class="help-block">Please provide your E-mail (Must be a valid E-mail)</p>
 		      </div>
 		    </div>
 		 
@@ -81,7 +81,7 @@
 		      <label class="control-label"  for="password_confirm">Password (Confirm)</label>
 		      <div class="controls">
 		        <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="input-xlarge">
-		        <p class="help-block">Please confirm password</p>
+		        <p class="help-block">Please confirm your password</p>
 		      </div>
 		    </div>
 		 
