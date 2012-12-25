@@ -56,7 +56,7 @@
 		    <div class="control-group">
 		      <label class="control-label" for="username">Username</label>
 		      <div class="controls">
-		        <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
+		        <input type="text" id="username" name="username" placeholder="Username" class="input-xlarge">
 		        <p class="help-block">Username can contain any letters or numbers, without spaces</p>
 		      </div>
 		    </div>
