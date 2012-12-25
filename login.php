@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Login/Register</title>
+    <title>MineWriter Login</title>
   <?php headIncludes(); ?>
   </head>
   <body>
@@ -12,13 +12,91 @@
     <div class="container">
       <div class="content">
         <div class="page-header">
-          <h1>Login <small>Login or Register here!</small></h1>
+          <h1>Login <small>Access your MineWriter panel</small></h1>
         </div>
-        	<h2 class="big">Post</h2>     
-        	<form action="someAction" method="POST">
-        		Login/Register<br /><br />
-        		Are you already a member? <input type="checkbox" value="checked"/>      		
-        	</form>
+        	<!--Post info to some php on the page to handle registration-->
+        	<form class="form-horizontal" action="register.php" method="POST">
+		  <fieldset>
+		    <div id="legend">
+		      <legend class="">Login</legend>
+		    </div>
+		    <div class="control-group">
+		      <!-- Username -->
+		      <label class="control-label" for="username">Username</label>
+		      <div class="controls">
+		        <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
+		        <p class="help-block">Username can contain any letters or numbers, without spaces</p>
+		      </div>
+		    </div>
+		 
+		 
+		    <div class="control-group">
+		      <!-- Password-->
+		      <label class="control-label" for="password">Password</label>
+		      <div class="controls">
+		        <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+		        <p class="help-block">Password should be at least 4 characters</p>
+		      </div>
+		    </div>
+		 
+		    <div class="control-group">
+		      <!-- Button -->
+		      <div class="controls">
+		        <button class="btn btn-success">Login</button>
+		      </div>
+		    </div>
+		  </fieldset>
+		</form>		
+		<form class="form-horizontal" action="register.php" method="POST">
+		  <fieldset>
+		    <div id="legend">
+		      <legend class="">Register</legend>
+		    </div>
+		    <div class="control-group">
+		      <!-- Username -->
+		      <label class="control-label" for="username">Username</label>
+		      <div class="controls">
+		        <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
+		        <p class="help-block">Username can contain any letters or numbers, without spaces</p>
+		      </div>
+		    </div>
+		 
+		    <div class="control-group">
+		      <!-- E-mail -->
+		      <label class="control-label" for="email">E-mail</label>
+		      <div class="controls">
+		        <input type="text" id="email" name="email" placeholder="" class="input-xlarge">
+		        <p class="help-block">Please provide your E-mail</p>
+		      </div>
+		    </div>
+		 
+		    <div class="control-group">
+		      <!-- Password-->
+		      <label class="control-label" for="password">Password</label>
+		      <div class="controls">
+		        <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+		        <p class="help-block">Password should be at least 4 characters</p>
+		      </div>
+		    </div>
+		 
+		    <div class="control-group">
+		      <!-- Password -->
+		      <label class="control-label"  for="password_confirm">Password (Confirm)</label>
+		      <div class="controls">
+		        <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="input-xlarge">
+		        <p class="help-block">Please confirm password</p>
+		      </div>
+		    </div>
+		 
+		    <div class="control-group">
+		      <!-- Button -->
+		      <div class="controls">
+		        <button class="btn btn-success">Register</button>
+		      </div>
+		    </div>
+		  </fieldset>
+		</form>
+
       </div>
     </div>
     <?php footer(); ?>
