@@ -15,7 +15,7 @@
           <h1>Login <small>Access your MineWriter panel</small></h1>
         </div>
         	<!--Post info to some php on the page to handle registration-->
-        	<form class="form-horizontal" action="register.php" method="POST">
+        	<form class="form-horizontal" action="loginScript.php" method="POST">
 		  <fieldset>
 		    <div id="legend">
 		      <legend class="">Login</legend>
@@ -48,7 +48,7 @@
 		    </div>
 		  </fieldset>
 		</form>		
-		<form class="form-horizontal" action="register.php" method="POST">
+		<form class="form-horizontal" action="registerScript.php" method="POST">
 		  <fieldset>
 		    <div id="legend">
 		      <legend class="">Register</legend>
