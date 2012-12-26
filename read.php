@@ -34,10 +34,10 @@ $row = $stmt->fetch();
 		if ($row['ID'] == null) {
 			die("105");
 		}
-$title = $row['title'];
-$author = $row['author'];
-$content = $row['content'];
-$date = $row['created'];
+$title = $row['Title'];
+$author = $row['Author'];
+$content = $row['Content'];
+$date = $row['Created'];
 
 ?> 
 
