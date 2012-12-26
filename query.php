@@ -67,9 +67,9 @@ if(is_null($id)) {
 				echo $row['Content'];
 			break;
 			case "YAML":
-				echo "Author: \"" . $ecaper.escapeWithDoubleQuotes($row['Author']) ."\"<br />";
-				echo "Title: \"" . $ecaper.escapeWithDoubleQuotes($row['Title']) . "\"<br />";
-				echo "Content: \"". $ecaper.escapeWithDoubleQuotes($row['Content']) ."\"<br />";
+				echo "Author: \"" . $escaper.escapeWithDoubleQuotes($row['Author']) ."\"<br />";
+				echo "Title: \"" . $escaper.escapeWithDoubleQuotes($row['Title']) . "\"<br />";
+				echo "Content: \"". $escaper.escapeWithDoubleQuotes($row['Content']) ."\"<br />";
 				break;
 			default:	
 				die("104");	
@@ -109,9 +109,9 @@ if(is_null($id)) {
 				echo $row['Content'];
 			break;
 			case "YAML":
-				echo "Author: \"" . $ecaper.escapeWithDoubleQuotes($row['Author']) ."\"<br />";
-				echo "Title: \"" . $ecaper.escapeWithDoubleQuotes($row['Title']) . "\"<br />";
-				echo "Content: \"". $ecaper.escapeWithDoubleQuotes($row['Content']) ."\"<br />";
+				echo "Author: \"" . $escaper.escapeWithDoubleQuotes($row['Author']) ."\"<br />";
+				echo "Title: \"" . $escaper.escapeWithDoubleQuotes($row['Title']) . "\"<br />";
+				echo "Content: \"". $escaper.escapeWithDoubleQuotes($row['Content']) ."\"<br />";
 				break;
 			default:	
 				die("104");	
