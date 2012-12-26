@@ -1,7 +1,6 @@
 <?php 
 //Includes
 require("../private/config.php");
-require("yamlTools.php");
 //die ($dbUser);
 //Functions
 function connectDB($user, $pass, $db) {
@@ -64,9 +63,8 @@ if(is_null($id)) {
 				echo $row['Content'];
 			break;
 			case "YAML":
-				echo "Author: " . escapeWithDoubleQuotes($row['Author']) ."\n";
-				echo "Title: " . escapeWithDoubleQuotes($row['Title']) . "\n";
-				echo "Content: ". escapeWithDoubleQuotes($row['Content']) ."\n";
+				$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'Content' => $row['Content']);
+				echo yaml_emit($array);
 				break;
 			default:	
 				die("104");	
@@ -106,9 +104,8 @@ if(is_null($id)) {
 				echo $row['Content'];
 			break;
 			case "YAML":
-				echo "Author: " . escapeWithDoubleQuotes($row['Author']) ."\n";
-				echo "Title: " . escapeWithDoubleQuotes($row['Title']) . "\n";
-				echo "Content: ". escapeWithDoubleQuotes($row['Content']) ."\n";
+				$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'Content' => $row['Content']);
+				echo yaml_emit($array);
 				break;
 			default:	
 				die("104");	
