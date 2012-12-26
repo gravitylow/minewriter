@@ -37,8 +37,8 @@ $row = $stmt->fetch();
 $title = $row['Title'];
 $author = $row['Author'];
 $content = $row['Content'];
-$date = $row[4];
-$license = $row[5];
+$date = $row[5];
+$license = $row[4];
 ?> 
 
 <!DOCTYPE html>
