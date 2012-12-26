@@ -49,9 +49,9 @@ $db = connectDB($dbUser, $dbPass, $dbName);
 if ($db instanceof PDOException) {
 	die ($db->getMessage());
 }
-$title = preg_replace('/[^a-zA-Z0-9_ \\\.\(\)-\]/s', '', $title);
+$title = preg_replace('/[^A-Za-z0-9 ]/', '', $title);
 $author = preg_replace('/#[^a-z0-9_.-]#i/', '', str_replace(".", "", $author));
-$content = preg_replace("\r\n", "\n", $content);
+$content = str_replace("\r\n", "\n", $content);
 $sql = "INSERT INTO Books VALUES(NULL,:author,:title,:content,:license,NOW(),:username,:ip,0)";
 $stmt = $db->prepare($sql);
 $stmt->bindParam(':author', $author);
