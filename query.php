@@ -6,7 +6,7 @@ include("yaml_lib/Dumper.php");
 include("yaml_lib/Inline.php");
 include("yaml_lib/Escaper.php");
 use Symfony\Component\Yaml\Yaml;
-header("Content-type: text/html; charset=utf-8");
+header("Content-type: text/plain; charset=utf-8");
 //Functions
 function connectDB($user, $pass, $db) {
 	try {	
