@@ -1,6 +1,6 @@
 <?php require("functions.php"); ?>
 <?php 
-
+require("../private/config.php");
 //Functions
 function connectDB($user, $pass, $db) {
 	try {	
