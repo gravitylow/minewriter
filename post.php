@@ -67,4 +67,6 @@ while($showtablerow = $stmt->fetch())
 {
 	echo $showtablerow[0]."<br />";
 }*/
+$id = $db->lastInsertId();
+header("Location: http://minewriter.net/query.php?id=" . $id . "&type=JSON")
 ?>
