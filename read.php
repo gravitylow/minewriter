@@ -70,7 +70,7 @@ $date = $row['created'];
           </div>
           
          
-       <textarea class = "book" id = "writing" name = "bookContent" style = "" readonly><?php echo ($content);</textarea>
+       <textarea class = "book" id = "writing" name = "bookContent" style = "" readonly><?php echo ($content); ?></textarea>
        
           <br /> 
         </div>
