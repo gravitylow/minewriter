@@ -30,7 +30,7 @@ $escaped = array('\\"', '\\\\', '\\"', "\\0", "\\x01", "\\x02", "\\x03", "\\x04"
  * @return Boolean True if the value would require double quotes.
  */
  function requiresDoubleQuoting($value) {
-	return preg_match('/' . self::REGEX_CHARACTER_TO_ESCAPE . '/u', $value);
+	return preg_match('/' . REGEX_CHARACTER_TO_ESCAPE . '/u', $value);
 }
 
 /**
@@ -41,7 +41,7 @@ $escaped = array('\\"', '\\\\', '\\"', "\\0", "\\x01", "\\x02", "\\x03", "\\x04"
  * @return string The quoted, escaped string
  */
  function escapeWithDoubleQuotes($value) {
-	return sprintf('"%s"', str_replace(self::$escapees, self::$escaped, $value));
+	return sprintf('"%s"', str_replace($escapees, $escaped, $value));
 }
 
 /**
