@@ -66,9 +66,9 @@ if(is_null($id)) {
 				echo $row['Content'];
 			break;
 			case "YAML":
-				echo "Author: \"" .$row['Author']."\"<br />";
-				echo "Title: \"" .$row['Title']. "\"<br />";
-				echo "Content: \"".$row['Content']."\"<br />";
+				echo "Author: \"" . addslashes($row['Author']) ."\"<br />";
+				echo "Title: \"" . addslashes($row['Title']) . "\"<br />";
+				echo "Content: \"". addslashes($row['Content']) ."\"<br />";
 				break;
 			default:	
 				die("104");	
@@ -108,9 +108,9 @@ if(is_null($id)) {
 				echo $row['Content'];
 			break;
 			case "YAML":
-				echo "Author: \"" .$row['Author']."\"<br />";
-				echo "Title: \"" .$row['Title']. "\"<br />";
-				echo "Content: \"".$row['Content']."\"<br />";
+				echo "Author: \"" . addslashes($row['Author']) ."\"<br />";
+				echo "Title: \"" . addslashes($row['Title']) . "\"<br />";
+				echo "Content: \"". addslashes($row['Content']) ."\"<br />";
 				break;
 			default:	
 				die("104");	
