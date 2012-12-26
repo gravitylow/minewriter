@@ -58,5 +58,5 @@ $stmt->bindParam(':license', $license);
 $stmt->bindParam(':username', $username);
 $stmt->bindParam(':ip', $ip);
 $stmt->execute();
-die ($stmt->errorInfo());
+var_dump ($stmt->errorInfo());
 ?>
