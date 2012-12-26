@@ -22,7 +22,10 @@ Error Codes:
 104 - No / Invalid File Type
 105 - No results found
 */
-							
+$db = connectDB($dbUser, $dbPass, $dbName);
+if ($db instanceof PDOException) {
+	die ($db->getMessage());
+}				
 $sql = "SELECT * FROM `Books` WHERE `ID` = :id LIMIT 1"; 
 $stmt = $db->prepare($sql);
 $stmt->bindParam(':id', $ID);
