@@ -68,7 +68,7 @@ $license = $row[4];
           	<strong>License: <?php echo $license; ?></strong>
           	<br />
           	<strong>Created: <?php echo $date; ?></strong>
-
+	<br /><br /><a href = "#" class = "btn btn-danger"><i class = "icon-flag"></i> Report content</a>
           
           </div>
           
