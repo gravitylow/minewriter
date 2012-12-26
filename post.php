@@ -49,7 +49,7 @@ $db = connectDB($dbUser, $dbPass, $dbName);
 if ($db instanceof PDOException) {
 	die ($db->getMessage());
 }
-$sql = "INSERT INTO books VALUES(NULL,:author,:title,:content,:license,NOW(),:username,:ip,0)";
+$sql = "INSERT INTO Books VALUES(NULL,:author,:title,:content,:license,NOW(),:username,:ip,0)";
 $stmt = $db->prepare($sql);
 $stmt->bindParam(':author', $author);
 $stmt->bindParam(':title', $title);
@@ -60,11 +60,11 @@ $stmt->bindParam(':ip', $ip);
 $stmt->execute();
 var_dump ($stmt->errorInfo());
 
-$sql = "SHOW TABLES FROM $dbName";
+/*$sql = "SHOW TABLES FROM $dbName";
 $stmt = $db->prepare($sql);
 $stmt->execute();
 while($showtablerow = $stmt->fetch())
 {
 	echo $showtablerow[0]."<br />";
-}
+}*/
 ?>
