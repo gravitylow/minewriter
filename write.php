@@ -39,11 +39,11 @@
           	<br />
           	<select size='8' name = "license" required>
           		<optgroup label='Licensing'>
-          			<option value = "reserved">All rights reserved</option>
-          			<option value = "BY-NC-ND">CC-BY-NC-ND</option>
-          			<option value = "BY-NC-SA">CC-BY-NC-SA</option>
-          			<option value = "BY-NC">CC-BY-NC</option>
-          			<option value = "BY-SA">CC-BY-SA</option>
+          			<option vlue = "reserved">All rights reserved</option>
+          			<option vlue = "BY-NC-ND">CC-BY-NC-ND</option>
+          			<option vlue = "BY-NC-SA">CC-BY-NC-SA</option>
+          			<option vlue = "BY-NC">CC-BY-NC</option>
+          			<option vlue = "BY-SA">CC-BY-SA</option>
           			<option vlaue = "BY">CC-BY</option>
           			<option vlaue = "pd">Public domain</option>
           			
