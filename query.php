@@ -66,6 +66,9 @@ if(is_null($id)) {
 				$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'Content' => $row['Content']);
 				echo yaml_emit($array);
 				break;
+			case "dump":
+				$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'Content' => $row['Content']);
+				var_dump($array);
 			default:	
 				die("104");	
 			break;
@@ -107,6 +110,9 @@ if(is_null($id)) {
 				$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'Content' => $row['Content']);
 				echo yaml_emit($array);
 				break;
+			case "dump":
+				$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'Content' => $row['Content']);
+				var_dump($array);
 			default:	
 				die("104");	
 			break;
