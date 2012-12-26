@@ -4,7 +4,7 @@ require("../private/config.php");
 
 function connectDB($user, $pass, $db) {
 	try {	
-		return(new PDO("mysql:host=localhost;dbname=" . $db . ";charset=UTF-8", $user, $pass));
+		return(new PDO("mysql:host=localhost;dbname=" . $db . ";charset=utf8", $user, $pass));
 	} catch(PDOException $ex) {
 		die($user);
 		return $ex;
