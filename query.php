@@ -59,14 +59,14 @@ if(is_null($id)) {
 				echo json_encode($array);		
 			break;
 			case "TEXT":			
-				echo "!Author-" .$row['Author']. "<br />";
-				echo "!Title-" .$row['Title']. "<br />";
+				echo "!Author-" .$row['Author']. "\n";
+				echo "!Title-" .$row['Title']. "\n";
 				echo $row['Content'];
 			break;
 			case "YAML":
-				echo "Author: \"" . escapeWithDoubleQuotes($row['Author']) ."\"<br />";
-				echo "Title: \"" . escapeWithDoubleQuotes($row['Title']) . "\"<br />";
-				echo "Content: \"". escapeWithDoubleQuotes($row['Content']) ."\"<br />";
+				echo "Author: " . escapeWithDoubleQuotes($row['Author']) ."\n";
+				echo "Title: " . escapeWithDoubleQuotes($row['Title']) . "\n";
+				echo "Content: ". escapeWithDoubleQuotes($row['Content']) ."\n";
 				break;
 			default:	
 				die("104");	
@@ -101,14 +101,14 @@ if(is_null($id)) {
 				echo json_encode($array);		
 			break;
 			case "TEXT":			
-				echo "!Author-" .$row['Author']. "<br />";
-				echo "!Title-" .$row['Title']. "<br />";
+				echo "!Author-" .$row['Author']. "\n";
+				echo "!Title-" .$row['Title']. "\n";
 				echo $row['Content'];
 			break;
 			case "YAML":
-				echo "Author: \"" . escapeWithDoubleQuotes($row['Author']) ."\"<br />";
-				echo "Title: \"" . escapeWithDoubleQuotes($row['Title']) . "\"<br />";
-				echo "Content: \"". escapeWithDoubleQuotes($row['Content']) ."\"<br />";
+				echo "Author: " . escapeWithDoubleQuotes($row['Author']) ."\n";
+				echo "Title: " . escapeWithDoubleQuotes($row['Title']) . "\n";
+				echo "Content:". escapeWithDoubleQuotes($row['Content']) ."\n";
 				break;
 			default:	
 				die("104");	
