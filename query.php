@@ -32,9 +32,6 @@ Error Codes:
 105 - No results found
 */
 
-$escaper = new Escaper();
-
-
 if(is_null($id)) {
 	if(is_null($Author)) {
 		die("101");
