@@ -13,6 +13,28 @@ function connectDB($user, $pass, $db) {
 	
 }
 
+function outputJSON($row) {
+	$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'Content' => $row['Content']);
+	return json_encode($array);
+}
+
+function outputDump($row) {
+	$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'Content' => $row['Content']);
+	return var_dump($array);
+}
+
+function outputText($row) {
+	return "!Author-" .$row['Author']. "\n" .
+	"!Title-" .$row['Title']. "\n" .
+	$row['Content'];
+}
+
+function outputYAML($row) {
+	$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'Content' => $row['Content']);
+	//echo yaml_emit($array);
+	return "Not yet supported.";
+}
+
 //User-supplied vars
 $Author=$_GET["author"];
 $Title=$_GET["title"];
@@ -54,23 +76,18 @@ if(is_null($id)) {
 		}
 		switch($Type) {
 			case "JSON":
-				$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'Content' => $row['Content']);
-				echo json_encode($array);		
+				echo outputJSON($row);		
 			break;
 			case "TEXT":			
-				echo "!Author-" .$row['Author']. "\n";
-				echo "!Title-" .$row['Title']. "\n";
-				echo $row['Content'];
+				echo outputText($row);
 			break;
 			case "YAML":
-				$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'Content' => $row['Content']);
-				echo yaml_emit($array);
+				echo outputYaml($row);
 				break;
 			case "dump":
-				$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'Content' => $row['Content']);
-				var_dump($array);
+				echo outputDump($row);
 			default:	
-				die("104");	
+				echo outputJSON($row);	
 			break;
 		}
 } else {
@@ -98,23 +115,18 @@ if(is_null($id)) {
 		}
 		switch($Type) {
 			case "JSON":
-				$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'Content' => $row['Content']);
-				echo json_encode($array);		
+				echo outputJSON($row);		
 			break;
 			case "TEXT":			
-				echo "!Author-" .$row['Author']. "\n";
-				echo "!Title-" .$row['Title']. "\n";
-				echo $row['Content'];
+				echo outputText($row);
 			break;
 			case "YAML":
-				$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'Content' => $row['Content']);
-				echo yaml_emit($array);
+				echo outputYaml($row);
 				break;
 			case "dump":
-				$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'Content' => $row['Content']);
-				var_dump($array);
+				echo outputDump($row);
 			default:	
-				die("104");	
+				echo outputJSON($row);	
 			break;
 		}
 	}
