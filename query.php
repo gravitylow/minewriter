@@ -108,7 +108,7 @@ if(is_null($id)) {
 			case "YAML":
 				echo "Author: " . escapeWithDoubleQuotes($row['Author']) ."\n";
 				echo "Title: " . escapeWithDoubleQuotes($row['Title']) . "\n";
-				echo "Content:". escapeWithDoubleQuotes($row['Content']) ."\n";
+				echo "Content: ". escapeWithDoubleQuotes($row['Content']) ."\n";
 				break;
 			default:	
 				die("104");	
