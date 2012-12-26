@@ -59,4 +59,12 @@ $stmt->bindParam(':username', $username);
 $stmt->bindParam(':ip', $ip);
 $stmt->execute();
 var_dump ($stmt->errorInfo());
+
+$sql = "SHOW TABLES FROM $dbName";
+$stmt = $db->prepare($sql);
+$stmt->execute();
+while($showtablerow = $stmt->fetch())
+{
+	echo $showtablerow[0]."<br />";
+}
 ?>
