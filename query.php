@@ -1,6 +1,7 @@
 <?php 
 //Includes
 require("../private/config.php");
+require("yamlTools.php");
 //die ($dbUser);
 //Functions
 function connectDB($user, $pass, $db) {
@@ -31,7 +32,7 @@ Error Codes:
 105 - No results found
 */
 
-
+$escaper = new Escaper();
 
 
 if(is_null($id)) {
@@ -66,9 +67,9 @@ if(is_null($id)) {
 				echo $row['Content'];
 			break;
 			case "YAML":
-				echo "Author: \"" . addslashes($row['Author']) ."\"<br />";
-				echo "Title: \"" . addslashes($row['Title']) . "\"<br />";
-				echo "Content: \"". addslashes($row['Content']) ."\"<br />";
+				echo "Author: \"" . $ecaper->escapeWithDoubleQuotes($row['Author']) ."\"<br />";
+				echo "Title: \"" . $ecaper->escapeWithDoubleQuotes($row['Title']) . "\"<br />";
+				echo "Content: \"". $ecaper->escapeWithDoubleQuotes($row['Content']) ."\"<br />";
 				break;
 			default:	
 				die("104");	
@@ -108,9 +109,9 @@ if(is_null($id)) {
 				echo $row['Content'];
 			break;
 			case "YAML":
-				echo "Author: \"" . addslashes($row['Author']) ."\"<br />";
-				echo "Title: \"" . addslashes($row['Title']) . "\"<br />";
-				echo "Content: \"". addslashes($row['Content']) ."\"<br />";
+				echo "Author: \"" . $ecaper->escapeWithDoubleQuotes($row['Author']) ."\"<br />";
+				echo "Title: \"" . $ecaper->escapeWithDoubleQuotes($row['Title']) . "\"<br />";
+				echo "Content: \"". $ecaper->escapeWithDoubleQuotes($row['Content']) ."\"<br />";
 				break;
 			default:	
 				die("104");	
