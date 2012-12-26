@@ -1,17 +1,17 @@
 <?php 
 //Includes
-use Symfony\Component\Yaml\Yaml;
 require("../private/config.php");
 include("yaml_lib/Yaml.php");
 include("yaml_lib/Dumper.php");
 include("yaml_lib/Inline.php");
 include("yaml_lib/Escaper.php");
+use Symfony\Component\Yaml\Yaml;
+
 //Functions
 function connectDB($user, $pass, $db) {
 	try {	
 		return(new PDO("mysql:host=localhost;dbname=" . $db . ";charset=UTF-8", $user, $pass));
 	} catch(PDOException $ex) {
-		die($user);
 		return $ex;
 	}
 	
