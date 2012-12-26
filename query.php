@@ -1,11 +1,12 @@
 <?php 
 //Includes
+
 require("../private/config.php");
 include("yaml_lib/Yaml.php");
 include("yaml_lib/Dumper.php");
 include("yaml_lib/Inline.php");
 include("yaml_lib/Escaper.php");
-use Symfony\Component\Yaml\Yaml;
+
 //die ($dbUser);
 //Functions
 function connectDB($user, $pass, $db) {
