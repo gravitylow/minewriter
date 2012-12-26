@@ -1,7 +1,6 @@
 <?php 
 //Includes
-die (PHP_VERSION);
-
+use Symfony\Component\Yaml\Yaml;
 require("../private/config.php");
 include("yaml_lib/Yaml.php");
 include("yaml_lib/Dumper.php");
