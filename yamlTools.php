@@ -9,8 +9,6 @@
 * https://github.com/symfony/Yaml/blob/master/Escaper.php
 */
 
-namespace Symfony\Component\Yaml;
-
 /**
 * Escaper encapsulates escaping rules for single and double-quoted
 * YAML strings.
