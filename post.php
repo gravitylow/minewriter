@@ -29,6 +29,12 @@ $content = $_POST["bookContent"];
 $ip = $_SERVER['REMOTE_ADDR'];
 $username = "anonymous";
 
+if($author = null || $title == null || $license == null || $content == null) {?>
+		<script type="text/javascript">
+			window.alert("Please fill in all the fields!");
+		</script>
+	
+}
 if(hasHtml($author) || hasHtml($title) || hasHtml($content)) {
 	?>
 		<script type="text/javascript">
@@ -38,12 +44,6 @@ if(hasHtml($author) || hasHtml($title) || hasHtml($content)) {
 	<?php
 	return;
 }
-if($author = null || $title == null || $license == null || $content == null) {?>
-		<script type="text/javascript">
-			window.alert("Please fill in all the fields!");
-		</script>
-<?php }
-
 
 $db = connectDB($dbUser, $dbPass, $dbName);
 if ($db instanceof PDOException) {
@@ -67,6 +67,7 @@ while($showtablerow = $stmt->fetch())
 {
 	echo $showtablerow[0]."<br />";
 }*/
+
 $id = $db->lastInsertId();
 header("Location: http://minewriter.net/query.php?id=" . $id . "&type=JSON")
 ?>
