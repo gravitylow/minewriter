@@ -68,7 +68,8 @@ $license = $row[4];
           	<strong>License: <?php echo $license; ?></strong>
           	<br />
           	<strong>Created: <?php echo $date; ?></strong>
-	<br /><br /><a href = "#" class = "btn btn-danger"><i class = "icon-flag"></i> Report content</a>
+	<br /><br />
+	<a href="#myModal" role="button" class="btn btn-danger" data-toggle="modal" style = "width: 110px; margin-left: 37px;"><i class = "icon-flag"></i> Report content</a>
           
           </div>
           
@@ -83,16 +84,13 @@ $license = $row[4];
 <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 <div class="modal-header">
 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-<h3 id="myModalLabel">Submission information</h3>
+<h3 id="myModalLabel">Report content</h3>
 </div>
 <div class="modal-body">
-<p>To ensure all submissions are accessible, we require some information from you before we are able to add your entry to the database. Firstly, we ask for a title and author. These are displayed in-game, so make sure you consider them carefully. We also ask for a license which plays an important part in what other people are allowed to do with your book. </p>
+<p>Thanks for keeping MineWriter free of illegal and inappropriate content. To proceed, please fill out the form below.</p>
 </div>
 
 </div>
-	<?php footer(); ?>
-  </body>
-</html>
 <script>
 function getCaret(node) {
   if (node.selectionStart) {
@@ -118,3 +116,9 @@ $("#writing").keydown(function(e){
 
 });
 </script>
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+
+	<?php footer(); ?>
+  </body>
+</html>
+
