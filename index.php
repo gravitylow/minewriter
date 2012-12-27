@@ -31,7 +31,7 @@
 					</ul>     
 				<h2 class="big">When will it launch?</h2>     
 					<ul>
-						<li class="big">Our Estimate is around late January, but this is not for sure.</li>          
+						<li class="big">Our estimate is around late January, but this is not for sure.</li>          
 						<li class="big">More contributors could speed up the process greatly!</li>
 						<li class="big">Check out our <a href="https://github.com/milkywayz/minewriter">github repository!</a></li>
 					</ul>              
