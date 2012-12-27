@@ -42,9 +42,9 @@ if ($zip->open('master.zip') === TRUE) {
     recurse_copy(getcwd() . "/minewriter-master/", getcwd());
     unlink("master.zip");
     rmdir_recursive(getcwd() . "/minewriter-master/");
-    file_put_contents("gitLinkLog.txt", "\n" . date("Y-m-d H:i:s") . ": Successful deploy from $ip", FILE_APPEND | LOCK_EX);   
+    file_put_contents("logs/gitlog.txt", "\n" . date("Y-m-d H:i:s") . ": Successful deploy from $ip", FILE_APPEND | LOCK_EX);   
 } else {
-    file_put_contents("gitLinkLog.txt", "\n" . date("Y-m-d H:i:s") . ": FAILED deploy from $ip", FILE_APPEND | LOCK_EX);
+    file_put_contents("logs/gitlog.txt", "\n" . date("Y-m-d H:i:s") . ": FAILED deploy from $ip", FILE_APPEND | LOCK_EX);
 }
 ?>
 
