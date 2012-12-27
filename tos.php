@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
 	<meta charset="utf-8">
-	<title>MineWriter Team</title>
+	<title>MineWriter ToS</title>
 	<?php headIncludes(); ?>
   </head>
   <body>
@@ -39,21 +39,10 @@
 
 <ol type="a">
 	<li>
-		Permission is granted to temporarily download one copy of the materials 
-		(information or software) on MineWriter's web site for personal, 
-		non-commercial transitory viewing only. This is the grant of a license, 
-		not a transfer of title, and under this license you may not:
-		
-		<ol type="i">
-			<li>modify or copy the materials;</li>
-			<li>use the materials for any commercial purpose, or for any public display (commercial or non-commercial);</li>
-			<li>attempt to decompile or reverse engineer any software contained on MineWriter's web site;</li>
-			<li>remove any copyright or other proprietary notations from the materials; or</li>
-			<li>transfer the materials to another person or "mirror" the materials on any other server.</li>
-		</ol>
+		Permission is granted under the GPLv3 to use and modify all text and code used to make up this site. Commercial use is permitted under some conditions. Refer to the license file for more information on this.
 	</li>
 	<li>
-		This license shall automatically terminate if you violate any of these restrictions and may be terminated by MineWriter at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format.
+		Please note that user-submitted material is not covered by this license, instead users may choose to license their contirubtions under a variety of licenses and these must be adhered to in addition to the above conditions. This license shall automatically terminate if you violate any of these restrictions and may be terminated by MineWriter at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format.
 	</li>
 </ol>
 
@@ -72,7 +61,7 @@
 </h3>
 
 <p>
-	In no event shall MineWriter or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption,) arising out of the use or inability to use the materials on MineWriter's Internet site, even if MineWriter or a MineWriter authorized representative has been notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.
+	In no event shall we be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption,) arising out of the use or inability to use the materials on MineWriter's Internet site, even if MineWriter or a MineWriter authorized representative has been notified orally or in writing of the possibility of such damage. We are in no way responsible for user-submitted material on the site and are not liable for any damages caused by this user-submitted material. Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.
 </p>
 			
 <h3>
@@ -99,17 +88,6 @@
 	MineWriter may revise these terms of use for its web site at any time without notice. By using this web site you are agreeing to be bound by the then current version of these Terms and Conditions of Use.
 </p>
 
-<h3>
-	8. Governing Law
-</h3>
-
-<p>
-	Any claim relating to MineWriter's web site shall be governed by the laws of the State of Ney York without regard to its conflict of law provisions.
-</p>
-
-<p>
-	General Terms and Conditions applicable to Use of a Web Site.
-</p>
 
 
 
@@ -118,36 +96,8 @@
 </h2>
 
 <p>
-	Your privacy is very important to us. Accordingly, we have developed this Policy in order for you to understand how we collect, use, communicate and disclose and make use of personal information. The following outlines our privacy policy.
-</p>
-
-<ul>
-	<li>
-		Before or at the time of collecting personal information, we will identify the purposes for which information is being collected.
-	</li>
-	<li>
-		We will collect and use of personal information solely with the objective of fulfilling those purposes specified by us and for other compatible purposes, unless we obtain the consent of the individual concerned or as required by law.		
-	</li>
-	<li>
-		We will only retain personal information as long as necessary for the fulfillment of those purposes. 
-	</li>
-	<li>
-		We will collect personal information by lawful and fair means and, where appropriate, with the knowledge or consent of the individual concerned. 
-	</li>
-	<li>
-		Personal data should be relevant to the purposes for which it is to be used, and, to the extent necessary for those purposes, should be accurate, complete, and up-to-date. 
-	</li>
-	<li>
-		We will protect personal information by reasonable security safeguards against loss or theft, as well as unauthorized access, disclosure, copying, use or modification.
-	</li>
-	<li>
-		We will make readily available to customers information about our policies and practices relating to the management of personal information. 
-	</li>
-</ul>
-
-<p>
-	We are committed to conducting our business in accordance with these principles in order to ensure that the confidentiality of personal information is protected and maintained. 
-</p>		
+	Your privacy is very important to us. Accordingly, we have also created a privacy policy that helps protect your personal information. This policy is linked at the bottom of each page.
+		
 
 			
 	  </div>
