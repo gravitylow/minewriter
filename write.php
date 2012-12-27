@@ -55,7 +55,7 @@
           </div>
           
           <div class = "well" style = "position: absolute; right: 0; top: 535px; width: 220px;">
-          	
+          	<a href="#myModal" role="button" class="btn btn-primary" data-toggle="modal" style = "width: 110px; margin-left: 37px;"><i class = "icon-info-sign"></i> Submission Guidelines</a>
           	</div>
        <textarea class = "book" id = "writing" name = "bookContent" style = "" required></textarea>
        
