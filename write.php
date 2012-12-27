@@ -74,9 +74,6 @@
 </div>
 
 </div>
-	<?php footer(); ?>
-  </body>
-</html>
 <script>
 function getCaret(node) {
   if (node.selectionStart) {
@@ -130,3 +127,7 @@ insertAtCaret: function(myValue){
 }
 });
 </script>
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+	<?php footer(); ?>
+  </body>
+</html>
