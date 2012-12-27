@@ -49,9 +49,10 @@
           			
           		</optgroup>
           	</select><br />
+          	<input type = "checkbox" name = "not_nsfw" checked = "checked"/> Suitable for all users 
           	<button type = "submit" class = "btn btn-success">
           		<i class = "icon-plus"></i> Add book
-          	</a>
+          	</button>
           </div>
           
           <div class = "well" style = "position: absolute; right: 0; top: 535px; width: 220px;">
@@ -73,7 +74,7 @@
 <p>To ensure all submissions are accessible, we require some information from you before we are able to add your entry to the database. Firstly, we ask for a title and author. These are displayed in-game, so make sure you consider them carefully. We also ask for a license which plays an important part in what other people are allowed to do with your book. </p>
 <p><strong>Restricted content</strong></p>
 <p>Absolutely no illegal material is to be uploaded (posting is a form of uploading) to this site. Linking to pages that provide illegal material is strictly prohibited as well. Illegal materials include, but are not limited to, pornography, psychoactive drugs, bootleg software, and any software designed to circumvent or bypass legal restrictions. Anything disallowed by law in the United Kingdom or the laws which govern the server upon which this site is hosted is strictly disallowed.</p>
-<p>Adult content must be marked clearly with the content rating system.</p>
+<p>Adult content must be marked clearly with the content rating system - untick the suitable for all users checkbox</p>
 <p><strong>Licensing information</strong></p>
 <p>We offer a variety of licenses to ensure your work is as protected or as free as you wish. A quick summary is available below (this is not legal advice):</p>
 <ul style = "list-style: none">
