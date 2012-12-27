@@ -45,4 +45,20 @@ Contributors
 <a href="https://github.com/gomeow"><img src = "http://forums.bukkit.org/data/avatars/s/90728/90728305.jpg?1354849565" /></a> <a href="https://github.com/gomeow">Gomeow</a> - Project Contributor<br />
 <h4>Contributors</h3>
 
-<a href="https://github.com/h31ix"><img src = "http://www.gravatar.com/avatar/a59a454531fd2f169c1cebf382f9c577.jpg?s=48&d=http%3A%2F%2Fforums.bukkit.org%2Fstyles%2Fflexile%2Fxenforo%2Favatars%2Favatar_male_s.png" /></a> <a href="https://github.com/h31ix">H31IX</a> - Project Contributor        
+<a href="https://github.com/h31ix"><img src = "http://www.gravatar.com/avatar/a59a454531fd2f169c1cebf382f9c577.jpg?s=48&d=http%3A%2F%2Fforums.bukkit.org%2Fstyles%2Fflexile%2Fxenforo%2Favatars%2Favatar_male_s.png" /></a> <a href="https://github.com/h31ix">H31IX</a> - Project Contributor 
+
+License
+====================
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
