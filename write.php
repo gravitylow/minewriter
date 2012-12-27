@@ -71,6 +71,11 @@
 </div>
 <div class="modal-body">
 <p>To ensure all submissions are accessible, we require some information from you before we are able to add your entry to the database. Firstly, we ask for a title and author. These are displayed in-game, so make sure you consider them carefully. We also ask for a license which plays an important part in what other people are allowed to do with your book. </p>
+<p><strong>Licensing information</strong></p>
+<p>We offer a variety of licenses to ensure your work is as protected or as free as you wish. A quick summary is available below:</p>
+<ul style = "list-style: none">
+	<li></li>
+</ul>
 </div>
 
 </div>
