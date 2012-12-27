@@ -49,14 +49,14 @@
           			
           		</optgroup>
           	</select><br />
-          	<input type = "checkbox" name = "not_nsfw" checked = "checked"/> Suitable for all users 
+          	<input type = "checkbox" name = "not_nsfw" checked = "checked"/> Suitable for all users <br />
           	<button type = "submit" class = "btn btn-success">
           		<i class = "icon-plus"></i> Add book
           	</button>
           </div>
           
           <div class = "well" style = "position: absolute; right: 0; top: 535px; width: 220px;">
-          	<a href="#myModal" role="button" class="btn btn-primary" data-toggle="modal" style = "width: 110px; margin-left: 37px;"><i class = "icon-info-sign"></i> Submission Guidelines</a>
+          	<a href="#myModal" role="button" class="btn btn-primary" data-toggle="modal" style = "width: 210px; margin-left: 37px;"><i class = "icon-info-sign"></i> Submission Guidelines</a>
           	</div>
        <textarea class = "book" id = "writing" name = "bookContent" style = "" required></textarea>
        
