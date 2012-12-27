@@ -55,7 +55,7 @@
           </div>
           
           <div class = "well" style = "position: absolute; right: 0; top: 535px; width: 220px;">
-          	<a href = "#" role="button" data-toggle="modal" class = "btn btn-primary centred" style = "width: 110px; margin-left: 37px;">Submission Info</a>
+          	<a href="#myModal" role="button" class="btn btn-primary centred" data-toggle="modal" style = "width: 110px; margin-left: 37px;">Submission Info</a>
           	</div>
        <textarea class = "book" id = "writing" name = "bookContent" style = "" required></textarea>
        
@@ -64,7 +64,7 @@
       </div>
 	</div><br />
 	<!-- Modal -->
-<div id="modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 <div class="modal-header">
 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 <h3 id="myModalLabel">Submission information</h3>
