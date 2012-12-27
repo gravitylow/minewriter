@@ -18,18 +18,18 @@
         </div> 
         <form name="myform" action="post.php" method="POST" style = "position: relative;">
         	  <div class = "well" style = "position: absolute; right: 0; width: 220px;">
-          	<a class = "btn" onclick = '$("#writing").val($("#writing").val() + "§l"); $("#writing").focus();' style = ""><i class = "icon-bold"></i></a> <a class = "btn" style = "" onclick = '$("#writing").val($("#writing").val() + "§o"); $("#writing").focus();'><i class = "icon-italic"></i></a>
-          	 <a class = "btn" onclick = '$("#writing").val($("#writing").val() + "§n"); $("#writing").focus();' style = ""><i class = "icon-underline"></i></a> <a class = "btn" style = "" onclick = '$("#writing").val($("#writing").val() + "§m"); $("#writing").focus();'><i class = "icon-strikethrough"></i></a>
-          	 <a class = "btn" onclick = '$("#writing").val($("#writing").val() + "§k"); $("#writing").focus();' style = ""><i class = "icon-magic"></i></a> <br style = "display: block; margin-bottom: 5px;" />
-          	 <a class = "btn" onclick = '$("#writing").val($("#writing").val() + "§r"); $("#writing").focus();' style = ""><i class = "icon-undo"></i></a> <a class = "btn" style = "color: #000000;" onclick = '$("#writing").val($("#writing").val() + "§0"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a> 
-          	 <a class = "btn" onclick = '$("#writing").val($("#writing").val() + "§1"); $("#writing").focus();' style = "color: #0000AA;"><i class = "icon-sign-blank"></i></a> <a class = "btn" style = "color: #00AA00;" onclick = '$("#writing").val($("#writing").val() + "§2"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a> 
-          	 <a class = "btn" onclick = '$("#writing").val($("#writing").val() + "§3"); $("#writing").focus();' style = "color: #00AAAA;"><i class = "icon-sign-blank"></i></a><br style = "display: block; margin-bottom: 5px;" /><a class = "btn" style = "color: #AA0000;" onclick = '$("#writing").val($("#writing").val() + "§4"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a> 
-          	 <a class = "btn" onclick = '$("#writing").val($("#writing").val() + "§5"); $("#writing").focus();' style = "color: #AA00AA;"><i class = "icon-sign-blank"></i></a> <a class = "btn" style = "color: #FFAA00;" onclick = '$("#writing").val($("#writing").val() + "§6"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a> 
-          	 <a class = "btn" onclick = '$("#writing").val($("#writing").val() + "§7"); $("#writing").focus();' style = "color: #AAAAAA;"><i class = "icon-sign-blank"></i></a> <a class = "btn" style = "color: #555555;" onclick = '$("#writing").val($("#writing").val() + "§8"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a> <br style = "display: block; margin-bottom: 5px;" />
-          	 <a class = "btn" onclick = '$("#writing").val($("#writing").val() + "§9"); $("#writing").focus();' style = "color: #5555FF;"><i class = "icon-sign-blank"></i></a> <a class = "btn" style = "color: #55FF55;" onclick = '$("#writing").val($("#writing").val() + "§a"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a> 
-          	 <a class = "btn" onclick = '$("#writing").val($("#writing").val() + "§b"); $("#writing").focus();' style = "color: #55FFFF;"><i class = "icon-sign-blank"></i></a> <a class = "btn" style = "color: #FF5555;" onclick = '$("#writing").val($("#writing").val() + "§c"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a> 
-          	 <a class = "btn" onclick = '$("#writing").val($("#writing").val() + "§d"); $("#writing").focus();' style = "color: #FF55FF;"><i class = "icon-sign-blank"></i></a><br style = "display: block; margin-bottom: 5px;" /><a class = "btn" style = "color: #FFFF55;" onclick = '$("#writing").val($("#writing").val() + "§e"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a>
-          	 <a class = "btn" onclick = '$("#writing").val($("#writing").val() + "§f"); $("#writing").focus();' style = "color: #FFFFFF;"><i class = "icon-sign-blank"></i></a>
+          	<a class = "btn" onclick = '$("#writing").insertAtCaret("§l"); $("#writing").focus();' style = ""><i class = "icon-bold"></i></a> <a class = "btn" style = "" onclick = '$("#writing").insertAtCaret("§o"); $("#writing").focus();'><i class = "icon-italic"></i></a>
+          	 <a class = "btn" onclick = '$("#writing").insertAtCaret("§n"); $("#writing").focus();' style = ""><i class = "icon-underline"></i></a> <a class = "btn" style = "" onclick = '$("#writing").insertAtCaret("§m"); $("#writing").focus();'><i class = "icon-strikethrough"></i></a>
+          	 <a class = "btn" onclick = '$("#writing").insertAtCaret("§k"); $("#writing").focus();' style = ""><i class = "icon-magic"></i></a> <br style = "display: block; margin-bottom: 5px;" />
+          	 <a class = "btn" onclick = '$("#writing").insertAtCaret("§r"); $("#writing").focus();' style = ""><i class = "icon-undo"></i></a> <a class = "btn" style = "color: #000000;" onclick = '$("#writing").insertAtCaret("§0"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a> 
+          	 <a class = "btn" onclick = '$("#writing").insertAtCaret("§1"); $("#writing").focus();' style = "color: #0000AA;"><i class = "icon-sign-blank"></i></a> <a class = "btn" style = "color: #00AA00;" onclick = '$("#writing").insertAtCaret("§2"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a> 
+          	 <a class = "btn" onclick = '$("#writing").insertAtCaret("§3"); $("#writing").focus();' style = "color: #00AAAA;"><i class = "icon-sign-blank"></i></a><br style = "display: block; margin-bottom: 5px;" /><a class = "btn" style = "color: #AA0000;" onclick = '$("#writing").insertAtCaret("§4"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a> 
+          	 <a class = "btn" onclick = '$("#writing").insertAtCaret("§5"); $("#writing").focus();' style = "color: #AA00AA;"><i class = "icon-sign-blank"></i></a> <a class = "btn" style = "color: #FFAA00;" onclick = '$("#writing").insertAtCaret("§6"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a> 
+          	 <a class = "btn" onclick = '$("#writing").insertAtCaret("§7"); $("#writing").focus();' style = "color: #AAAAAA;"><i class = "icon-sign-blank"></i></a> <a class = "btn" style = "color: #555555;" onclick = '$("#writing").insertAtCaret("§8"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a> <br style = "display: block; margin-bottom: 5px;" />
+          	 <a class = "btn" onclick = '$("#writing").insertAtCaret("§9"); $("#writing").focus();' style = "color: #5555FF;"><i class = "icon-sign-blank"></i></a> <a class = "btn" style = "color: #55FF55;" onclick = '$("#writing").insertAtCaret("§a"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a> 
+          	 <a class = "btn" onclick = '$("#writing").insertAtCaret("§b"); $("#writing").focus();' style = "color: #55FFFF;"><i class = "icon-sign-blank"></i></a> <a class = "btn" style = "color: #FF5555;" onclick = '$("#writing").insertAtCaret("§c"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a> 
+          	 <a class = "btn" onclick = '$("#writing").insertAtCaret("§d"); $("#writing").focus();' style = "color: #FF55FF;"><i class = "icon-sign-blank"></i></a><br style = "display: block; margin-bottom: 5px;" /><a class = "btn" style = "color: #FFFF55;" onclick = '$("#writing").insertAtCaret("§e"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a>
+          	 <a class = "btn" onclick = '$("#writing").insertAtCaret("§f"); $("#writing").focus();' style = "color: #FFFFFF;"><i class = "icon-sign-blank"></i></a>
           </div>
           
             <div class = "well" style = "position: absolute; right: 0; top: 220px; width: 220px;">
@@ -100,5 +100,33 @@ function getCaret(node) {
 $("#writing").keydown(function(e){
 
 
+});
+
+jQuery.fn.extend({
+insertAtCaret: function(myValue){
+  return this.each(function(i) {
+    if (document.selection) {
+      //For browsers like Internet Explorer
+      this.focus();
+      sel = document.selection.createRange();
+      sel.text = myValue;
+      this.focus();
+    }
+    else if (this.selectionStart || this.selectionStart == '0') {
+      //For browsers like Firefox and Webkit based
+      var startPos = this.selectionStart;
+      var endPos = this.selectionEnd;
+      var scrollTop = this.scrollTop;
+      this.value = this.value.substring(0, startPos)+myValue+this.value.substring(endPos,this.value.length);
+      this.focus();
+      this.selectionStart = startPos + myValue.length;
+      this.selectionEnd = startPos + myValue.length;
+      this.scrollTop = scrollTop;
+    } else {
+      this.value += myValue;
+      this.focus();
+    }
+  })
+}
 });
 </script>
