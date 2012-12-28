@@ -40,6 +40,7 @@ $content = $row['Content'];
 $date = $row['Date'];
 $license = $row['License'];
 $nsfw = $row['nsfw'];
+die($nsfw);
 ?> 
 
 <!DOCTYPE html>
