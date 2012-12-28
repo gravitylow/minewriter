@@ -74,7 +74,11 @@ if ($db instanceof PDOException) {
 $title = preg_replace('/[^A-Za-z0-9 ]/', '', $title);
 $author = preg_replace('/#[^a-z0-9_.-]#i/', '', str_replace(".", "", $author));
 $content = str_replace("\r\n", "\n", $content);
-$sql = "INSERT INTO Books VALUES(NULL,:author,:title,:content,:license,NOW(),:username,:ip,0,$queue)";
+$nsfw = 0;
+if (!isset($_POST['not_nsfw'])) {
+	$nsfw = 1;
+}
+$sql = "INSERT INTO Books VALUES(NULL,:author,:title,:content,:license,NOW(),:username,:ip,0,$queue,$nsfw)";
 $stmt = $db->prepare($sql);
 $stmt->bindParam(':author', $author);
 $stmt->bindParam(':title', $title);
