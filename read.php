@@ -32,7 +32,8 @@ $stmt->bindParam(':id', $ID);
 $stmt->execute();
 $row = $stmt->fetch();
 		if ($row['ID'] == null) {
-			die("105");
+			$err = "book";
+			require("error.php");
 		}
 $title = $row['Title'];
 $author = $row['Author'];
