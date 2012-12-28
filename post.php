@@ -79,7 +79,7 @@ if (!isset($_POST['not_nsfw'])) {
 	$nsfw = 1;
 }
 $genre = $_POST['genre'];
-$sql = "INSERT INTO Books VALUES(NULL,:author,:title,:content,:license,NOW(),:username,:ip,0,$queue,$nsfw,$genre)";
+$sql = "INSERT INTO Books VALUES(NULL,:author,:title,:content,:license,NOW(),:username,:ip,0,$queue,$nsfw,:genre)";
 $stmt = $db->prepare($sql);
 $stmt->bindParam(':author', $author);
 $stmt->bindParam(':title', $title);
@@ -87,8 +87,8 @@ $stmt->bindParam(':content', $content);
 $stmt->bindParam(':license', $license);
 $stmt->bindParam(':username', $username);
 $stmt->bindParam(':ip', $ip);
+$stmt->bindParam(':genre', $genre);
 $stmt->execute();
-
 /*$sql = "SHOW TABLES FROM $dbName";
 $stmt = $db->prepare($sql);
 $stmt->execute();
