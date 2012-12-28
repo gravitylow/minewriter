@@ -33,7 +33,7 @@
 						<li class="big">Currently the three variables are author, title, and type.</li>
 						<li class="big">Example Query: http://minewriter.net/query.php?author=milkywayz&title=Wolfz&type=JSON</li>
 						<li class="big">You can also query based on id. It will need the id, and the type.</li>
-						<li class="big">Example Query: http://minewriter.net/query.php?author=milkywayz&title=Wolfz&type=YAML</li>
+						<li class="big">Example Query: http://minewriter.net/query.php?id=5&type=YAML</li>
 					</ul>              
                </div>
             </div>
