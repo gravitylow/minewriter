@@ -43,7 +43,7 @@ function cleaner($url) {
   }
   return $contains;
 }
-
+$queue = 0;
 $author = $_POST["author"];
 $title = $_POST["title"];
 $license = $_POST["license"];
