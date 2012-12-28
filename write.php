@@ -51,31 +51,31 @@
           	</select><br />
           	<select size='1' name = "genre" required>
           		<optgroup label='Genre'>
-					<select>Action and Adventure</select>
-					<select>Chick Lit</select>
-					<select>Children’s</select>
-					<select>Contemporary</select>
-					<select>Crime</select>
-					<select>Family Saga</select>
-					<select>Fantasy</select>
-					<select>Dark Fantasy</select>
-					<select>General Fiction</select>
-					<select>Historical Fiction</select>
-					<select>Horror</select>
-					<select>Humour</select>
-					<select>Literary Fiction</select>
-					<select>Military and Espionage</select>
-					<select>Multicultural</select>
-					<select>Mystery</select>
-					<select>Non-fiction</select>
-					<select>Religious and Inspirational</select>
-					<select>Romance</select>
-					<select>Science Fiction</select>
-					<select>Short Story Collections</select>
-					<select>Thrillers and Suspense</select>
-					<select>Western</select>
-					<select>Young Adult</select>
-					<select>Other</select>
+					<option>Action and Adventure</option>
+					<option>Chick Lit</option>
+					<option>Children’s</option>
+					<option>Contemporary</option>
+					<option>Crime</option>
+					<option>Family Saga</option>
+					<option>Fantasy</option>
+					<option>Dark Fantasy</option>
+					<option>General Fiction</option>
+					<option>Historical Fiction</option>
+					<option>Horror</option>
+					<option>Humour</option>
+					<option>Literary Fiction</option>
+					<option>Military and Espionage</option>
+					<option>Multicultural</option>
+					<option>Mystery</option>
+					<option>Non-fiction</option>
+					<option>Religious and Inspirational</option>
+					<option>Romance</option>
+					<option>Science Fiction</option>
+					<option>Short Story Collections</option>
+					<option>Thrillers and Suspense</option>
+					<option>Western</option>
+					<option>Young Adult</option>
+					<option>Other</option>
           		</optgroup>
           	</select>
           	<br />
