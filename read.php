@@ -33,7 +33,7 @@ $stmt->execute();
 $row = $stmt->fetch();
 		if ($row['ID'] == null) {
 			$err = "book";
-			require("error.php");
+			require("404.php");
 		}
 $title = $row['Title'];
 $author = $row['Author'];
