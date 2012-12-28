@@ -70,13 +70,13 @@ $nsfw = $row['nsfw'];
           	<br />
           	<strong>Created: <?php echo $date; ?></strong>
 	<br /><br />
-	<?php if ($nswf == '1') { ?><center><a href="#" role="button" class="btn btn-danger" onclick = '$("#writing").show()'><i class = "icon-exclamation-sign"></i> Show adult content</a></center><br /><?php } ?>
+	<?php if ($nsfw == '1') { ?><center><a href="#" role="button" class="btn btn-danger" onclick = '$("#writing").show()'><i class = "icon-exclamation-sign"></i> Show adult content</a></center><br /><?php } ?>
 	<center><a href="#myModal" role="button" class="btn btn-danger" data-toggle="modal"><i class = "icon-flag"></i> Report content</a></center>
           
           </div>
           
          
-       <textarea class = "book" id = "writing" name = "bookContent" style = "cursor: default !important; <?php if ($nsfw == '1') { ?>visibility: none;<?php } ?>" readonly><?php echo ($content); ?></textarea>
+       <textarea class = "book" id = "writing" name = "bookContent" style = "cursor: default !important; <?php if ($nsfw == '1') { ?>visibility: hidden;<?php } ?>" readonly><?php echo ($content); ?></textarea>
        
           <br /> 
         </div>
