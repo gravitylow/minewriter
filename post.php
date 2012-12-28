@@ -32,17 +32,16 @@ function containsTLD($string) {
 
 function cleaner($url) {
   $U = explode(' ',$url);
-
+  $contains = false;
   $W =array();
   foreach ($U as $k => $u) {
     if (stristr($u,".")) { //only preg_match if there is a dot    
       if (containsTLD($u) === true) {
-      unset($U[$k]);
-      return cleaner( implode(' ',$U));
+      $contains = true;
     }      
     }
   }
-  return implode(' ',$U);
+  return $contains;
 }
 
 
@@ -76,11 +75,11 @@ if ($db instanceof PDOException) {
 $title = preg_replace('/[^A-Za-z0-9 ]/', '', $title);
 $author = preg_replace('/#[^a-z0-9_.-]#i/', '', str_replace(".", "", $author));
 $content = str_replace("\r\n", "\n", $content);
-$sql = "INSERT INTO Books VALUES(NULL,:author,:title,:content,:license,NOW(),:username,:ip,0)";
+$sql = "INSERT INTO Books VALUES(NULL,:author,:title,:content,:license,NOW(),:username,:ip,0,$queue)";
 $stmt = $db->prepare($sql);
 $stmt->bindParam(':author', $author);
 $stmt->bindParam(':title', $title);
-$stmt->bindParam(':content', cleaner($content));
+$stmt->bindParam(':content', $content);
 $stmt->bindParam(':license', $license);
 $stmt->bindParam(':username', $username);
 $stmt->bindParam(':ip', $ip);
