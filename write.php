@@ -49,6 +49,36 @@
           			
           		</optgroup>
           	</select><br />
+          	<select size='1' name = "genre" required>
+          		<optgroup label='Genre'>
+					<select>Action and Adventure</select>
+					<select>Chick Lit</select>
+					<select>Children’s</select>
+					<select>Contemporary</select>
+					<select>Crime</select>
+					<select>Family Saga</select>
+					<select>Fantasy</select>
+					<select>Dark Fantasy</select>
+					<select>General Fiction</select>
+					<select>Historical Fiction</select>
+					<select>Horror</select>
+					<select>Humour</select>
+					<select>Literary Fiction</select>
+					<select>Military and Espionage</select>
+					<select>Multicultural</select>
+					<select>Mystery</select>
+					<select>Non-fiction</select>
+					<select>Religious and Inspirational</select>
+					<select>Romance</select>
+					<select>Science Fiction</select>
+					<select>Short Story Collections</select>
+					<select>Thrillers and Suspense</select>
+					<select>Western</select>
+					<select>Young Adult</select>
+					<select>Other</select>
+          		</optgroup>
+          	</select>
+          	<br />
           	<input type = "checkbox" name = "not_nsfw" checked = "checked"/> Suitable for all users <br /><br />
           	<button type = "submit" class = "btn btn-success">
           		<i class = "icon-plus"></i> Add book
