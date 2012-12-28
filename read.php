@@ -70,12 +70,12 @@ $nsfw = $row['nsfw'];
           	<br />
           	<strong>Created: <?php echo $date; ?></strong>
 	<br /><br />
-	<?php if ($nsfw == '1') { ?><center><a href="#" role="button" class="btn btn-danger" onclick = '$("#writing").css("visibility","visible");'><i class = "icon-exclamation-sign"></i> Show adult content</a></center><br /><?php } ?>
+	<?php if ($nsfw == '1') { ?><center><a href="#" id = "nbtn" role="button" class="btn btn-danger" onclick = 'showNSFW()'><i class = "icon-exclamation-sign"></i> Show this content</a></center><br /><?php } ?>
 	<center><a href="#myModal" role="button" class="btn btn-danger" data-toggle="modal"><i class = "icon-flag"></i> Report content</a></center>
           
           </div>
           
-         
+       <div id = "notice" class = "alert alert-block alert-warning">This content may not be suitable for all users, as flagged by the author. CLick the show content button on the right to proceed.</div> 
        <textarea class = "book" id = "writing" name = "bookContent" style = "cursor: default !important; <?php if ($nsfw == '1') { ?>visibility: hidden;<?php } ?>" readonly><?php echo ($content); ?></textarea>
        
           <br /> 
@@ -117,6 +117,13 @@ $("#writing").keydown(function(e){
 
 
 });
+
+function showNSFW() {
+	$("#notice").hide();
+	$("#writing").css("visibility","visible");
+	$("#nbtn").slideUp();
+	
+}
 </script>
 <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
 
