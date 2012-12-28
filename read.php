@@ -75,7 +75,7 @@ $nsfw = $row['nsfw'];
           
           </div>
           
-       <div id = "notice" class = "alert alert-block alert-warning">This content may not be suitable for all users, as flagged by the author. CLick the show content button on the right to proceed.</div> 
+       <?php if ($nsfw == '1') { ?><div id = "notice" class = "alert alert-block alert-error" style = "width: 470px;">This content may not be suitable for all users, as flagged by the author. Click the show content button on the right to proceed.</div><?php } ?> 
        <textarea class = "book" id = "writing" name = "bookContent" style = "cursor: default !important; <?php if ($nsfw == '1') { ?>visibility: hidden;<?php } ?>" readonly><?php echo ($content); ?></textarea>
        
           <br /> 
