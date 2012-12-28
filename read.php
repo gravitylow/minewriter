@@ -121,9 +121,9 @@ $("#writing").keydown(function(e){
 });
 
 function showNSFW() {
-	$("#notice").hide();
+	$("#notice").slideUp();
 	$("#writing").css("visibility","visible");
-	$("#nbtn").slideUp();
+	
 	
 }
 </script>
