@@ -44,7 +44,6 @@ function cleaner($url) {
   return $contains;
 }
 
-
 $author = $_POST["author"];
 $title = $_POST["title"];
 $license = $_POST["license"];
