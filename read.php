@@ -1,4 +1,3 @@
-<?php require("functions.php"); ?>
 <?php 
 require("../private/config.php");
 //Functions
@@ -35,6 +34,7 @@ $row = $stmt->fetch();
 			$err = "book";
 			require("404.php");
 		}
+require("functions.php"); 
 $title = $row['Title'];
 $author = $row['Author'];
 $content = $row['Content'];
