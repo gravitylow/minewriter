@@ -36,6 +36,13 @@
 						<li class="big">Example Query: http://minewriter.net/query.php?id=5&type=YAML</li>
 					</ul>              
                </div>
+               <h2 class="big">Links</h2>     
+					<ul>
+						<li class="big"><a class="btn btn-success btn-large" href="http://goo.gl/sRR9u">MineWriter Github</a></li>         
+						<li class="big"><a class="btn btn-success btn-large" href="http://goo.gl/cgj2T">MineReader Github</a></li> 
+						<li class="big"><a class="btn btn-success btn-large" href="">Documentation</a></li> 
+					</ul>              
+               </div>
             </div>
       </div>
       	<?php footer(); ?>
