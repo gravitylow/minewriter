@@ -16,7 +16,7 @@
 		<p>Try out our user friendly authoring service!</p>  
 		<p><a href="write.php" class="btn btn-success btn-large">Try now</a></p>  
 		</div>  
-		<div class="row">  
+		<div class="row" align="center">  
 		
 		<div class="span4">  
 			<h2>Server Owners</h2>  
