@@ -32,6 +32,11 @@
 						<li class="big">The bukkit plugin is also still in development, but it's functional</li>            
 						<li class="big">If we get contributors, it will greatly speed up the process</li>
 						<li class="big">Stay in touch for future updates</li>
+					</ul>  
+				<h2 class="big">Other</h2>     
+					<ul>
+						<li class="big">This site is not affiliated with Mojang</li>
+						<li class="big">This site will always be free to use</li>            
 					</ul>              
                </div>
             </div>
