@@ -125,9 +125,6 @@ h2.big {
 	line-height: 40px;
 	font-size: large;
 }  
-h2.small {
-	font-size: medium;
-}
 .contactInputs {
 	width: 280px;
 }
@@ -135,7 +132,7 @@ h2.small {
 	text-align: right;
 }
 .container {
-	width: 920px; 
+	width: 960px; 
 }
 
 
