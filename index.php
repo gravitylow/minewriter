@@ -31,7 +31,7 @@
 			<div class="span4">  
 				<h2>Try yourself</h2>  
 					<p>We will be setting up a demo server running the MineReader plugin, currently the demo re-directs you to my server.</p>  					
-					<a href="#" class="btn btn-primary" title="Use this IP address to connect to the demo server:', 'demo.minewriter.net'); return false;">Demo!</a>  
+					<a href="#" class="btn btn-primary" onclick="prompt('Use this IP address to connect to the demo server:', 'demo.minewriter.net'); return false;">Demo!</a>  
 			</div>		 
 		</div>
 		
