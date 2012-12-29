@@ -10,6 +10,7 @@
     <?php navigation(); ?>
     <div id = "wrap">
     <div class="container">   
+    <div class="content">
 		<div class="leaderboard">  
 		<h1>MineWriter</h1>  
 		<p>Try out our user friendly authoring service!</p>  
@@ -33,6 +34,7 @@
 			</div> 
 		</div>
     </div> 
+    </div>
     </div>      
 <?php footer(); ?>
 </body>
