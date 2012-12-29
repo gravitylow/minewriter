@@ -9,8 +9,7 @@
   <body>
     <?php navigation(); ?>
     <div id = "wrap">
-    <div class="container">
-
+    <div class="container-fluid">
       <div class="content">
         <div class="page-header">
           <h1>MineWriter <small>Author downloadable books for minecraft!</small></h1>
@@ -47,6 +46,5 @@
             </div>
       </div>
       <?php footer(); ?>
-
   </body>
 </html>
