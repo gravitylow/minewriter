@@ -1,3 +1,7 @@
 ErrorDocument 404 /404.php
 # Use PHP 5.3
 AddType application/x-httpd-php53 .php
+AddType image/x-icon .ico
+ExpiresByType text/plain "access plus 30 days"
+ExpiresByType image/x-icon "access plus 30 days"
+ExpiresByType image/ico "access plus 30 days"
