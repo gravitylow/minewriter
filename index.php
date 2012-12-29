@@ -35,7 +35,7 @@
 		</div>
     </div> 
     </div>
+    <?php footer(); ?>
     </div>      
-<?php footer(); ?>
 </body>
 </html>
