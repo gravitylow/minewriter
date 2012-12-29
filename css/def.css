@@ -36,7 +36,7 @@ html, body {
       }
 
       /* Lastly, apply responsive CSS fixes as necessary */
-      @media (max-width: 867px) {
+      @media (max-width: 767px) {
         #footer {
           margin-left: -20px;
           margin-right: -20px;
@@ -133,7 +133,7 @@ h2.big {
 	text-align: right;
 }
 .container {
-	width: 860px; 
+	width: 920px; 
 }
 
 
