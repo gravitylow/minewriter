@@ -24,16 +24,14 @@
 					<p><a class="btn btn-success btn-medium" href="#">Get the plugin</a></p>  
 			</div>  
 			<div class="span4">  
-				<h2>Details</h2>  
-					<ul>
-					<li>MineWriter and MineReader will always be free to use!</li>
-					</ul>
-					<p><a class="btn btn-success btn-medium" href="#">See more</a></p>  
+				<h2>About the project</h2>  
+					<p>MineWriter and MineReader will always be free to use, and we will do our best to provide a ad-free environment</p>
+					<p><a class="btn btn-success btn-medium" href="about.php">About</a></p>  
 			</div>  
 			<div class="span4">  
 				<h2>Try yourself</h2>  
 					<p>We will be setting up a demo server running the MineReader plugin, currently the demo re-directs you to my server.</p>  					
-					<p><a href="#" role="button" class="btn btn-primary" title="Use this IP address to connect to the demo server:', 'demo.minewriter.net'); return false;">Demo!</a></p>  
+					<a href="#" class="btn btn-primary" title="Use this IP address to connect to the demo server:', 'demo.minewriter.net'); return false;">Demo!</a>  
 			</div>		 
 		</div>
 		
