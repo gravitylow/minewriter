@@ -124,8 +124,10 @@ li.big {
 h2.big {
 	line-height: 40px;
 	font-size: large;
-	}
-  
+}  
+h2.small {
+	font-size: smaller;
+}
 .contactInputs {
 	width: 280px;
 }
@@ -177,10 +179,6 @@ font-weight: 200;
 line-height: 27px;  
 }
 
-h2.big {
-	line-height: 40px;
-	font-size: large;
-}
 .admins {
 	text-align: center;
 }
