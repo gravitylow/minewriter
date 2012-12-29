@@ -9,42 +9,31 @@
   <body>
     <?php navigation(); ?>
     <div id = "wrap">
-    <div class="container-fluid">
-      <div class="content">
-        <div class="page-header">
-          <h1>MineWriter <small>Author downloadable books for minecraft!</small></h1>
-        </div>            
-              <div>
-              	<h2 class="big">What is MineWriter?</h2>     
-					<ul>
-						<li class="big">MineWriter is a service where you can write books for Minecraft!</li>
-						<li class="big">This site will be used to generate JSON files which can be imported into Minecraft.</li>            
-						<li class="big">In order to port the books you write into minecraft, you need the MineReader plugin.</li>
-					</ul>   
-				<h2 class="big">Why use MineWriter</h2>     
-					<ul>
-						<li class="big">You can write extremely large books very easily.</li>
-						<li class="big">Your book is saved into our database so it is never lost!</li>            
-						<li class="big">You can make unlimited copies of your book in game.</li>
-						<li class="big">You can make revisions after it's 'published'.</li>
-					</ul>     
-				<h2 class="big">When will it launch?</h2>     
-					<ul>
-						<li class="big">Our estimate is around late January, but this is not for sure.</li>          
-						<li class="big">More contributors could speed up the process greatly!</li>
-						<li class="big">Check out our <a href="https://github.com/milkywayz/minewriter">github repository!</a></li>
-					</ul>              
-               </div>
-              <div>
-              	<h2 class="big">What is MineReader?</h2>     
-					<ul>
-						<li class="big">MineReader is the Bukkit plugin that can port website content into books.</li>
-						<li class="big">The plugin uses this sites API service to generate your book!</li>            
-						<li class="big">If you want your book you write here in game, you need it!</li>
-					</ul>    
-              </div>
-            </div>
-      </div>
-      <?php footer(); ?>
-  </body>
+    <div class="container">   
+		<div class="leaderboard">  
+		<h1>MineWriter</h1>  
+		<p>Try out our user friendly authoring service!</p>  
+		<p><a href="write.php" class="btn btn-success btn-large">Try now</a></p>  
+		</div>  
+		<div class="row">  
+		<div class="span4">  
+			<h2>Server Owners</h2>  
+				<p>We want to make it as easy as possible for your players to author books and get them onto your server. Using the Bukkit plugin called MineReader, your players can easily get any book they want in game, with ease of use!</p>  
+				<p><a class="btn btn-success btn-large" href="#">Get the plugin</a></p>  
+			</div>  
+			<div class="span4">  
+			<h2>Regular Players</h2>  
+				<p>Writing books and bringing them onto your favorite server is now easier then ever!</p>  
+				<p><a class="btn btn-success btn-large" href="#">See more</a></p>  
+			</div>  
+			<div class="span4">  
+			<h2>Developers</h2>  
+				<p>All developers are invited to help us improve our website and minereader plugin, both are open sourced and we welcome all contributors</p>  
+				<p><a class="btn btn-success btn-large" href="devs.php">Visit the dev page</a></p>  
+			</div> 
+		</div>
+    </div> 
+    </div>      
+<?php footer(); ?>
+</body>
 </html>
