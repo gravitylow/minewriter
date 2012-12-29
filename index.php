@@ -14,10 +14,9 @@
 		<div class="leaderboard">  
 		<h1>MineWriter</h1>  
 		<p>Try out our user friendly authoring service!</p>  
-		<p><a href="write.php" class="btn btn-success btn-large">Try now</a></p>  
-		</div>  
-		<div class="row" align="center">  
-		
+		<p><a href="write.php" class="btn btn-success btn-medium">Try now</a></p>  
+		</div>  		
+		<div class="row">  		
 		<div class="span4">  
 			<h2>Server Owners</h2>  
 				<p>We want to make it as easy as possible for your players to author books and get them onto your server. Using the Bukkit plugin called MineReader, your players can easily get any book they want in game, with ease of use!</p>  
@@ -34,6 +33,14 @@
 				<p><a class="btn btn-success btn-medium" href="devs.php">Visit the dev page</a></p>  
 		</div> 
 		</div>
+		<div id="legend">
+        <legend class=""></legend>
+        </div>
+        <div class="row"> 
+        	<div class="span4">
+        		<!--Add more-->
+        	</div>
+        </div> 	
     </div>
     </div>
        <?php footer(); ?>    
