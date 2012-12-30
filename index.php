@@ -28,10 +28,9 @@
 		      		<li><p>Both MineWriter and MineReader are open-source and we welcome contributors</p></li>
 		      	</ul>
 		      </div>
-		      <h2>Blah</h2>
 		      <div class="span3">
 		      	<ul>
-		      		<li><p>Blah</p></li>
+		      		<li><p>Lets add something interactive here :P</p></li>
 		      	</ul>
 		      </div>
 		    </div>
