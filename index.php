@@ -17,22 +17,14 @@
 		<p><a href="write.php" class="btn btn-primary">Try now</a></p>  
 		</div>  
 				
-		<div class="row">  		
-			<div class="span4">  
-				<h2>How to use</h2>  
-					<p>Using MineWriter is simple, you write your story in our authoring client and then once it's submitted, you can download it in game!</p>  
-					<p><a class="btn btn-primary" href="tutorial.php">Tutorial</a></p>  
-			</div>  
-			<div class="span4">  
-				<h2>About the project</h2>  
-					<p>MineWriter and MineReader will always be free to use, and we will do our best to provide a ad-free environment</p>
-					<p><a class="btn btn-primary" href="about.php">About</a></p>  
-			</div>  
-			<div class="span4">  
-				<h2>Try yourself</h2>  
-					<p>We will be setting up a demo server running the MineReader plugin, currently the demo re-directs you to my server.</p>  					
-					<a href="#" class="btn btn-primary" onclick="prompt('Use this IP address to connect to the demo server:', 'demo.minewriter.net'); return false;">Demo</a>  
-			</div>		 
+		<div class="row">
+		  <div class="span12">
+		    <p>About the project</p>
+		    <div class="row">
+		      <div class="span8">Test</div>
+		      <div class="span4">Test</div>
+		    </div>
+		  </div>
 		</div>
 		
 		<?php divider(); ?>
@@ -45,7 +37,7 @@
 			</div>  
 			<div class="span4">  
 				<h2>Regular Players</h2>  
-					<p>Writing books and bringing them onto your favorite server is now easier then ever!</p>  
+					<p>Writing books and bringing them onto your favorite server is now easier then ever! If the server you play on doesn't have MineReader, suggest it to them! :D</p>  
 					<p><a class="btn btn-primary" href="#">See more</a></p>  
 			</div>  
 			<div class="span4">  
