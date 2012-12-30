@@ -23,12 +23,15 @@
 		    <div class="row">
 		      <div class="span6">
 		      	<ul> 
-		      		<p>Test</p>
+		      		<li><p>MineWriter was started December, 20th 2012</p></li>
+		      		<li><p>Our aim is to provide a fun way for creative writers to bring their work to any server</p></li>
+		      		<li><p>Both MineWriter and MineReader are open-source and we welcome contributors</p></li>
 		      	</ul>
 		      </div>
+		      <h2>Blah</h2>
 		      <div class="span3">
 		      	<ul>
-		      		<p></p>
+		      		<li><p>Blah</p></li>
 		      	</ul>
 		      </div>
 		    </div>
