@@ -18,11 +18,19 @@
 		</div>  
 				
 		<div class="row">
-		  <div class="span12">
-		    <p>About the project</p>
+		  <div class="span9">
+		    <h2>About the project</h2>
 		    <div class="row">
-		      <div class="span8">Test</div>
-		      <div class="span4">Test</div>
+		      <div class="span6">
+		      	<ul> 
+		      		<p>Test</p>
+		      	</ul>
+		      </div>
+		      <div class="span3">
+		      	<ul>
+		      		<p></p>
+		      	</ul>
+		      </div>
 		    </div>
 		  </div>
 		</div>
