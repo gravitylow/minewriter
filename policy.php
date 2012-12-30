@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
 	<meta charset="utf-8">
-	<title>MineWriter Team</title>
+	<title>MineWriter Policy</title>
 	<?php headIncludes(); ?>
   </head>
   <body>
@@ -13,7 +13,7 @@
 
 	  <div class="content">
 		<div class="page-header">
-		  <h1>Policy <small>Privacy Policy</small></h1>
+		  <h1><small>Privacy Policy</small></h1>
 		</div>		   
 	  		  <h3>Privacy Policy</h3>
 <b>Information collected</b>
