@@ -3,7 +3,7 @@ require("../private/config.php");
 /*
  * Script stub for login
  */
-$username = $_POST['username'];
+$username = strtolower($_POST['username']);
 $password = $_POST['password'];
 $hash = secureHash($username, $password); //This is a private function for security reasons
 $query = "SELECT * FROM milky_minewriter.Users WHERE username = :user AND password = :password;";
