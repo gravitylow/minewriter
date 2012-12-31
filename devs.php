@@ -38,9 +38,9 @@
                </div>
                <h2 class="big">Links</h2>     
 					<ul style = "list-style: none;">
-						<li class="big spaced"><a class="btn btn-success btn-large" href="http://goo.gl/sRR9u">MineWriter Github</a></li>         
-						<li class="big spaced"><a class="btn btn-success btn-large" href="http://goo.gl/cgj2T">MineReader Github</a></li> 
-						<li class="big spaced"><a class="btn btn-success btn-large" href="">Documentation</a></li> 
+						<li class="big spaced"><a class="btn btn-success" href="http://goo.gl/sRR9u">MineWriter Github</a></li>         
+						<li class="big spaced"><a class="btn btn-success" href="http://goo.gl/cgj2T">MineReader Github</a></li> 
+						<li class="big spaced"><a class="btn btn-success" href="https://apigee.com/MineWriter/embed/console/MineService?req={%22resource%22%3A%22statuses_mentions_timeline%22%2C%22params%22%3A{%22query%22%3A{}%2C%22template%22%3A{}%2C%22headers%22%3A{}%2C%22body%22%3A{%22undefined%22%3A%22\u0000%22%2C%22attachmentFormat%22%3A%22mime%22%2C%22attachmentContentDisposition%22%3A%22form-data%22}}%2C%22verb%22%3A%22get%22}">Apigee Console</a></li> 
 					</ul>              
                </div>
             </div>
