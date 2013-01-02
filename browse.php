@@ -37,14 +37,13 @@ if (isset($_POST['author']) || isset($_POST['title']) || isset($_POST['date'])) 
   </body>
 </html>
 <?php
-// DO a DB search and make it pretty :D
+// DaO a DB search and make it pretty :D
 function search() {
 	$db = connectDB($dbUser, $dbPass, $dbName);
 	if ($db instanceof PDOException) {
 		die ($db->getMessage());
 	}
 
-	$author = 
 	
 	$query = "SELECT * FROM `Books` WHERE `Author` = :author LIMIT 1";
 	$stmt = $db->prepare($query);
