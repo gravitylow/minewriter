@@ -5,11 +5,24 @@ function require_multi($files) {
         require_once($file);
 }
 
+function connectDB($user, $pass, $db) {
+    try {
+        return(new PDO("mysql:host=localhost;dbname=" . $db . ";charset=utf8", $user, $pass));
+    } catch(PDOException $ex) {
+        return $ex;
+    }
+
+}
+
+
 if (isset($_POST['author']) || isset($_POST['title']) || isset($_POST['date'])) {
 	search();
 }
+
+require("functions.php");
+require("../private/config.php");
+
 ?>
-<?php require_multi("functions.php", "../private/config.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -55,14 +68,4 @@ function search() {
 	
 	echo $row["ID"];
 }
-
-function connectDB($user, $pass, $db) {
-	try {
-		return(new PDO("mysql:host=localhost;dbname=" . $db . ";charset=utf8", $user, $pass));
-	} catch(PDOException $ex) {
-		return $ex;
-	}
-
-}
-
 ?>
