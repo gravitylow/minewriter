@@ -90,11 +90,25 @@ $nsfw = $row['nsfw'];
 	<!-- Modal -->
 <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 <div class="modal-header">
-<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-<h3 id="myModalLabel">Report content</h3>
+	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	<h3 id="myModalLabel">Report content</h3>
 </div>
 <div class="modal-body">
-<p>Thanks for keeping MineWriter free of illegal and inappropriate content. To proceed, please fill out the form below.</p>
+	<p>Thanks for keeping MineWriter free of illegal and inappropriate content. To proceed, please fill out the form below.</p>
+<form class="form-horizontal" id="report" action="report.php" method="POST">
+	<div class="control-group">
+		<label class="control-label" for="inputName">Name</label>
+		<div class="controls">
+			<input type="text" id="inputName" placeholder="Name" name = "name">
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label" for="inputName">Reason</label>
+		<div class="controls">
+			<input type="text" id="inputName" placeholder="Reason" name = "reason">
+		</div>
+	</div>
+</form>
 </div>
 
 </div>
