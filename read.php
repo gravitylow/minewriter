@@ -97,15 +97,20 @@ $nsfw = $row['nsfw'];
 	<p>Thanks for keeping MineWriter free of illegal and inappropriate content. To proceed, please fill out the form below.</p>
 <form class="form-horizontal" id="report" action="report.php" method="POST">
 	<div class="control-group">
-		<label class="control-label" for="inputName">Name</label>
+		<label class="control-label" for="inputName">Name:</label>
 		<div class="controls">
 			<input type="text" id="inputName" placeholder="Name" name = "name">
 		</div>
 	</div>
 	<div class="control-group">
-		<label class="control-label" for="inputName">Reason</label>
+		<label class="control-label" for="inputName">Reason:</label>
 		<div class="controls">
 			<input type="text" id="inputName" placeholder="Reason" name = "reason">
+		</div>
+	</div>
+	<div class="control-group">
+		<div class="controls">
+			<button type="submit" class = "btn btn-success"><i class = "icon-envelope"></i> Report</button>
 		</div>
 	</div>
 </form>
