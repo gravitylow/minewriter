@@ -35,7 +35,31 @@ function require_multi($files) {
 <?php
 // DO a DB search and make it pretty :D
 function search() {
-	pageRedirect("404.php?err=book");
+	$db = connectDB($dbUser, $dbPass, $dbName);
+	if ($db instanceof PDOException) {
+		die ($db->getMessage());
+	}
+
+	$author = 
+	
+	$query = "SELECT * FROM `Books` WHERE `Author` = :author LIMIT 1";
+	$stmt = $db->prepare($query);
+	
+	
+	$stmt->bindParam(':author', $author);
+	$stmt->execute();
+	$row = $stmt->fetch();
+	
+	echo $row["ID"];
+}
+
+function connectDB($user, $pass, $db) {
+	try {
+		return(new PDO("mysql:host=localhost;dbname=" . $db . ";charset=utf8", $user, $pass));
+	} catch(PDOException $ex) {
+		return $ex;
+	}
+
 }
 
 ?>
