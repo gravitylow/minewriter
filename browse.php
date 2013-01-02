@@ -4,6 +4,10 @@ function require_multi($files) {
     foreach($files as $file)
         require_once($file);
 }
+
+if (isset($_POST['author']) || isset($_POST['title']) || isset($_POST['date'])) {
+	search();
+}
 ?>
 <?php require_multi("functions.php", "../private/config.php"); ?>
 <!DOCTYPE html>
@@ -46,7 +50,7 @@ function search() {
 	$stmt = $db->prepare($query);
 	
 	
-	$stmt->bindParam(':author', $author);
+	$stmt->bindParam(':author', $_POST['author']);
 	$stmt->execute();
 	$row = $stmt->fetch();
 	
