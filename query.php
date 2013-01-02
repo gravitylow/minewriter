@@ -28,7 +28,7 @@ function outputDump($row) {
 }
 
 function outputText($row) {
-	return "!Author -" .$row['Author']. "\n" .
+	return "!Author-" .$row['Author']. "\n" .
 	"!Title-" .$row['Title']. "\n" . "!License-" . $row['License'] . "\n" .
 	$row['Content'];
 }
@@ -94,6 +94,10 @@ if(is_null($id)) {
 				break;
 			case "dump":
 				echo outputDump($row);
+				break;
+			case "ID":
+				echo outputID($row);
+				break;
 			default:	
 				echo outputJSON($row);	
 			break;
@@ -136,6 +140,7 @@ if(is_null($id)) {
 				break;
 			case "dump":
 				echo outputDump($row);
+				break;
 			default:	
 				echo outputJSON($row);	
 			break;
