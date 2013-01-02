@@ -40,7 +40,7 @@ function outputYAML($row) {
 }
 
 function outputID($row) {
-	return $row['id'];
+	return $row['ID'];
 }
 
 //User-supplied vars
