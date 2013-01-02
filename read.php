@@ -110,7 +110,7 @@ $nsfw = $row['nsfw'];
 	</div>
 	<div class="control-group">
 		<div class="controls">
-			<button type="submit" class = "btn btn-success"><i class = "icon-envelope"></i> Report</button>
+			<button type="submit" class = "btn btn-success">Report</button>
 		</div>
 	</div>
 </form>
