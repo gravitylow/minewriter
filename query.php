@@ -28,7 +28,7 @@ function outputDump($row) {
 }
 
 function outputText($row) {
-	return "!Author-" .$row['Author']. "\n" .
+	return "!Author -" .$row['Author']. "\n" .
 	"!Title-" .$row['Title']. "\n" . "!License-" . $row['License'] . "\n" .
 	$row['Content'];
 }
@@ -37,6 +37,10 @@ function outputYAML($row) {
 	$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'Content' => $row['Content'], 'License' => $row['License']);
 	//echo yaml_emit($array);
 	return Yaml::dump($array);
+}
+
+function outputID($row) {
+	return $row['ID'];
 }
 
 //User-supplied vars
@@ -126,6 +130,9 @@ if(is_null($id)) {
 			break;
 			case "YAML":
 				echo outputYaml($row);
+				break;
+			case "ID":
+				echo outputID($row);
 				break;
 			case "dump":
 				echo outputDump($row);
