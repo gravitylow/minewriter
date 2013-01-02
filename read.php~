@@ -42,7 +42,7 @@ $content = $row['Content'];
 $date = $row['Date'];
 $license = $row['License'];
 $nsfw = $row['nsfw'];
-
+$id = $row['id'];
 ?> 
 
 <!DOCTYPE html>
