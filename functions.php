@@ -21,8 +21,16 @@ function loginLinkSubFolder() {
 	}
 }
 
+// Navigation funtions
+function pageRedirect ($page) {
+	if (!@header("Location: ".$page))
+		echo "\n<script type=\"text/javascript\">window.location.replace('$page');</script>\n";
+		exit;
+}
+
 
 //Page structure functions
+
 function navigation() {
 $parent = basename($_SERVER['PHP_SELF']);
 ?>

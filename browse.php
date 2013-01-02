@@ -35,7 +35,7 @@ function require_multi($files) {
 <?php
 // DO a DB search and make it pretty :D
 function search() {
-	//STUFF
+	pageRedirect("404.php?err=book");
 }
 
 ?>
