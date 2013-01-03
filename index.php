@@ -41,7 +41,7 @@
         	<div class="span4">  
 				<h2>Server Owners</h2>  
 					<p>We want to make it as easy as possible for your players to author books and get them onto your server. Using the Bukkit plugin called MineReader, your players can easily get any book they want in game, with ease of use!</p>  
-					<p><a class="btn btn-primary" href="#">Get the plugin</a></p>  
+					<p><a class="btn btn-primary" href="http://dev.bukkit.org/server-mods/minereader/">Get the plugin</a></p>  
 			</div>  
 			<div class="span4">  
 				<h2>Regular Players</h2>  
