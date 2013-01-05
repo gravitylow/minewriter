@@ -81,8 +81,7 @@ $flags = $row['Flags'];
           
        <?php if ($nsfw == '1') { ?><div id = "notice" class = "alert alert-block alert-error" style = "width: 470px;">This content may not be suitable for all users, as flagged by the author. Click the button below to read this content. Remember that it may include explicit, violent or disturbing content:<br />
        	<br /><a href="#" id = "nbtn" role="button" class="btn btn-danger" onclick = 'showNSFW()'><i class = "icon-exclamation-sign"></i> Show this content</a>
-       </div><?php } ?> 
-       <?php
+       </div><?php }
        		if($flags > 1) { ?>
        			<div id = "notice" class = "alert alert-block alert-error" style = "width: 470px;">
        				Warning: This book has <?php $flags ?> flags!

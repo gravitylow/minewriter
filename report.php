@@ -37,6 +37,19 @@ function hasHtml($str){
 		$flags = $flags + 1;
 	}
 	
+			
+		
+	$db = connectDB($dbUser, $dbPass, $dbName);
+	if ($db instanceof PDOException) {
+		die ($db->getMessage());
+	}
+	$sql = "UPDATE Books SET Flags=':flags' WHERE ID=':id'";
+	$stmt = $db->prepare($sql);
+	$stmt->bindParam(':id', $id);
+	$stmt->bindParam(':flags', $flags);
+	$stmt->execute();
+	
+	
 	if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 		?><script type="text/javascript">
 			window.alert("Invalid email, it must be example@domain.com");
@@ -72,16 +85,5 @@ function hasHtml($str){
 			history.go(-1);
 		</script>
 		<?php
-		
-		
-$db = connectDB($dbUser, $dbPass, $dbName);
-if ($db instanceof PDOException) {
-	die ($db->getMessage());
-}
-$sql = "UPDATE Books SET Flags=':flags' WHERE ID=':id'";
-$stmt = $db->prepare($sql);
-$stmt->bindParam(':id', $id);
-$stmt->bindParam(':flags', $flags);
-$stmt->execute();
 		
 ?>
