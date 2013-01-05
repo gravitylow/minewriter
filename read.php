@@ -84,7 +84,7 @@ $flags = $row['Flags'];
        </div><?php }
        		if($flags > 0) { ?>
        			<div id = "notice" class = "alert alert-block alert-error" style = "width: 470px;">
-       				Warning: This book has <?php echo($flags) ?> flags!
+       				Warning: This book has <?php echo($flags) ?> flag<?php if($flags != 1) {echo("s")}?>!
        			</div>
        <?php } ?>
        
