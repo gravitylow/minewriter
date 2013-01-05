@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+<script src="bootstrap.min.js"></script>
 <script src="bootbox.min.js"></script>
 <?php
 require("../private/config.php");
