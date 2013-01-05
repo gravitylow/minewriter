@@ -1,3 +1,4 @@
+<script src="bootbox.min.js"></script>
 <?php
 require("../private/config.php");
 require("functions.php");
@@ -60,7 +61,7 @@ function hasHtml($str){
 	}
 	if($name == null || $email == null) {
 		?><script type="text/javascript">
-			window.alert("Please fill in a name and/or email.");
+			bootbox.alert("Please fill in a name and/or email.");
 			history.go(-1);
 		</script>
 		<?php
