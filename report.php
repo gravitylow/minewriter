@@ -43,7 +43,7 @@ function hasHtml($str){
 	if ($db instanceof PDOException) {
 		die ($db->getMessage());
 	}
-	$sql = "UPDATE Books SET Flags=':flags' WHERE ID=':id'";
+	$sql = "UPDATE Books SET Flags=:flags WHERE ID=:id";
 	$stmt = $db->prepare($sql);
 	$stmt->bindParam(':id', $id);
 	$stmt->bindParam(':flags', $flags);
