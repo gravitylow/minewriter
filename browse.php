@@ -1,7 +1,7 @@
+<?php
 require("functions.php");
 require("../private/config.php");
 
-<?php
 function require_multi($files) {
     $files = func_get_args();
     foreach($files as $file)
