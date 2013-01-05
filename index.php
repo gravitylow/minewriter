@@ -46,12 +46,12 @@
 			<div class="span4">  
 				<h2>Regular Players</h2>  
 					<p>Writing books and bringing them onto your favorite server is now easier then ever! If the server you play on doesn't have MineReader, suggest it to them! :D</p>  
-					<p><a class="btn btn-primary" href="#">See more</a></p>  
+					<br /><p><a class="btn btn-primary" href="#">See more</a></p>  
 			</div>  
 			<div class="span4">  
 				<h2>Developers</h2>  
 					<p>All developers are invited to help us improve our website and minereader plugin, both are open sourced and we welcome all contributors</p>  
-					<p><a class="btn btn-primary" href="devs.php">Visit the dev page</a></p>  
+					<br /><br /><p><a class="btn btn-primary" href="devs.php">Visit the dev page</a></p>  
 			</div>	
         </div> 	
         <?php divider(); ?>
