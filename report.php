@@ -3,7 +3,6 @@
 <script src="bootbox.min.js"></script>
 <?php
 require("../private/config.php");
-require("functions.php");
 
 
 
@@ -84,7 +83,7 @@ function hasHtml($str){
 		$message);
 		?>
 		<script type="text/javascript">
-			window.alert("Reported!");
+			bootbox.alert("Reported!");
 			history.go(-1);
 		</script>
 		<?php
