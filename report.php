@@ -1,4 +1,19 @@
 <?php
+require("../private/config.php");
+require("functions.php");
+
+
+
+function connectDB($user, $pass, $db) {
+	try {	
+		return(new PDO("mysql:host=localhost;dbname=" . $db . ";charset=utf8", $user, $pass));
+	} catch(PDOException $ex) {
+		die($user);
+		return $ex;
+	}
+	
+}
+
 
 function hasHtml($str){
   if(strlen($str) != strlen(strip_tags($str))) {
@@ -14,6 +29,14 @@ function hasHtml($str){
 	$name = $_POST['name'];
 	$id = $_POST['id'];
 	$content = $_POST['reason'];
+	$flags = $_POST['flags'];
+	if($flags < 0) {
+		$flags = 1;
+	}
+	else {
+		$flags = $flags + 1;
+	}
+	
 	if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 		?><script type="text/javascript">
 			window.alert("Invalid email, it must be example@domain.com");
@@ -49,5 +72,16 @@ function hasHtml($str){
 			history.go(-1);
 		</script>
 		<?php
+		
+		
+$db = connectDB($dbUser, $dbPass, $dbName);
+if ($db instanceof PDOException) {
+	die ($db->getMessage());
+}
+$sql = "UPDATE Books SET Flags=':flags' WHERE ID=':id'";
+$stmt = $db->prepare($sql);
+$stmt->bindParam(':id', $id);
+$stmt->bindParam(':flags', $flags);
+$stmt->execute();
 		
 ?>
