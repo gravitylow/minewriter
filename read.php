@@ -61,7 +61,7 @@ $flags = $row['Flags'];
 
       <div class="content">
         <div class="page-header">
-          <h1>Reading book <small><?php echo ($title); ?></small></h1>
+          <h1>Reading book <small><?php echo($title); ?></small></h1>
         </div> 
         <div name="myform" style = "position: relative;">
           
@@ -84,7 +84,7 @@ $flags = $row['Flags'];
        </div><?php }
        		if($flags > 0) { ?>
        			<div id = "notice" class = "alert alert-block alert-error" style = "width: 470px;">
-       				Warning: This book has <?php $flags ?> flags!
+       				Warning: This book has <?php echo($flags) ?> flags!
        			</div>
        <?php } ?>
        
