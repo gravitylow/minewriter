@@ -42,6 +42,7 @@ $content = $row['Content'];
 $date = $row['Date'];
 $license = $row['License'];
 $nsfw = $row['nsfw'];
+$flags = $row['Flags'];
 
 ?> 
 
@@ -81,6 +82,13 @@ $nsfw = $row['nsfw'];
        <?php if ($nsfw == '1') { ?><div id = "notice" class = "alert alert-block alert-error" style = "width: 470px;">This content may not be suitable for all users, as flagged by the author. Click the button below to read this content. Remember that it may include explicit, violent or disturbing content:<br />
        	<br /><a href="#" id = "nbtn" role="button" class="btn btn-danger" onclick = 'showNSFW()'><i class = "icon-exclamation-sign"></i> Show this content</a>
        </div><?php } ?> 
+       <?php
+       		if($flags > 1) { ?>
+       			<div id = "notice" class = "alert alert-block alert-error" style = "width: 470px;">
+       				Warning: This book has <?php $flags ?> flags!
+       			</div>
+       <?php } ?>
+       
        <textarea class = "book" id = "writing" name = "bookContent" style = "cursor: default !important; <?php if ($nsfw == '1') { ?>visibility: hidden;<?php } ?>" readonly><?php echo ($content); ?></textarea>
        
           <br /> 
@@ -97,6 +105,7 @@ $nsfw = $row['nsfw'];
 	<p>Thanks for keeping MineWriter free of illegal and inappropriate content. To proceed, please fill out the form below.</p>
 <form class="form-horizontal" id="report" action="report.php" method="POST">
 	<input type="hidden" name="id" value="<?=$ID?>" /><!-- Pass the id -->
+	<input type="hidden" name="flags" value="<?=$flags?>" /><!-- Pass the flags -->
 	<div class="control-group">
 		<label class="control-label" for="inputName">Name:</label>
 		<div class="controls">
