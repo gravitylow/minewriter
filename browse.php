@@ -1,3 +1,6 @@
+require("functions.php");
+require("../private/config.php");
+
 <?php
 function require_multi($files) {
     $files = func_get_args();
@@ -19,8 +22,7 @@ if (isset($_POST['author']) || isset($_POST['title']) || isset($_POST['date'])) 
 	search();
 }
 
-require("functions.php");
-require("../private/config.php");
+
 
 ?>
 <!DOCTYPE html>
