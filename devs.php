@@ -13,7 +13,7 @@
 
       <div class="content">
         <div class="page-header">
-          <h1>MineDeveloper <small>Write programs using our MineService!</small></h1>
+          <h1>MineAPI <small>Write programs using our MineService!</small></h1>
         </div>            
               <div>
               	<h2 class="big">What is MineService?</h2>     
