@@ -87,7 +87,7 @@ $parent = basename($_SERVER['PHP_SELF']);
 			<li><a href="../about.php">About</a></li>
 			<li><a href="../contact.php">Contact</a></li>
 			<li><a href="../team.php">Team</a></li>
-			<li><a href="devs.php">Developers</a></li>
+			<li><a href="devs.php">API</a></li>
 		  </ul>
 		  <ul class = "nav pull-right">
 		  	<li <?php if ($parent == "login.php") {?>class="active"<?php } ?>><?php echo (loginLinkSubFolder()); ?></li>
@@ -122,7 +122,7 @@ $parent = basename($_SERVER['PHP_SELF']);
 			<li><a href="http://www.minewriter.net/about.php">About</a></li>
 			<li><a href="http://www.minewriter.net/contact.php">Contact</a></li>
 			<li><a href="http://www.minewriter.net/team.php">Team</a></li>
-			<li><a href="http://www.minewriter.net/devs.php">Developers</a></li>
+			<li><a href="http://www.minewriter.net/devs.php">API</a></li>
 		  </ul>
 		  <ul class = "nav pull-right">
 		  	<li <?php if ($parent == "login.php") {?>class="active"<?php } ?>><?php echo (loginLink()); ?></li>
