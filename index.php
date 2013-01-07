@@ -51,7 +51,7 @@
 			<div class="span4">  
 				<h2>Developers</h2>  
 					<p>All developers are invited to help us improve our website and minereader plugin, both are open sourced and we welcome all contributors</p>  
-					<br /><br /><p><a class="btn btn-primary" href="devs.php">Visit the dev page</a></p>  
+					<br /><br /><p><a class="btn btn-primary" href="devs.php">Visit the API page</a></p>  
 			</div>	
         </div> 	
         <?php divider(); ?>
