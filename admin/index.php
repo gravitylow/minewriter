@@ -26,7 +26,6 @@
           <label class="control-label" for="input01">Username</label>
           <div class="controls">
             <input type="text" placeholder="Username" class="input-xlarge">
-            <p class="help-block">Your username</p>
           </div>
         </div>
 
@@ -36,7 +35,6 @@
           <label class="control-label" for="input01">Password</label>
           <div class="controls">
             <input type="password" placeholder="Password" class="input-xlarge">
-            <p class="help-block">Your password</p>
           </div>
         </div>
 
@@ -46,7 +44,6 @@
           <label class="control-label" for="input01">Key</label>
           <div class="controls">
             <input type="password" placeholder="Key" class="input-xlarge">
-            <p class="help-block">Your special key</p>
           </div>
         </div>
 
