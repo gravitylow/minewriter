@@ -38,9 +38,9 @@
                </div>
                <h2 class="big">Links</h2>     
 					<ul style = "list-style: none;">
-						<li class="big spaced"><a class="btn btn-success" href="http://goo.gl/sRR9u">MineWriter Github</a></li>         
-						<li class="big spaced"><a class="btn btn-success" href="http://goo.gl/cgj2T">MineReader Github</a></li> 
-						<li class="big spaced"><a class="btn btn-success" href="https://apigee.com/MineWriter/embed/console/MineService">Apigee Console</a></li> 
+						<li class="big spaced"><a class="btn btn-success" href="http://goo.gl/sRR9u" width="130px">MineWriter Github</a></li>         
+						<li class="big spaced"><a class="btn btn-success" href="http://goo.gl/cgj2T" width="130px">MineReader Github</a></li> 
+						<li class="big spaced"><a class="btn btn-success" href="https://apigee.com/MineWriter/embed/console/MineService" width="130px">Apigee Console</a></li> 
 					</ul>              
                </div>
             </div>
