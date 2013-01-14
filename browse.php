@@ -54,9 +54,10 @@ if (isset($_POST['author']) || isset($_POST['title']) || isset($_POST['date'])) 
 <?php
 // DaO a DB search and make it pretty :D
 function search() {
+	global $dbUser, $dbPass, $dbName;
 	$db = connectDB($dbUser, $dbPass, $dbName);
 	if ($db instanceof PDOException) {
-		die ($db->getMessage() . strlen($dbUser));
+		die ($db->getMessage());
 	}
 
 	
