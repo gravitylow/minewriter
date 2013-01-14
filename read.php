@@ -45,6 +45,9 @@ $nsfw = $row['nsfw'];
 $flags = $row['Flags'];
 $genre = $row['genre'];
 $downloads = $row['downloads'];
+if ($downloads == "") {
+	$downloads = 0;
+}
 
 ?> 
 
@@ -86,7 +89,7 @@ $downloads = $row['downloads'];
           
            
           
-            <div class = "well" style = "position: absolute; right: 0; top: 240px; width: 220px;">
+            <div class = "well" style = "position: absolute; right: 0; top: 260px; width: 220px;">
           <?php topHeader("Staff tools"); ?>
           <p>Would be here</p>
           </div>
