@@ -92,8 +92,8 @@ if ($downloads == "") {
             <div class = "well" style = "position: absolute; right: 0; top: 260px; width: 220px;">
           <?php topHeader("Staff tools"); ?>
           <form method="POST" action="someForm.php">
-          	<center><button type="button" class="btn btn-warning" style="margin-bottom: 10px;"><i class = "icon-minus-sign"></i> Hide Book</button><br />
-          	<button type="button" class="btn btn-danger" width="130"><i class = "icon-trash"></i> Delete Book</button><br /></center>
+          	<center><button type="button" class="btn btn-warning" style="margin-bottom: 10px;width:130px;"><i class = "icon-minus-sign"></i> Hide Book</button><br />
+          	<button type="button" class="btn btn-danger" style=" width:130px;"><i class = "icon-trash"></i> Delete Book</button><br /></center>
           </form>
           </div>
           
