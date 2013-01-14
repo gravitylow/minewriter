@@ -99,8 +99,8 @@ if ($downloads == "") {
           <strong>IP: </strong><?php echo $IP; ?>
           <br /><strong style = "font-size: 16px;">Book actions</strong><br />
           	<center>
-          	<a type="button" class="btn btn-warning" style="margin-bottom: 10px;width:130px;"><i class = "icon-minus-sign"></i> Hide Book</button><br />
-          	<a type="button" class="btn btn-danger" style=" width:130px;"><i class = "icon-trash"></i> Delete Book</button><br />
+          	<a type="button" class="btn btn-warning" style="margin-bottom: 10px;width:130px;"><i class = "icon-minus-sign"></i> Hide Book</a><br />
+          	<a type="button" class="btn btn-danger" style=" width:130px;"><i class = "icon-trash"></i> Delete Book</a><br />
           	</center>
           </div>
           
