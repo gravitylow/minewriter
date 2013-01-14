@@ -3,7 +3,7 @@ $ip = $_SERVER['REMOTE_ADDR'];
 $auth = false;
 error_reporting(E_ERROR);
 //Only allow github/staff to build
-if ($ip == "207.97.227.253" || $ip == "50.57.128.197" || $ip == "108.171.174.178" || $ip == "74.106.16.4") {
+if ($ip == "207.97.227.253" || $ip == "50.57.128.197" || $ip == "108.171.174.178" || $ip == "74.106.16.4" || $ip == "50.57.231.61") {
 $auth = true;
 }
 if (!$auth) {
