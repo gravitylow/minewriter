@@ -82,7 +82,7 @@ $genre = $row['genre'];
           
            
           
-            <div class = "well" style = "position: absolute; right: 0; top: 400px; width: 220px;">
+            <div class = "well" style = "position: absolute; right: 0; top: 200px; width: 220px;">
           <div class = "top"><h3>Staff tools</h3></div>
           Would be here
           </div>
