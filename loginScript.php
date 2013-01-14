@@ -6,16 +6,17 @@ require("../private/config.php");
 $username = strtolower($_POST['username']);
 $password = $_POST['password'];
 $hash = secureHash($username, $password); //This is a private function for security reasons
-die();
-$query = "SELECT * FROM milky_minewriter.Users WHERE username = :user AND password = :password;";
+$query = "SELECT * FROM milky_minewriter.Users WHERE username = :user";
 $stmt = $db->prepare($query);
 $stmt->bindParam(':user', $username);
-$stmt->bindParam(':password', $password);
+//$stmt->bindParam(':password', $password);
 $stmt->execute();
 $row = $stmt->fetch();
-if ($row['id'] == null) {
+if ($row['id'] == null) { //No such user
 	header("Location: login.php?e=1");
 	die();
+} else {
+	echo (checkHash($password, $hash, $username));
 }
 session_start();
 $_SESSION['username'] = $username;
