@@ -94,7 +94,7 @@ if(is_null($id)) {
 			case "YAML":
 				echo outputYaml($row);
 				break;
-			case "dump":
+			case "DUMP":
 				echo outputDump($row);
 				break;
 			case "ID":
@@ -142,7 +142,7 @@ if(is_null($id)) {
 			case "ID":
 				echo outputID($row);
 				break;
-			case "dump":
+			case "DUMP":
 				echo outputDump($row);
 				break;
 			default:	
