@@ -29,9 +29,10 @@ if ($row['id'] == null) { //No such user
 	header("Location: login.php?e=1");
 	die();
 } else {
-	echo (checkHash($password, $hash, $username));
+	echo (checkHash($password, $row['password'], $username));
 }
 session_start();
+die();
 $_SESSION['username'] = $username;
 $_SESSION['id'] = $row['id'];
 $_SESSION['access'] = $row['access'];
