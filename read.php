@@ -93,17 +93,15 @@ if ($downloads == "") {
           
             <div class = "well" style = "position: absolute; right: 0; top: 260px; width: 220px;">
           <?php topHeader("Staff tools"); ?>
-          <h4>Submission Details:</h4><br />
-          <h6>Username: </h6><?php echo $username; ?>
+          <strong style = "font-size: 16px;">Submission Details</strong><br />
+          <strong>Username: </strong><?php echo $username; ?>
           <br />
-          <h6>IP: </h6><?php echo $IP; ?>
-          <br /><br />
-          <form method="POST" action="someForm.php">
+          <strong>IP: </strong><?php echo $IP; ?>
+          <br /><strong style = "font-size: 16px;">Book actions</strong><br />
           	<center>
-          	<button type="button" class="btn btn-warning" style="margin-bottom: 10px;width:130px;"><i class = "icon-minus-sign"></i> Hide Book</button><br />
-          	<button type="button" class="btn btn-danger" style=" width:130px;"><i class = "icon-trash"></i> Delete Book</button><br />
+          	<a type="button" class="btn btn-warning" style="margin-bottom: 10px;width:130px;"><i class = "icon-minus-sign"></i> Hide Book</button><br />
+          	<a type="button" class="btn btn-danger" style=" width:130px;"><i class = "icon-trash"></i> Delete Book</button><br />
           	</center>
-          </form>
           </div>
           
        <?php if ($nsfw == '1') { ?><div id = "notice" class = "alert alert-block alert-error" style = "width: 470px;">This content may not be suitable for all users, as flagged by the author. Click the button below to read this content. Remember that it may include explicit, violent or disturbing content:<br />
