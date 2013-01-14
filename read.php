@@ -91,7 +91,10 @@ if ($downloads == "") {
           
             <div class = "well" style = "position: absolute; right: 0; top: 260px; width: 220px;">
           <?php topHeader("Staff tools"); ?>
-          <p>Would be here</p>
+          <form method="POST" action="someForm.php">
+          	<button type="button" class="btn btn-warning"><i class = "icon-minus-sign"></i> Hide Book</button><br />
+          	<button type="button" class="btn btn-danger"><i class = "icon-trash"></i> Delete Book</button><br />
+          </form>
           </div>
           
        <?php if ($nsfw == '1') { ?><div id = "notice" class = "alert alert-block alert-error" style = "width: 470px;">This content may not be suitable for all users, as flagged by the author. Click the button below to read this content. Remember that it may include explicit, violent or disturbing content:<br />
@@ -119,7 +122,7 @@ if ($downloads == "") {
 	<p>Thanks for keeping MineWriter free of illegal and inappropriate content. To proceed, please fill out the form below.</p>
 <form class="form-horizontal" id="report" action="report.php" method="POST">
 	<input type="hidden" name="id" value="<?=$ID?>" /><!-- Pass the id -->
-	<input type="hidden" name="flags" value="<?=$flags?>" /><!-- Pass the flags -->
+	<input type="hidden" name="s" value="<?=$flags?>" /><!-- Pass the flags -->
 	<div class="control-group">
 		<label class="control-label" for="inputName">Name:</label>
 		<div class="controls">
