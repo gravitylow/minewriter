@@ -1,6 +1,6 @@
 <?php
-require("functions.php");
 require("../private/config.php");
+require("functions.php");
 
 function require_multi($files) {
     $files = func_get_args();
@@ -56,7 +56,7 @@ if (isset($_POST['author']) || isset($_POST['title']) || isset($_POST['date'])) 
 function search() {
 	$db = connectDB($dbUser, $dbPass, $dbName);
 	if ($db instanceof PDOException) {
-		die ($db->getMessage());
+		die ($db->getMessage() . strlen($dbUser));
 	}
 
 	
