@@ -79,7 +79,7 @@ if (!isset($_POST['not_nsfw'])) {
 	$nsfw = 1;
 }
 $genre = $_POST['genre'];
-$sql = "INSERT INTO Books VALUES(NULL,:author,:title,:content,:license,NOW(),:username,:ip,0,$queue,$nsfw,:genre,0)";
+$sql = "INSERT INTO Books VALUES(NULL,:author,:title,:content,:license,NOW(),:username,:ip,0,$queue,$nsfw,:genre,0,0)";
 $stmt = $db->prepare($sql);
 $stmt->bindParam(':author', $author);
 $stmt->bindParam(':title', $title);
