@@ -1,4 +1,5 @@
 <?php
+include "$functions.php";
 
 $ID = $_GET['ID'];
 
