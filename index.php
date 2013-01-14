@@ -16,7 +16,7 @@
 		<p>Try out our user friendly authoring service!</p>  
 		<p><a href="write.php" class="btn btn-primary">Try now!</a></p> 
 		<a class="thumbnail" href="#" style = "position: absolute; right: 25px; top: 30px;">
-                  <img alt="260x180" src="http://i.imgur.com/0RWRs.png" style="width: 350px; height: 180px;" >
+                  <img alt="260x180" src="http://i.imgur.com/0RWRs.png" style="width: 438px; height: 192px;" >
                 </a>
 		</div>  
 				
