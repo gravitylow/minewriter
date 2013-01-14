@@ -60,8 +60,13 @@ if ($downloads == "") {
     <title>Reading <?php echo ($title); ?></title>
 	<?php headIncludes(); ?>
 	<script type = "text/javascript" src = "http://code.jquery.com/jquery.min.js"></script>
+	<script type = "text/javascript" src = "js/bootstrap.min.js"></script>
   </head>
   <body>
+  	<?php 
+  		if($_GET['a'] == "20") { ?> <script type="text/javascript">bootbox.alert("Successfully deleted book.");</script> <?php } 
+  		if($_GET['a'] == "21") { ?> <script type="text/javascript">bootbox.alert("You do not have privledges to delete books.");</script> <?php }
+  	?>
     <?php navigation(); ?>
     <div id = "wrap">
     <div class="container">
