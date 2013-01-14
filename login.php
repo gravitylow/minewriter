@@ -21,7 +21,7 @@
 		      <legend class="">Login</legend>
 		    </div>
 		    <?php if ($_GET['e'] == 1) {?><div class = "alert-error alert"><i class = "icon-lock"></i> Incorrect username or password.</div><?php } ?>
-		    <?php if ($_GET['e'] == 2) {?><div class = "alert-error alert"><i class = "icon-ban-circle"></i> You have been banned: <?php echo (strip_tags(base64_decode($_GET['reason']))); ?></div><?php } ?>
+		    <?php if ($_GET['e'] == 2) { if ($_GET['reason'] == "") { $_GET['reason'] = 'Inappropriate Conduct'; }?><div class = "alert-error alert"><i class = "icon-ban-circle"></i> You have been banned: <?php echo (strip_tags(base64_decode($_GET['reason']))); ?></div><?php } ?>
 		    <?php if ($_GET['e'] == 3) {?><div class = "alert-error alert"><i class = "icon-envelope"></i> Please verify your email address before logging in.</div><?php } ?>
 		    <?php if ($_GET['e'] == 4) {?><div class = "alert-success alert"><i class = "icon-check"></i> Your email address has been verified. You may now login.</div><?php } ?>
 		     <?php if ($_GET['e'] == 5) {?><div class = "alert-success alert"><i class = "icon-signout"></i> You have been successfully logged out.</div><?php } ?>
