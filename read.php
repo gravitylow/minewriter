@@ -44,6 +44,7 @@ $license = $row['License'];
 $nsfw = $row['nsfw'];
 $flags = $row['Flags'];
 $genre = $row['genre'];
+$downloads = $row['downloads'];
 
 ?> 
 
@@ -75,6 +76,8 @@ $genre = $row['genre'];
           	<strong>License: </strong><?php echo $license; ?>
           	<br />
           	<strong>Created: </strong><?php echo $date; ?>
+          	<br />
+          	<strong>Downloads: </strong><?php echo $downloads; ?>
 	<br />
 	<br />
 	<center><a href="#myModal" role="button" class="btn btn-danger" data-toggle="modal"><i class = "icon-flag"></i> Report content</a></center>
