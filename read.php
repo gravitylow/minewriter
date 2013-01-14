@@ -67,6 +67,7 @@ $genre = $row['genre'];
         <div name="myform" style = "position: relative;">
           
             <div class = "well" style = "position: absolute; right: 0; width: 220px;">
+            <?php topHeader("Book info"); ?>
           	<strong><?php echo $title; ?></strong>
           	<br />
           	<strong>by <?php echo $author; ?></strong><br />
@@ -82,9 +83,9 @@ $genre = $row['genre'];
           
            
           
-            <div class = "well" style = "position: absolute; right: 0; top: 200px; width: 220px;">
-          <div class = "top"><h3>Staff tools</h3></div>
-          Would be here
+            <div class = "well" style = "position: absolute; right: 0; top: 220px; width: 220px;">
+          <?php topHeader("Staff tools"); ?>
+          <p>Would be here</p>
           </div>
           
        <?php if ($nsfw == '1') { ?><div id = "notice" class = "alert alert-block alert-error" style = "width: 470px;">This content may not be suitable for all users, as flagged by the author. Click the button below to read this content. Remember that it may include explicit, violent or disturbing content:<br />
