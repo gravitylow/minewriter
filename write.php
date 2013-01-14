@@ -92,8 +92,8 @@
           	<a href="#myModal" role="button" class="btn btn-primary" data-toggle="modal" style = "margin-left: 16px;"><i class = "icon-info-sign"></i> Submission Guidelines</a>
           	</div>
        <textarea class = "book" id = "writing" name = "bookContent" style = "" required></textarea>
-       <p class = "text-warning">All books must be original. No copyrighted material will be accepted. Additionally, 'adult' content must be marked as so by unticking the checkbox on the right. Failure to comply with this and the polciies shown in the submission info may result in book deletion and the ban of the user responsible.</p>
-          <br /> 
+       <p class = "text-warning" style = "width: 680px; padding-top: 10px;">All books must be original. No copyrighted material will be accepted. Additionally, 'adult' content must be marked as so by unticking the checkbox on the right. Failure to comply with this and the polciies shown in the submission info may result in book deletion and the ban of the user responsible.</p>
+           
         </form>
       </div>
 	</div><br />
