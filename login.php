@@ -61,7 +61,7 @@
 		    <?php if ($_GET['e'] == 7) {?><div class = "alert-error alert"><i class = "icon-warning-sign"></i> Passwords do not match.</div><?php } ?>
 		    <?php if ($_GET['e'] == 8) {?><div class = "alert-error alert"><i class = "icon-warning-sign"></i> Invalid email address given.</div><?php } ?>
 		    <?php if ($_GET['e'] == 9) {?><div class = "alert-error alert"><i class = "icon-warning-sign"></i> Username is already taken.</div><?php } ?>
-		    <?php if ($_GET['e'] == 10) {?><div class = "alert"><i class = "icon-check"></i> Your registration was succesfull, please now confirm your email.</div><?php } ?>
+		    <?php if ($_GET['e'] == 10) {?><div class = "alert"><i class = "icon-check"></i> Your registration was succesful, please now confirm your email.</div><?php } ?>
 
 		    <div class="control-group">
 		      <label class="control-label" for="username">Username</label>
