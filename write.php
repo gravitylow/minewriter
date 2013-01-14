@@ -87,12 +87,12 @@
           	</button>
           </div>
           
-          <div class = "well" style = "position: absolute; right: 0; top: 656px; width: 220px;">
+          <div class = "well" style = "position: absolute; right: 0; top: 696px; width: 220px;">
           <?php topHeader("Submission information"); ?>
           	<a href="#myModal" role="button" class="btn btn-primary" data-toggle="modal" style = "margin-left: 16px;"><i class = "icon-info-sign"></i> Submission Guidelines</a>
           	</div>
        <textarea class = "book" id = "writing" name = "bookContent" style = "" required></textarea>
-       
+       <p class = "text-warning">All books must be original. No copyrighted material will be accepted. Additionally, 'adult' content must be marked as so by unticking the checkbox on the right. Failure to comply with this and the polciies shown in the submission info may result in book deletion and the ban of the user responsible.</p>
           <br /> 
         </form>
       </div>
