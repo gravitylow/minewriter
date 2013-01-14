@@ -1,6 +1,9 @@
 <?php
 session_start();
 //Authentication functions
+function topHeader($text) {
+?><div class = "top"><h4><?php echo ($text); ?></h4></div><?php	
+}
 function isLoggedIn() {
 	return isset($_SESSION['username']);
 }
