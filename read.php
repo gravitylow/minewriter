@@ -93,8 +93,9 @@ if ($downloads == "") {
           
             <div class = "well" style = "position: absolute; right: 0; top: 260px; width: 220px;">
           <?php topHeader("Staff tools"); ?>
-          <strong>Submission Username: </strong><?php echo $username; ?>
-          <strong>Submission IP: </strong><?php echo $IP; ?>
+          <strong>Submission Details:</strong><br />
+          <strong>Username: </strong><?php echo $username; ?>
+          <strong>IP: </strong><?php echo $IP; ?>
           <form method="POST" action="someForm.php">
           	<center>
           	<button type="button" class="btn btn-warning" style="margin-bottom: 10px;width:130px;"><i class = "icon-minus-sign"></i> Hide Book</button><br />
