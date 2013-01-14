@@ -25,7 +25,7 @@ function loginLinkSubFolder() {
 }
 
 function isStaff() {
-	return ($_SESSION['access'] == "staff");
+	return (isLoggedIn() && $_SESSION['access'] == "staff");
 }
 
 // Navigation funtions
