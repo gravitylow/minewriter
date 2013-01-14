@@ -83,7 +83,7 @@ $genre = $row['genre'];
           
            
           
-            <div class = "well" style = "position: absolute; right: 0; top: 220px; width: 220px;">
+            <div class = "well" style = "position: absolute; right: 0; top: 240px; width: 220px;">
           <?php topHeader("Staff tools"); ?>
           <p>Would be here</p>
           </div>
