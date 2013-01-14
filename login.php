@@ -20,6 +20,8 @@
 		    <div id="legend">
 		      <legend class="">Login</legend>
 		    </div>
+		    <?php if ($_GET['e'] == 1) {?><div class = "alert-error alert"><i class = "icon-lock"></i> Incorrect username or password.</div><?php } ?>
+		    <?php if ($_GET['e'] == 2) {?><div class = "alert-error alert"><i class = "icon-ban-circle"></i> You have been banned. <?php echo (base64_decode($_GET['reason'])); ?></div><?php } ?>
 		    <div class="control-group">
 		      <label class="control-label" for="username">Username</label>
 		      <div class="controls">
