@@ -6,7 +6,6 @@ require("../private/config.php");
 $username = strtolower($_POST['username']);
 $password = $_POST['password'];
 $hash = secureHash($username, $password); //This is a private function for security reasons
-echo ($hash);
 die();
 $query = "SELECT * FROM milky_minewriter.Users WHERE username = :user AND password = :password;";
 $stmt = $db->prepare($query);
