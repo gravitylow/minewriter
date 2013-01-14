@@ -11,14 +11,14 @@ if(isStaff()) {
 		$stmt->execute();
 		?>
 		<script type="text/javascript">
-		window.location = "read.php?a=20"
+		window.location = "read.php?id=<?php echo($ID) ?>&a=20"
 	</script>
 		<?php
 
 }
 else { ?>
 	<script type="text/javascript">
-		window.location = "read.php?a=21"
+		window.location = "read.php?id=<?php echo($ID) ?>&a=21"
 	</script>
 <?php }
 	
