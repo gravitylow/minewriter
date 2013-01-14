@@ -49,7 +49,7 @@ $Title=$_GET["title"];
 $Type=$_GET["type"];
 $ID=$_GET['id'];
 $Ip = $_SERVER['REMOTE_ADDR'];
-
+$downloads = 0;
 
 /*
 Error Codes:
@@ -82,6 +82,8 @@ if(is_null($id)) {
 		if ($row['ID'] == null) {
 			die("105");
 		}
+		global $downloads;
+		$downloads = $row['downloads'] + 1;
 		switch($Type) {
 			case "JSON":
 				echo outputJSON($row);		
@@ -125,6 +127,8 @@ if(is_null($id)) {
 		if ($row['ID'] == null) {
 			die("105");
 		}
+		global $downloads;
+		$downloads = $row['downloads'] + 1;
 		switch($Type) {
 			case "JSON":
 				echo outputJSON($row);		
@@ -147,4 +151,10 @@ if(is_null($id)) {
 		}
 	}
 }
+
+$updateQuery = "UPDATE `Books` SET `downloads` = :downloads WHERE `ID` = :id";
+		$stmt = $db->prepare($updateQuery);
+		$stmt->bindParam(':downloads', $downloads);
+		$stmt->bindParam(':id', $ID);
+		$stmt->execute();
 ?> 
