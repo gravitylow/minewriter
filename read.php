@@ -93,11 +93,11 @@ if ($downloads == "") {
           
             <div class = "well" style = "position: absolute; right: 0; top: 260px; width: 220px;">
           <?php topHeader("Staff tools"); ?>
-          <strong style = "font-size: 16px;">Submission Details</strong><br />
+          <strong style = "font-size: 16px; margin-bottom: 8px;">Submission Details</strong><br />
           <strong>Username: </strong><?php echo $username; ?>
           <br />
           <strong>IP: </strong><?php echo $IP; ?>
-          <br /><strong style = "font-size: 16px;">Book actions</strong><br />
+          <br /><strong style = "font-size: 16px; margin-bottom: 8px;">Book actions</strong><br />
           	<center>
           	<a type="button" class="btn btn-warning" style="margin-bottom: 10px;width:130px;"><i class = "icon-minus-sign"></i> Hide Book</a><br />
           	<a type="button" class="btn btn-danger" style=" width:130px;"><i class = "icon-trash"></i> Delete Book</a><br />
