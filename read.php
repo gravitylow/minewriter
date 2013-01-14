@@ -97,7 +97,7 @@ if ($downloads == "") {
           <strong>Username: </strong><?php echo $username; ?>
           <br />
           <strong>IP: </strong><?php echo $IP; ?>
-          <br /><br /><br />
+          <br /><br />
           <form method="POST" action="someForm.php">
           	<center>
           	<button type="button" class="btn btn-warning" style="margin-bottom: 10px;width:130px;"><i class = "icon-minus-sign"></i> Hide Book</button><br />
