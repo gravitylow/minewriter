@@ -18,6 +18,7 @@
         </div> 
         <form name="myform" action="post.php" method="POST" style = "position: relative;">
         	  <div class = "well" style = "position: absolute; right: 0; width: 220px;">
+        	  <?php topHeader("Formatting tools"); ?>
           	<a class = "btn" onclick = '$("#writing").insertAtCaret("§l"); $("#writing").focus();' style = ""><i class = "icon-bold"></i></a> <a class = "btn" style = "" onclick = '$("#writing").insertAtCaret("§o"); $("#writing").focus();'><i class = "icon-italic"></i></a>
           	 <a class = "btn" onclick = '$("#writing").insertAtCaret("§n"); $("#writing").focus();' style = ""><i class = "icon-underline"></i></a> <a class = "btn" style = "" onclick = '$("#writing").insertAtCaret("§m"); $("#writing").focus();'><i class = "icon-strikethrough"></i></a>
           	 <a class = "btn" onclick = '$("#writing").insertAtCaret("§k"); $("#writing").focus();' style = ""><i class = "icon-magic"></i></a> <br style = "display: block; margin-bottom: 5px;" />
@@ -32,7 +33,8 @@
           	 <a class = "btn" onclick = '$("#writing").insertAtCaret("§f"); $("#writing").focus();' style = "color: #FFFFFF;"><i class = "icon-sign-blank"></i></a>
           </div>
           
-            <div class = "well" style = "position: absolute; right: 0; top: 220px; width: 220px;">
+            <div class = "well" style = "position: absolute; right: 0; top: 260px; width: 220px;">
+            <?php topHeader("Book details"); ?>
           	<input type = "text" placeholder = "Title" name = "title" required />
           	<br />
           	<input type = "text" placeholder = "Author" name = "author" required />
@@ -85,7 +87,8 @@
           	</button>
           </div>
           
-          <div class = "well" style = "position: absolute; right: 0; top: 616px; width: 220px;">
+          <div class = "well" style = "position: absolute; right: 0; top: 656px; width: 220px;">
+          <?php topHeader("Submission information"); ?>
           	<a href="#myModal" role="button" class="btn btn-primary" data-toggle="modal" style = "margin-left: 16px;"><i class = "icon-info-sign"></i> Submission Guidelines</a>
           	</div>
        <textarea class = "book" id = "writing" name = "bookContent" style = "" required></textarea>
