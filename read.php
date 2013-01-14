@@ -43,6 +43,7 @@ $date = $row['Date'];
 $license = $row['License'];
 $nsfw = $row['nsfw'];
 $flags = $row['Flags'];
+$genre = $row['genre'];
 
 ?> 
 
@@ -68,15 +69,22 @@ $flags = $row['Flags'];
             <div class = "well" style = "position: absolute; right: 0; width: 220px;">
           	<strong><?php echo $title; ?></strong>
           	<br />
-          	<strong>by <?php echo $author; ?></strong>
+          	<strong>by <?php echo $author; ?></strong><br />
           	<br />
-          	<strong>License: <?php echo $license; ?></strong>
+          	<strong>License: </strong><?php echo $license; ?>
           	<br />
-          	<strong>Created: <?php echo $date; ?></strong>
+          	<strong>Created: </strong><?php echo $date; ?>
 	<br />
 	<br />
 	<center><a href="#myModal" role="button" class="btn btn-danger" data-toggle="modal"><i class = "icon-flag"></i> Report content</a></center>
           
+          </div>
+          
+           
+          
+            <div class = "well" style = "position: absolute; right: 0; top: 400px; width: 220px;">
+          <div class = "top"><h3>Staff tools</h3></div>
+          Would be here
           </div>
           
        <?php if ($nsfw == '1') { ?><div id = "notice" class = "alert alert-block alert-error" style = "width: 470px;">This content may not be suitable for all users, as flagged by the author. Click the button below to read this content. Remember that it may include explicit, violent or disturbing content:<br />
