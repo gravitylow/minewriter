@@ -18,12 +18,12 @@ function connectDB($user, $pass, $db) {
 }
 
 function outputJSON($row) {
-	$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'Content' => $row['Content'], 'License' => $row['License']);
+	$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'Id' => $row['Id'] ,'Content' => $row['Content'], 'License' => $row['License']);
 	return json_encode($array);
 }
 
 function outputDump($row) {
-	$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'Content' => $row['Content'], 'License' => $row['License']);
+	$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'Id' => $row['Id'] ,'Content' => $row['Content'], 'License' => $row['License']);
 	return var_dump($array);
 }
 
@@ -34,7 +34,7 @@ function outputText($row) {
 }
 
 function outputYAML($row) {
-	$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'Content' => $row['Content'], 'License' => $row['License']);
+	$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'Id' => $row['Id'] ,'Content' => $row['Content'], 'License' => $row['License']);
 	//echo yaml_emit($array);
 	return Yaml::dump($array);
 }
