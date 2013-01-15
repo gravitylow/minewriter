@@ -158,7 +158,7 @@ function footerURL() {
 </div>
 <div id="footer">
 	<div class="container" style = "position: relative; top: 20px;">
-	<p class="muted credit"><a href="tos.php">Terms of Service</a> | <a href="policy.php">Privacy Policy</a></p>
+	<p class="muted credit"><a href="tos.php">Terms of Service</a> | <a href="policy.php">Privacy Policy</a></p> <p class = "muted credit pull-right"><a href = "https://github.com/milkywayz/minewriter/">GitHub</a></p>
 </div>
  <?php }
 
@@ -168,7 +168,7 @@ function footer() {
 </div>
 <div id="footer">
 	<div class="container" style = "position: relative; top: 20px;">
-	<p class="muted credit"><a href="tos.php">Terms of Service</a> | <a href="policy.php">Privacy Policy</a></p>
+	<p class="muted credit"><a href="tos.php">Terms of Service</a> | <a href="policy.php">Privacy Policy</a></p> <p class = "muted credit pull-right"><a href = "https://github.com/milkywayz/minewriter/">GitHub</a></p>
 </div>
 <?php }
 
