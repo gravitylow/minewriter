@@ -95,7 +95,7 @@ if ($downloads == "") {
           
           </div>
           
-           
+           <?php if (isStaff()) { ?>
           
             <div class = "well" style = "position: absolute; right: 0; top: 260px; width: 220px;">
           <?php topHeader("Staff tools"); ?>
@@ -108,7 +108,7 @@ if ($downloads == "") {
           	<a type="button" class="btn btn-warning" style="margin-bottom: 10px;width:130px;"><i class = "icon-minus-sign"></i> Hide Book</a><br />
           	<a href="delete.php?ID=<?php echo($ID) ?>" type="button" class="btn btn-danger" style=" width:130px;"><i class = "icon-trash"></i> Delete Book</a><br />
           	</center>
-          </div>
+          </div><?php } ?>
           
        <?php if ($nsfw == '1') { ?><div id = "notice" class = "alert alert-block alert-error" style = "width: 470px;">This content may not be suitable for all users, as flagged by the author. Click the button below to read this content. Remember that it may include explicit, violent or disturbing content:<br />
        	<br /><a href="#" id = "nbtn" role="button" class="btn btn-danger" onclick = 'showNSFW()'><i class = "icon-exclamation-sign"></i> Show this content</a>
