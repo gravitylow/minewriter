@@ -60,7 +60,7 @@ if ($downloads == "") {
     <title>Reading <?php echo ($title); ?></title>
 	<?php headIncludes(); ?>
 	<script type = "text/javascript" src = "http://code.jquery.com/jquery.min.js"></script>
-	<script type = "text/javascript" src = "js/bootstrap.min.js"></script>
+	<script type = "text/javascript" src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
 	<script type = "text/javascript" src = "js/bootbox.min.js"></script>
   </head>
   <body>
