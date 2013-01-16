@@ -32,7 +32,7 @@
               <h4>Official People</h3>
               	<ul class = "team">
               	<!--Syntax=Name with link to github - Persons job / place-->
-              	<li class="big team"><a href="https://github.com/np98765"><img src = "http://www.gravatar.com/avatar/4fbbbd1969d05c11c92840e0548c6d12.jpg?s=48&d=http%3A%2F%2Fforums.bukkit.org%2Fstyles%2Fflexile%2Fxenforo%2Favatars%2Favatar_male_l.png" /></a> <a href="https://github.com/h31ix">NP98765</a> - Cookie Giver</li>
+              	<li class="big team"><a href="https://github.com/np98765"><img src = "http://www.gravatar.com/avatar/4fbbbd1969d05c11c92840e0548c6d12.jpg?s=48&d=http%3A%2F%2Fforums.bukkit.org%2Fstyles%2Fflexile%2Fxenforo%2Favatars%2Favatar_male_l.png" /></a> <a href="https://github.com/np98765">NP98765</a> - Cookie Giver</li>
               	</ul>
                </div>
             </div>
