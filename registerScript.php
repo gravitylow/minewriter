@@ -35,7 +35,7 @@ $db = connectDB($dbUser, $dbPass, $dbName);
 if ($db instanceof PDOException) {
 	die ($db->getMessage());
 }
-$query = "SELECT count(*) FROM `Books` WHERE username = :username";
+$query = "SELECT count(*) FROM `Users` WHERE username = :username";
 $stmt = $db->prepare($query);
 $stmt->bindParam(':username', $username);
 $stmt->execute();
@@ -48,7 +48,7 @@ foreach($row as $value) {
 	}
 	break;
 }
-$query = "SELECT count(*) FROM `Books` WHERE email = :email";
+$query = "SELECT count(*) FROM `Users` WHERE email = :email";
 $stmt = $db->prepare($query);
 $stmt->bindParam(':email', $email);
 $stmt->execute();
