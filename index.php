@@ -17,7 +17,7 @@ $db = connectDB($dbUser, $dbPass, $dbName);
 if ($db instanceof PDOException) {
 	die ($db->getMessage());
 }
-$query = "SELECT count(*) FROM `testtable`";
+$query = "SELECT count(*) FROM `Books`";
 $stmt = $db->prepare($query);
 $stmt->execute();
 $row = $stmt->fetch();
