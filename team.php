@@ -26,13 +26,13 @@
               	<h4>Contributors</h3>
               	<ul class = "team">
               	<!--Syntax=Name with link to github - Persons job / place-->
-              	<li class="big team"><a href="https://github.com/h31ix"><img src = "http://www.gravatar.com/avatar/a59a454531fd2f169c1cebf382f9c577.jpg?s=48&d=http%3A%2F%2Fforums.bukkit.org%2Fstyles%2Fflexile%2Fxenforo%2Favatars%2Favatar_male_s.png" /></a> <a href="https://github.com/h31ix">H31IX</a> - Project Contributor</li>
               	<li class="big team"><a href="https://github.com/modwizcode"><img src = "http://gravatar.com/avatar/aabd953519c7cc1f96147a746f9c5908?s=48&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" /></a> <a href="https://github.com/modwizcode">modwizcode</a> - Project Contributor</li>
               	</ul>
               <h4>Official People</h3>
               	<ul class = "team">
               	<!--Syntax=Name with link to github - Persons job / place-->
               	<li class="big team"><a href="https://github.com/np98765"><img src = "http://www.gravatar.com/avatar/4fbbbd1969d05c11c92840e0548c6d12.jpg?s=48&d=http%3A%2F%2Fforums.bukkit.org%2Fstyles%2Fflexile%2Fxenforo%2Favatars%2Favatar_male_l.png" /></a> <a href="https://github.com/np98765">NP98765</a> - Cookie Giver</li>
+                <li class="big team"><a href="https://github.com/h31ix"><img src = "http://www.gravatar.com/avatar/a59a454531fd2f169c1cebf382f9c577.jpg?s=48&d=http%3A%2F%2Fforums.bukkit.org%2Fstyles%2Fflexile%2Fxenforo%2Favatars%2Favatar_male_s.png" /></a> <a href="https://github.com/h31ix">H31IX</a> - Grammar Nazi</li>
               	</ul>
                </div>
             </div>
