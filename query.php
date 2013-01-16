@@ -18,23 +18,25 @@ function connectDB($user, $pass, $db) {
 }
 
 function outputJSON($row) {
-	$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'ID' => $row['ID'] ,'Content' => $row['Content'], 'License' => $row['License']);
+	$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'ID' => $row['ID'] , 'License' => $row['License'], 'Content' => $row['Content']);
 	return json_encode($array);
 }
 
 function outputDump($row) {
-	$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'ID' => $row['ID'] ,'Content' => $row['Content'], 'License' => $row['License']);
+	$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'ID' => $row['ID'] , 'License' => $row['License'], 'Content' => $row['Content']);
 	return var_dump($array);
 }
 
 function outputText($row) {
-	return "!Author-" .$row['Author']. "\n" .
-	"!Title-" .$row['Title']. "\n" . "!License-" . $row['License'] . "\n" .
+	return "!Author-" .$row['Author']. "\n" . 
+	"!Title-" .$row['Title']. "\n" . 
+	"!ID-" .$row['ID'] . "\n" . 
+	"!License-" . $row['License'] . "\n" .
 	$row['Content'];
 }
 
 function outputYAML($row) {
-	$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'ID' => $row['ID'] ,'Content' => $row['Content'], 'License' => $row['License']);
+	$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'ID' => $row['ID'] , 'License' => $row['License'], 'Content' => $row['Content']);
 	//echo yaml_emit($array);
 	return Yaml::dump($array);
 }
