@@ -22,7 +22,7 @@ $stmt = $db->prepare($query);
 $stmt->execute();
 $row = $stmt->fetch();
 foreach($row as $value) {
-	$booksAmt = $value;
+	$booksAmt = $value -1;
 	break;
 }
 
