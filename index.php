@@ -1,4 +1,32 @@
-<?php require("functions.php"); ?>
+<?php
+require("functions.php"); 
+require("../private/config.php");
+
+function connectDB($user, $pass, $db) {
+	try {	
+		return(new PDO("mysql:host=localhost;dbname=" . $db . ";charset=utf8", $user, $pass));
+	} catch(PDOException $ex) {
+		return $ex;
+	}
+	
+}
+
+$booksAmt = 0;
+
+$db = connectDB($dbUser, $dbPass, $dbName);
+if ($db instanceof PDOException) {
+	die ($db->getMessage());
+}
+$query = "SELECT count(*) FROM `testtable`";
+$stmt = $db->prepare($query);
+$stmt->execute();
+$row = $stmt->fetch();
+foreach($row as $value) {
+	$booksAmt = $value;
+	break;
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,7 +41,8 @@
     <div class="content">
 		<div class="leaderboard" style = "position: relative">  
 		<h1>MineWriter</h1>  
-		<p>Try out our user friendly authoring service!</p>  
+		<p>Try out our user friendly authoring service!</p>
+		<p>Over <?php echo($booksAmt); ?> books written so far!</p>  
 		<p><a href="write.php" class="btn btn-primary">Try now!</a></p> 
 		<a class="thumbnail" href="#" style = "position: absolute; right: 25px; top: 30px;">
                   <img alt="260x180" src="http://i.imgur.com/0RWRs.png" style="width: 438px; height: 192px;" >
