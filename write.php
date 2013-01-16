@@ -53,7 +53,7 @@ $detect = new Mobile_Detect();
           			<option vlaue = "BY">CC-BY</option>
           			<option vlaue = "pd">Public domain</option>
           			
-          		<?php if(!$detect->isiOS() { ?></optgroup><?php } ?>
+          		<?php if(!$detect->isiOS()) { ?></optgroup><?php } ?>
           	</select><br />
           	<select size='1' name = "genre" required>
           		<?php if($detect->isiOS()) {?><option disabled="disabled">Genre</option><?php } else { ?><optgroup label='Genre'><?php } ?>
@@ -82,7 +82,7 @@ $detect = new Mobile_Detect();
 					<option>Western</option>
 					<option>Young Adult</option>
 					<option>Other</option>
-          		<?php if(!$detect->isiOS() { ?></optgroup><?php } ?>
+          		<?php if(!$detect->isiOS()) { ?></optgroup><?php } ?>
           	</select>
           	<br />
           	<input type = "checkbox" name = "not_nsfw" checked = "checked"/> Suitable for all users <br /><br />
