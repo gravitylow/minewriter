@@ -1,4 +1,8 @@
 <?php require("functions.php"); ?>
+<?php
+include 'Mobile_Detect.php';
+$detect = new Mobile_Detect();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -40,7 +44,7 @@
           	<input type = "text" placeholder = "Author" name = "author" required />
           	<br />
           	<select size='8' name = "license" required>
-          		<optgroup label='Licensing'>
+          		<?php if($detect->isiOS()) {?><option disabled="disabled">Licensing</option><?php } else { ?><optgroup label='Licensing'><?php } ?>
           			<option vlue = "reserved">All rights reserved</option>
           			<option vlue = "BY-NC-ND">CC-BY-NC-ND</option>
           			<option vlue = "BY-NC-SA">CC-BY-NC-SA</option>
@@ -52,7 +56,7 @@
           		</optgroup>
           	</select><br />
           	<select size='1' name = "genre" required>
-          		<optgroup label='Genre'>
+          		<?php if($detect->isiOS()) {?><option disabled="disabled">Genre</option><?php } else { ?><optgroup label='Genre'><?php } ?>
 					<option>Action and Adventure</option>
 					<option>Chick Lit</option>
 					<option>Children’s</option>
