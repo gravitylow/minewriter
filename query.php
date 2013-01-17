@@ -153,10 +153,11 @@ if(is_null($id)) {
 		}
 	}
 }
-
+if ($_GET['download'] == "true") {
 $updateQuery = "UPDATE `Books` SET `downloads` = :downloads WHERE `ID` = :id";
 		$stmt = $db->prepare($updateQuery);
 		$stmt->bindParam(':downloads', $downloads);
 		$stmt->bindParam(':id', $ID);
 		$stmt->execute();
+}
 ?> 
