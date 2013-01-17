@@ -12,15 +12,11 @@ function connectDB($user, $pass, $db) {
 }
 
 $has=$_GET["has"];
-if(!isset($has)) {
-	die("0");
-} else {
-	$db = connectDB($dbUser, $dbPass, $dbName);
-	$sql = "SELECT MAX(id) FROM `Books`"; 
-	$stmt = $db->prepare($sql);
-	$stmt->execute();
-	$row = $stmt->fetch();
-	$total = $row['MAX(id)'];
-	echo($total - $has);
-}
+$db = connectDB($dbUser, $dbPass, $dbName);
+$sql = "SELECT MAX(id) FROM `Books`"; 
+$stmt = $db->prepare($sql);
+$stmt->execute();
+$row = $stmt->fetch();
+$total = $row['MAX(id)'];
+echo($total - $has);
 ?>
