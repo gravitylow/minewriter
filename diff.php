@@ -12,10 +12,10 @@ function connectDB($user, $pass, $db) {
 }
 
 $has=$_GET["has"];
-if(isset($has)) {
+if(!isset($has)) {
 	die("0");
 } else {
-	$total = $db->lastinsertid();
+	$total = $this->db->lastinsertid();
 	echo($total - $has);
 }
 ?>
