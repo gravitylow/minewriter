@@ -53,7 +53,7 @@
 		    </div>
 		  </fieldset>
 		</form>		
-		<form class="form-horizontal" action="registerScript.php" method="POST">
+		<form class="form-horizontal" action="register.php" method="POST">
 		  <fieldset>
 		    <div id="legend">
 		      <legend class="">Register</legend>
