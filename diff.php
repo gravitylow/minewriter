@@ -16,7 +16,11 @@ if(!isset($has)) {
 	die("0");
 } else {
 	$db = connectDB($dbUser, $dbPass, $dbName);
-	$total = $db->lastinsertid('ID');
+	$sql = "SELECT MAX(id) FROM `Books`"; 
+	$stmt = $db->prepare($sql);
+	$stmt->execute();
+	$row = $stmt->fetch();
+	$total = $row['id'];
 	echo($total - $has);
 }
 ?>
