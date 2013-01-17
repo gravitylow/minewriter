@@ -15,7 +15,7 @@ $has=$_GET["has"];
 if(!isset($has)) {
 	die("0");
 } else {
-	$total = $this->db->lastinsertid();
+	$total = $db->lastinsertid();
 	echo($total - $has);
 }
 ?>
