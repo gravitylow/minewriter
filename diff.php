@@ -15,6 +15,7 @@ $has=$_GET["has"];
 if(!isset($has)) {
 	die("0");
 } else {
+	$db = connectDB($dbUser, $dbPass, $dbName);
 	$total = $db->lastinsertid();
 	echo($total - $has);
 }
