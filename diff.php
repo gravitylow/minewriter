@@ -21,6 +21,6 @@ if(!isset($has)) {
 	$stmt->execute();
 	$row = $stmt->fetch();
 	$total = $row['id'];
-	echo($total - $has);
+	echo($row);
 }
 ?>
