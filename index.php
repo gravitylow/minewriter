@@ -78,7 +78,7 @@ foreach($row as $value) {
 			<div class="span4">  
 				<h2>Regular Players</h2>  
 					<p>Writing books and bringing them onto your favorite server is now easier then ever! If the server you play on doesn't have MineReader, suggest it to them! :D</p>  
-					<br /><p><a class="btn btn-primary" href="#">See more</a></p>  
+					<br /><p><a class="btn btn-primary" href="tutorial.php">Read the tutorial</a></p>  
 			</div>  
 			<div class="span4">  
 				<h2>Developers</h2>  
