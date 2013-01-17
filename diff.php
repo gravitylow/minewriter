@@ -20,7 +20,7 @@ if(!isset($has)) {
 	$stmt = $db->prepare($sql);
 	$stmt->execute();
 	$row = $stmt->fetch();
-	$total = $row['id'];
-	echo($row);
+	$total = $row['MAX(id)'];
+	echo($total - $has);
 }
 ?>
