@@ -1,10 +1,4 @@
 <?php
-$obj = json_decode($_POST['value']);
-logToFile("post.txt",$obj);
-
-function logToFile($filename,$msg) {
-      $fd=fopen($filename,"a");
-      fwrite($fd,$msg);
-      fclose($fd);
-}
+$js = json_decode(file_get_contents('php://input'));
+file_put_contents("logs/post.txt", "\n" . $js . "\n", FILE_APPEND | LOCK_EX);
 ?>
