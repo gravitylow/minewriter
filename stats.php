@@ -35,7 +35,11 @@ $row = $stmt->fetch();
     <div class="container">   
     <div class="content">
     	<p>Crude stats page, this will be improved</p>
-    	<?php echo("Book Count = " . $row['BookCount']);?>			
+    	<p><?php echo("Book Count = " . $row['BookCount']);?></p>
+    	<p><?php echo("Total Characters = " . $row['TotalChars']);?></p>
+    	<p><?php echo("Average Characters = " . $row['AverageChars']);?></p>
+    	<p><?php echo("Most Used Word = " . $row['MostUsedWord']);?></p>
+    	<p><?php echo("Longest Book = " . $row['LongestBook']);?></p>			
         <?php divider(); ?>        
     </div>
     </div>
