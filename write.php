@@ -103,29 +103,28 @@ $detect = new Mobile_Detect();
 	</div><br />
 	<!-- Modal -->
 <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-<div class="modal-header">
-<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-<h3 id="myModalLabel">Submission information</h3>
-</div>
-<div class="modal-body">
-<p>To ensure all submissions are accessible, we require some information from you before we are able to add your entry to the database. Firstly, we ask for a title and author. These are displayed in-game, so make sure you consider them carefully. We also ask for a license which plays an important part in what other people are allowed to do with your book. </p>
-<p><strong>Restricted content</strong></p>
-<p>Absolutely no illegal material is to be uploaded (posting is a form of uploading) to this site. Linking to pages that provide illegal material is strictly prohibited as well. Illegal materials include, but are not limited to, pornography, psychoactive drugs, bootleg software, and any software designed to circumvent or bypass legal restrictions. Anything disallowed by law in the United Kingdom or the laws which govern the server upon which this site is hosted is strictly disallowed.</p>
-<p>Adult content must be marked clearly with the content rating system - untick the suitable for all users checkbox</p>
-<p><strong>Licensing information</strong></p>
-<p>We offer a variety of licenses to ensure your work is as protected or as free as you wish. A quick summary is available below (this is not legal advice):</p>
-<ul style = "list-style: none">
-	<li>All rights reserved - This very simply means you retain all right such as commercial use. Other than fair use, your works cannot be modified/distributed.</li>
-	<li>CC-BY-NC-ND - Creative commons license. Allows sharing but not commerical use or modification. Works must be attributed to the copyright holder in the way they state.</li>
-	<li>CC-BY-NC-SA - Creative commons license. Allows sharing and distribution as long as modifications are shared under the same or similar license. Non-commercial only, works must be attributed to the copyright holder in the way they state.</li>
-	<li>CC-BY-NC - Creative commons license. Allows sharing and modifications without requiring modifications to be released. Non-commercial only, works must be attributed to the copyright holder in the way they state.</li>
-	<li>CC-BY-SA - Creative commons license. Allows commercial use and mofication as long as modifications are released under a same or similar license. Works must be attributed to the copyright holder in the way they state.</li>
-	<li>CC-BY - Creative commons license. Allows commercial use and mofication without any requirements other than attribution.</li>
-	<li>Public domain - Gives up all your rights and allows modification, distribution and commercial usage without consent.</li>
-</ul>
-<p>Where attribtuion is not specified a link back and credit to the author's name is usually suffice. All copyright holders (the publishing user who wrote the story) can waive any of these restrictions (such as attribution by adding a note to the book).</p>
-</div>
-
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		<h3 id="myModalLabel">Submission information</h3>
+	</div>
+	<div class="modal-body">
+		<p>To ensure all submissions are accessible, we require some information from you before we are able to add your entry to the database. Firstly, we ask for a title and author. These are displayed in-game, so make sure you consider them carefully. We also ask for a license which plays an important part in what other people are allowed to do with your book. </p>
+		<p><strong>Restricted content</strong></p>
+		<p>Absolutely no illegal material is to be uploaded (posting is a form of uploading) to this site. Linking to pages that provide illegal material is strictly prohibited as well. Illegal materials include, but are not limited to, pornography, psychoactive drugs, bootleg software, and any software designed to circumvent or bypass legal restrictions. Anything disallowed by law in the United Kingdom or the laws which govern the server upon which this site is hosted is strictly disallowed.</p>
+		<p>Adult content must be marked clearly with the content rating system - untick the suitable for all users checkbox</p>
+		<p><strong>Licensing information</strong></p>
+		<p>We offer a variety of licenses to ensure your work is as protected or as free as you wish. A quick summary is available below (this is not legal advice):</p>
+		<ul style = "list-style: none">
+			<li>All rights reserved - This very simply means you retain all right such as commercial use. Other than fair use, your works cannot be modified/distributed.</li>
+			<li>CC-BY-NC-ND - Creative commons license. Allows sharing but not commerical use or modification. Works must be attributed to the copyright holder in the way they state.</li>
+			<li>CC-BY-NC-SA - Creative commons license. Allows sharing and distribution as long as modifications are shared under the same or similar license. Non-commercial only, works must be attributed to the copyright holder in the way they state.</li>
+			<li>CC-BY-NC - Creative commons license. Allows sharing and modifications without requiring modifications to be released. Non-commercial only, works must be attributed to the copyright holder in the way they state.</li>
+			<li>CC-BY-SA - Creative commons license. Allows commercial use and mofication as long as modifications are released under a same or similar license. Works must be attributed to the copyright holder in the way they state.</li>
+			<li>CC-BY - Creative commons license. Allows commercial use and mofication without any requirements other than attribution.</li>
+			<li>Public domain - Gives up all your rights and allows modification, distribution and commercial usage without consent.</li>
+		</ul>
+		<p>Where attribtuion is not specified a link back and credit to the author's name is usually suffice. All copyright holders (the publishing user who wrote the story) can waive any of these restrictions (such as attribution by adding a note to the book).</p>
+		</div>
 </div>
 <script>
 function getCaret(node) {
