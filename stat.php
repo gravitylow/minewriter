@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$sql = "UPDATE `Stats` SET `TotalChars`=:Chars,`AverageChars`=:AvgChars,`BookCount`=:Count,`MostUsedWord`=:FavWord,`LongestBook`=:LongestBook WHERE 1";
 	$stmt = $db->prepare($sql);
 	foreach ($jsonObj as $name => $value) {
-			$stmt->bindParam(":".$name,$value);
+			$stmt->bindParam('":".$name',$value);
 			file_put_contents("logs/stats.txt", "\n" . date("Y-m-d H:i:s") . "Updated $name with $value", FILE_APPEND | LOCK_EX);
 		} 
 		$stmt->execute(); 
