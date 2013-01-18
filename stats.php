@@ -20,7 +20,6 @@ $query = "SELECT * FROM `Stats` WHERE 1";
 $stmt = $db->prepare($query);
 $stmt->execute();
 $row = $stmt->fetch();
-}
 
 ?>
 <!DOCTYPE html>
