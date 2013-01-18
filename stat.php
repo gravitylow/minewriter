@@ -1,4 +1,9 @@
 <?php
-$js = json_decode(file_get_contents('php://input'));
-file_put_contents("logs/post.txt", "\n" . $js . "\n", FILE_APPEND | LOCK_EX);
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  $input = file_get_contents('php://input');
+  $jsonObj = json_decode($input, true);
+  file_put_contents("logs/stats.txt", "\n" . date("Y-m-d H:i:s") . ": Updated stats to: $jsonObj", FILE_APPEND | LOCK_EX);
+  }
 ?>
+  
