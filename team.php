@@ -26,7 +26,7 @@
               	<h4>Contributors</h3>
               	<ul class = "team">
               	<!--Syntax=Name with link to github - Persons job / place-->
-              	<li class="big team"><a href="https://github.com/modwizcode"><img src = "http://gravatar.com/avatar/aabd953519c7cc1f96147a746f9c5908?s=48&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" /></a> <a href="https://github.com/modwizcode">modwizcode</a> - Project Contributor</li>
+              	<li class="big team"><a href="https://github.com/modwizcode"><img src = "http://gravatar.com/avatar/aabd953519c7cc1f96147a746f9c5908?s=48&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" /></a> <a href="https://github.com/modwizcode">Modwizcode</a> - Project Contributor</li>
               	</ul>
               <h4>Official People</h3>
               	<ul class = "team">
