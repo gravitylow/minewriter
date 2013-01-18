@@ -35,8 +35,7 @@ $row = $stmt->fetch();
     <div class="container">   
     <div class="content">
     	<p>Crude stats page, this will be improved</p>
-    	<? while($showtablerow = $stmt->fetch()) {
-	    	echo $showtablerow[0]."<br />"; }?>			
+    	<?php echo("Book Count = " . $row['BookCount']);?>			
         <?php divider(); ?>        
     </div>
     </div>
