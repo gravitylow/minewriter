@@ -17,14 +17,11 @@ $db = connectDB($dbUser, $dbPass, $dbName);
 if ($db instanceof PDOException) {
 	die ($db->getMessage());
 }
-$query = "SELECT count(*) FROM `Books`";
+$query = "SELECT * FROM `Stats` WHERE 1";
 $stmt = $db->prepare($query);
 $stmt->execute();
 $row = $stmt->fetch();
-foreach($row as $value) {
-	$booksAmt = $value -1;
-	break;
-}
+$booksAmt = $row['BookCount'] -1;
 
 ?>
 <!DOCTYPE html>
