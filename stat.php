@@ -1,12 +1,10 @@
 <?php
-$input = file_get_contents('php://input');
-logToFile("post.txt",$input);
+$obj = json_decode($_POST['value']);
+logToFile("post.txt",$obj);
 
-function logToFile($filename,$msg)
-{
+function logToFile($filename,$msg) {
       $fd=fopen($filename,"a");
-      $str="[".date("Y/m/d h:i:s")."]".$msg;
-      fwrite($fd,$str."\n");
+      fwrite($fd,$msg);
       fclose($fd);
 }
 ?>
