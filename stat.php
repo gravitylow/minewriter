@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$input = substr($input, 5);
 	$input = urldecode($input);
 	$jsonObj = json_decode($input, true);
-	$sql = "UPDATE `Stats` SET `TotalChars`=:Chars,`AverageChars`=:AvgChars,`BookCount`=:Count,`MostUsedWord`=:FavWord,`LongestBook`=:LongestBook";
+	$sql = "UPDATE `Stats` SET `TotalChars`=:Chars,`AverageChars`=:AvgChars,`BookCount`=:Count,`MostUsedWord`=:FavWord,`LongestBook`=:LongestBook,`LongestBookLength`=:LongestBookLength ,`FavLicense`=:FavLicense";
 	$stmt = $db->prepare($sql);
 	foreach ($jsonObj as $name => $value) {
 			$stmt->bindValue($name,$value);

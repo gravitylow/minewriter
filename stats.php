@@ -59,9 +59,17 @@ $row = $stmt->fetch();
             <td><?php echo($row['MostUsedWord']);?></td>  
           </tr>
           <tr>  
-            <td>Longest book length</td>  
+            <td>Longest book</td>  
             <td><?php echo($row['LongestBook']);?></td>  
-          </tr>  
+          </tr> 
+          <tr>  
+            <td>Longest book length</td>  
+            <td><?php echo($row['LongestBookLength']);?></td>  
+          </tr> 
+          <tr>  
+            <td>Most common license</td>  
+            <td><?php echo($row['FavLicense']);?></td>  
+          </tr> 
         </tbody>  
       </table>  	
         <?php divider(); ?>        
