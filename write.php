@@ -70,6 +70,7 @@ $detect = new Mobile_Detect();
 					<option>Horror</option>
 					<option>Humour</option>
 					<option>Literary Fiction</option>
+					<option>Lyrics</option>
 					<option>Military and Espionage</option>
 					<option>Multicultural</option>
 					<option>Mystery</option>
