@@ -71,7 +71,8 @@ $row = $stmt->fetch();
             <td><?php echo($row['FavLicense']);?></td>  
           </tr> 
         </tbody>  
-      </table>  	
+      </table>  
+      <p>These stats are generated every 10 minutes using the query service.</p>	
         <?php divider(); ?>        
     </div>
     </div>
