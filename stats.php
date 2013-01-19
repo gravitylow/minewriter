@@ -51,11 +51,11 @@ $row = $stmt->fetch();
             <td><?php echo($row['TotalChars']);?></td>  
           </tr>  
           <tr>  
-            <td>Average Character length per book</td>  
+            <td>Average Characters per book</td>  
             <td><?php echo($row['AverageChars']);?></td>  
           </tr>  
           <tr>  
-            <td>Most used word in all books</td>  
+            <td>Most common word</td>  
             <td><?php echo($row['MostUsedWord']);?></td>  
           </tr>
           <tr>  
