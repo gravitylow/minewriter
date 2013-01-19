@@ -34,12 +34,36 @@ $row = $stmt->fetch();
     <div id = "wrap">
     <div class="container">   
     <div class="content">
-    	<p>Crude stats page, this will be improved</p>
-    	<p><?php echo("Book Count = " . $row['BookCount']);?></p>
-    	<p><?php echo("Total Characters = " . $row['TotalChars']);?></p>
-    	<p><?php echo("Average Characters = " . $row['AverageChars']);?></p>
-    	<p><?php echo("Most Used Word = " . $row['MostUsedWord']);?></p>
-    	<p><?php echo("Longest Book = " . $row['LongestBook']);?></p>			
+    	<table class="table">  
+        <thead>  
+          <tr>  
+            <th>Statistic</th>  
+            <th>Value</th>  
+          </tr>  
+        </thead>  
+        <tbody>  
+          <tr>  
+            <td>Total Book Count</td>  
+            <td><?php echo($row['BookCount']);?></td>  
+          </tr>  
+          <tr>  
+            <td>Total Characters in all books</td>  
+            <td><?php echo($row['TotalChars']);?></td>  
+          </tr>  
+          <tr>  
+            <td>Average Character length per book</td>  
+            <td><?php echo($row['AverageChars']);?></td>  
+          </tr>  
+          <tr>  
+            <td>Most used word in all books</td>  
+            <td><?php echo($row['MostUsedWord']);?></td>  
+          </tr>
+          <tr>  
+            <td>Longest book length</td>  
+            <td><?php echo($row['LongestBook']);?></td>  
+          </tr>  
+        </tbody>  
+      </table>  	
         <?php divider(); ?>        
     </div>
     </div>
