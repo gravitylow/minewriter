@@ -26,7 +26,7 @@ $row = $stmt->fetch();
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>MineWriter Metrics</title>
+    <title>MineWriter Stats</title>
 	<?php headIncludes(); ?>
   </head>
   <body>
