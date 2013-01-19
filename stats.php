@@ -72,9 +72,9 @@ $row = $stmt->fetch();
           </tr> 
         </tbody>  
       </table>  
-        <?php divider(); ?>        
-    </div>
-    <p>These stats are generated every 10 minutes using the query service.</p>
+        <?php divider(); ?>     
+        <p>These stats are generated every 10 minutes using the query service.</p>  
+    </div> 
     </div>
        <?php footer(); ?>    
     </div>
