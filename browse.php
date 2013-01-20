@@ -16,14 +16,6 @@ function connectDB($user, $pass, $db) {
     }
 
 }
-
-
-if (isset($_POST['author']) || isset($_POST['title']) || isset($_POST['date'])) {
-	search();
-}
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -50,6 +42,10 @@ if (isset($_POST['author']) || isset($_POST['title']) || isset($_POST['date'])) 
       </form>
       <div class="results">
         <?php
+        if (isset($_POST['author']) || isset($_POST['title']) || isset($_POST['date'])) {
+		search();
+	}
+        
 		function search() {
 			global $dbUser, $dbPass, $dbName;
 			$db = connectDB($dbUser, $dbPass, $dbName);
@@ -74,27 +70,28 @@ if (isset($_POST['author']) || isset($_POST['title']) || isset($_POST['date'])) 
 			$stmt->execute();
 			$rows = $stmt->fetchAll();
 			
-			if (!$stmt->rowCount() == 0) {
-            foreach($rows as $row) {
-               $title = $row['Title'];			
-               $author = $row['Author'];
-               $genre = $row['genre'];
-               $date = $row['Date'];
-               $downloads = $row['downloads'];
-            }
-
-        } else {
-            echo 'Nothing found';
-        }		
+			if ($stmt->rowCount() == 0) {
+				echo 'Nothing found';
+				return;
+			}
+			
 		?>
-			<table class="table table-striped">
-            	<tr style="font-weight: bold;">
+		<table class="table table-striped">
+            		<tr style="font-weight: bold;">
         			<td>Title</td>
         			<td>Author</td>
                     <td>Genre</td>
                     <td>Date created</td>
                     <td>Downloads</td>
      		 	</tr>
+     		 <?php
+            		foreach($rows as $row) {
+              		 	$title = $row['Title'];			
+               			$author = $row['Author'];
+               			$genre = $row['genre'];
+              			 $date = $row['Date'];
+               			$downloads = $row['downloads'];		
+		?>
 			<tr onclick="document.location='read.php?id=<?php echo $row['ID'] ?>';">
             	<td><?php echo $title; ?></td>
            	 	<td><?php echo $author; ?></td>
@@ -103,7 +100,8 @@ if (isset($_POST['author']) || isset($_POST['title']) || isset($_POST['date'])) 
             	<td><?php echo $downloads; ?></td>
             </tr>    
 		<?php
-			}
+            		}
+		}
 		?>
              </table>
       </div>
