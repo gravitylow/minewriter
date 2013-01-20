@@ -21,7 +21,18 @@ $password = $_POST['password'];
 $confirm = $_POST['password_confirm'];
 $email = $_POST['email'];
 
-
+if($username == "" or $userame == " ") {
+	header("Location: login.php?e=12");
+	die();
+}
+if($password == "" or $confirm == "" or $password == " " or $confirm == " ") {
+	header("Location: login.php?e=13");
+	die();
+}
+if($email == "" or $email == " ") {
+	header("Location: login.php?e=14");
+	die();
+}
 if($password !== $confirm) {
 	header("Location: login.php?e=7");
 	die();
