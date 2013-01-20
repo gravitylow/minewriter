@@ -109,7 +109,6 @@ if (isset($_POST['author']) || isset($_POST['title']) || isset($_POST['date'])) 
 		?>
              </table>
         <?php     
-		}
 		?>
       </div>
     </div>
