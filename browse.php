@@ -2,12 +2,6 @@
 require("../private/config.php");
 require("functions.php");
 
-function require_multi($files) {
-    $files = func_get_args();
-    foreach($files as $file)
-        require_once($file);
-}
-
 function connectDB($user, $pass, $db) {
     try {
         return(new PDO("mysql:host=localhost;dbname=" . $db . ";charset=utf8", $user, $pass));
@@ -44,8 +38,8 @@ function connectDB($user, $pass, $db) {
       <div class="results">
         <?php
         if (isset($_POST['author']) || isset($_POST['title']) || isset($_POST['genre'])) {
-		search();
-	}
+			search();
+		}
         
 		function search() {
 			$res = 10;
@@ -53,6 +47,7 @@ function connectDB($user, $pass, $db) {
 				$res = $_POST['results'];
 				if($res > 1000) {
 				$res = 1000;
+				}
 			}
 			
 			global $dbUser, $dbPass, $dbName;
@@ -84,8 +79,8 @@ function connectDB($user, $pass, $db) {
 			if ($stmt->rowCount() == 0) {
 				echo 'Nothing found';
 				return;
+				}
 			}
-			
 		?>
 		<table class="table table-striped">
             		<tr style="font-weight: bold;">
@@ -111,7 +106,7 @@ function connectDB($user, $pass, $db) {
             	<td><?php echo $downloads; ?></td>
             </tr>    
 		<?php
-            		}
+		}
 		}
 		?>
              </table>
