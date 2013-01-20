@@ -37,12 +37,12 @@ function connectDB($user, $pass, $db) {
       <form method="post" class="form-search" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         <input type="text" name="author" class="input-medium search-query" placeholder="Author">
         <input type="text" name="title" class="input-medium search-query" placeholder="Title">
-        <input type="text" name="date" class="input-medium search-query" placeholder="Date">
+        <input type="text" name="genre" class="input-medium search-query" placeholder="Genre">
         <button type="submit" class="btn">Search</button>
       </form>
       <div class="results">
         <?php
-        if (isset($_POST['author']) || isset($_POST['title']) || isset($_POST['date'])) {
+        if (isset($_POST['author']) || isset($_POST['title']) || isset($_POST['genre'])) {
 		search();
 	}
         
@@ -61,11 +61,11 @@ function connectDB($user, $pass, $db) {
 				$query = "SELECT * FROM `Books` WHERE `Title` LIKE :title LIMIT 10";
 				$stmt = $db->prepare($query);
 				$stmt->bindValue(':title', "%".$_POST['title']."%");
-			} else if(isset($_POST['date']) && !is_null($_POST['date'])) {
+			} else if(isset($_POST['genre']) && !is_null($_POST['genre'])) {
 				// This needs to be smarter, theres no way people will come up with an EXACT date for a book's creation
-				$query = "SELECT * FROM `Books` WHERE `Date` LIKE :date LIMIT 10";
+				$query = "SELECT * FROM `Books` WHERE `genre` LIKE :genre LIMIT 10";
 				$stmt = $db->prepare($query);
-				$stmt->bindValue(':date', "%".$_POST['date']."%");
+				$stmt->bindValue(':genre', "%".$_POST['genre']."%");
 			}
 			$stmt->execute();
 			$rows = $stmt->fetchAll();
