@@ -107,7 +107,6 @@ function connectDB($user, $pass, $db) {
             </tr>    
 		<?php
 		}
-		}
 		?>
              </table>
       </div>
