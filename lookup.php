@@ -24,7 +24,7 @@ function connectDB($user, $pass, $db) {
 function outputJSON($row) {
 	$array = array('Author' => $row['Author'], 'Title' => $row['Title'], 'ID' => $row['ID'] , 
 	'License' => $row['License'], 'Genre' => $row['genre'], 'Date' => $row['Date'] , 
-	'Nswf' => $row['nsfw'], 'Content' => $row['Content']);
+	'Nswf' => $row['nsfw'], 'Flags' => $row['Flags'],'Content' => $row['Content']);
 	return json_encode($array);
 }
 
