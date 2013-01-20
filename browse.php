@@ -29,10 +29,10 @@ function connectDB($user, $pass, $db) {
       </div>
       <h2 class="big">Search</h2>
       <form method="post" class="form-search" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-        <input type="text" name="author" class="input-medium search-query" placeholder="Author">
-        <input type="text" name="title" class="input-medium search-query" placeholder="Title">
-        <input type="text" name="genre" class="input-medium search-query" placeholder="Genre">
-        <input type="text" name="results" class="input-medium search-query" placeholder="# of results">
+        <input type="text" value = "<?php echo ($_POST['author']); ?>" name="author" class="input-medium search-query" placeholder="Author">
+        <input type="text" name="title" value = "<?php echo ($_POST['title']); ?>" class="input-medium search-query" placeholder="Title">
+        <input type="text" name="genre" value = "<?php echo ($_POST['genre']); ?>" class="input-medium search-query" placeholder="Genre">
+        <input type="text" name="results" value = "<?php echo ($_POST['results']); ?>" class="input-medium search-query" placeholder="# of results">
         <button type="submit" class="btn">Search</button>
       </form>
       <div class="results">
