@@ -48,15 +48,13 @@ function connectDB($user, $pass, $db) {
 	}
         
 		function search() {
-			$res = $_POST['results'];
-			if(is_null($res)) {
-				//Default to ten
-				$res = 10;
-			}
-			if($res > 1000) {
-				//Limit to 1000 for now
+			$res = 10;
+			if(isset($_POST['results'])) {
+				$res = $_POST['results'];
+				if($res > 1000) {
 				$res = 1000;
 			}
+			
 			global $dbUser, $dbPass, $dbName;
 			$db = connectDB($dbUser, $dbPass, $dbName);
 			if ($db instanceof PDOException) {
