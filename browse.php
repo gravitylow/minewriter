@@ -95,7 +95,7 @@ if (isset($_POST['author']) || isset($_POST['title']) || isset($_POST['date'])) 
                     <td>Date created</td>
                     <td>Downloads</td>
      		 	</tr>
-			<tr>
+			<tr onclick="document.location='read.php?id=<?php echo $row['ID'] ?>';">
             	<td><?php echo $title; ?></td>
            	 	<td><?php echo $author; ?></td>
            	 	<td><?php echo $genre; ?></td>
