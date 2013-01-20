@@ -73,11 +73,19 @@ if (isset($_POST['author']) || isset($_POST['title']) || isset($_POST['date'])) 
 			}
 			$stmt->execute();
 			$rows = $stmt->fetchAll();
-			//I assume $rows is a array with all the mysql results
-			if(count($rows) == 0) {
-				echo ("Sorry, we couldn't find anything for your search.");
-				return;
-			}			
+			
+			if (!$stmt->rowCount() == 0) {
+            while ($results = $stmt->fetchAll()) {
+               $title = $row['Title'];			
+               $author = $row['Author'];
+               $genre = $row['genre'];
+               $date = $row['Date'];
+               $downloads = $row['downloads'];
+            }
+
+        } else {
+            echo 'Nothing found';
+        }		
 		?>
 			<table class="table table-striped">
             	<tr style="font-weight: bold;">
@@ -87,16 +95,6 @@ if (isset($_POST['author']) || isset($_POST['title']) || isset($_POST['date'])) 
                     <td>Date created</td>
                     <td>Downloads</td>
      		 	</tr>
-        
-        <?php	
-        foreach($rows as $row) {
-        	$title = $row['Title'];			
-        	$author = $row['Author'];
-        	$genre = $row['genre'];
-        	$date = $row['Date'];
-        	$downloads = $row['downloads'];
-        	}
-		?>
 			<tr>
             	<td><?php echo $title; ?></td>
            	 	<td><?php echo $author; ?></td>
