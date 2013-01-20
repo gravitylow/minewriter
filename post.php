@@ -13,6 +13,9 @@ function connectDB($user, $pass, $db) {
 }
 
 function hasHtml($str){
+  if($str === "") {
+	  return false;
+  }
   if(strlen($str) != strlen(strip_tags($str))) {
       return true;
 	}
