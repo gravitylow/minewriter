@@ -58,18 +58,18 @@ if (isset($_POST['author']) || isset($_POST['title']) || isset($_POST['date'])) 
 			}
 
 			if(isset($_POST['author']) && !is_null($_POST['author'])) {
-				$query = "SELECT * FROM `Books` WHERE `Author` like :author LIMIT 10";
+				$query = "SELECT * FROM `Books` WHERE `Author` LIKE :author LIMIT 10";
 				$stmt = $db->prepare($query);
-				$stmt->bindParam(':author', "%".$_POST['author']."%");
+				$stmt->bindParam(':author', "%'".$_POST['author']."'%");
 			} else if(isset($_POST['title']) && !is_null($_POST['title'])) {
-				$query = "SELECT * FROM `Books` WHERE `Title` like :title LIMIT 10";
+				$query = "SELECT * FROM `Books` WHERE `Title` LIKE :title LIMIT 10";
 				$stmt = $db->prepare($query);
-				$stmt->bindParam(':title', "%".$_POST['title']."%");
+				$stmt->bindParam(':title', "%'".$_POST['title']."'%");
 			} else if(isset($_POST['date']) && !is_null($_POST['date'])) {
 				// This needs to be smarter, theres no way people will come up with an EXACT date for a book's creation
-				$query = "SELECT * FROM `Books` WHERE `Date` like :date LIMIT 10";
+				$query = "SELECT * FROM `Books` WHERE `Date` LIKE :date LIMIT 10";
 				$stmt = $db->prepare($query);
-				$stmt->bindParam(':date', "%".$_POST['date']."%");
+				$stmt->bindParam(':date', "%'".$_POST['date']."'%");
 			}
 			$stmt->execute();
 			$rows = $stmt->fetch();
