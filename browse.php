@@ -38,6 +38,7 @@ function connectDB($user, $pass, $db) {
         <input type="text" name="author" class="input-medium search-query" placeholder="Author">
         <input type="text" name="title" class="input-medium search-query" placeholder="Title">
         <input type="text" name="genre" class="input-medium search-query" placeholder="Genre">
+        <input type="text" name="results" class="input-medium search-query" placeholder="# of results">
         <button type="submit" class="btn">Search</button>
       </form>
       <div class="results">
@@ -47,6 +48,15 @@ function connectDB($user, $pass, $db) {
 	}
         
 		function search() {
+			$res = $_POST['results'];
+			if(is_null($res)) {
+				//Default to ten
+				$res = 10;
+			}
+			if($res > 1000) {
+				//Limit to 1000 for now
+				$res = 1000;
+			}
 			global $dbUser, $dbPass, $dbName;
 			$db = connectDB($dbUser, $dbPass, $dbName);
 			if ($db instanceof PDOException) {
@@ -54,18 +64,21 @@ function connectDB($user, $pass, $db) {
 			}
 
 			if(isset($_POST['author']) && !is_null($_POST['author'])) {
-				$query = "SELECT * FROM `Books` WHERE `Author` LIKE :author LIMIT 10";
+				$query = "SELECT * FROM `Books` WHERE `Author` LIKE :author LIMIT :res";
 				$stmt = $db->prepare($query);
 				$stmt->bindValue(':author', "%".$_POST['author']."%");
+				$stmt->bindParam(':res', $res);
 			} else if(isset($_POST['title']) && !is_null($_POST['title'])) {
-				$query = "SELECT * FROM `Books` WHERE `Title` LIKE :title LIMIT 10";
+				$query = "SELECT * FROM `Books` WHERE `Title` LIKE :title LIMIT :res";
 				$stmt = $db->prepare($query);
 				$stmt->bindValue(':title', "%".$_POST['title']."%");
+				$stmt->bindParam(':res', $res);
 			} else if(isset($_POST['genre']) && !is_null($_POST['genre'])) {
 				// This needs to be smarter, theres no way people will come up with an EXACT date for a book's creation
-				$query = "SELECT * FROM `Books` WHERE `genre` LIKE :genre LIMIT 10";
+				$query = "SELECT * FROM `Books` WHERE `genre` LIKE :genre LIMIT :res";
 				$stmt = $db->prepare($query);
 				$stmt->bindValue(':genre', "%".$_POST['genre']."%");
+				$stmt->bindParam(':res', $res);
 			}
 			$stmt->execute();
 			$rows = $stmt->fetchAll();
