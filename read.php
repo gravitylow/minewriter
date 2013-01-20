@@ -65,6 +65,7 @@ if ($downloads == "") {
   </head>
   <body>
   	<?php 
+  		// Session based 'modals' are preferred as people can fabricate this, however it does nothing.. just nit picking
   		if($_GET['a'] == "20") { ?> <script type="text/javascript">bootbox.alert("Successfully deleted book.");</script> <?php } 
   		if($_GET['a'] == "21") { ?> <script type="text/javascript">bootbox.alert("You do not have privledges to delete books.");</script> <?php }
   	?>
@@ -81,13 +82,13 @@ if ($downloads == "") {
             <div class = "well" style = "position: absolute; right: 0; width: 220px;">
             <?php topHeader("Book info"); ?>
           	<strong><?php echo $title; ?></strong>
-          	<br />
+          	<br/>
           	<strong>by <?php echo $author; ?></strong><br />
-          	<br />
+          	<br/>
           	<strong>License: </strong><?php echo $license; ?>
-          	<br />
+          	<br/>
           	<strong>Created: </strong><?php echo $date; ?>
-          	<br />
+          	<br/>
           	<strong>Downloads: </strong><?php echo $downloads; ?>
 	<br />
 	<br />
@@ -101,9 +102,9 @@ if ($downloads == "") {
           <?php topHeader("Staff tools"); ?>
           <strong style = "font-size: 16px; line-height: 40px;">Submission Details</strong><br />
           <strong>Username: </strong><?php echo $username; ?>
-          <br />
+          <br/>
           <strong>IP: </strong><?php echo $IP; ?>
-          <br /><br /><strong style = "font-size: 16px; line-height: 40px;">Book actions</strong><br />
+          <br/><br /><strong style = "font-size: 16px; line-height: 40px;">Book actions</strong><br />
           	<center>
           	<a type="button" class="btn btn-warning" style="margin-bottom: 10px;width:130px;"><i class = "icon-minus-sign"></i> Hide Book</a><br />
           	<a href="delete.php?ID=<?php echo($ID) ?>" type="button" class="btn btn-danger" style=" width:130px;"><i class = "icon-trash"></i> Delete Book</a><br />
@@ -183,17 +184,15 @@ function getCaret(node) {
   sel.text = "";
   return len;
 }
+
 $("#writing").keydown(function(e){
-
-
 });
 
 function showNSFW() {
 	$("#notice").slideUp();
-	$("#writing").css("visibility","visible");
-	
-	
+	$("#writing").css("visibility","visible");	
 }
+
 </script>
 	<?php footer(); ?>
   </body>
