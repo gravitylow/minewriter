@@ -72,7 +72,7 @@ if (isset($_POST['author']) || isset($_POST['title']) || isset($_POST['date'])) 
 				$stmt->bindValue(':date', "%".$_POST['date']."%");
 			}
 			$stmt->execute();
-			$rows = $stmt->fetch();
+			$rows = $stmt->fetchAll();
 			//I assume $rows is a array with all the mysql results
 			if(count($rows) == 0) {
 				echo ("Sorry, we couldn't find anything for your search.");
