@@ -32,7 +32,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$stmt = $db->prepare($sql);
 	foreach ($jsonObj as $name => $value) {
 			$stmt->bindValue($name,$value);
-			file_put_contents("logs/stats.txt", "\n" . date("Y-m-d H:i:s") . "Updated $name with $value", FILE_APPEND | LOCK_EX);
 		} 
 		$stmt->execute(); 
 	}
