@@ -29,27 +29,25 @@ function connectDB($user, $pass, $db) {
       </div>
       <h2 class="big">Search</h2>
       <form method="post" class="form-search" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+<<<<<<< HEAD
         <input type="text" value = "<?php echo ($_POST['author']); ?>" name="author" class="input-medium search-query" placeholder="Author">
         <input type="text" name="title" value = "<?php echo ($_POST['title']); ?>" class="input-medium search-query" placeholder="Title">
         <input type="text" name="genre" value = "<?php echo ($_POST['genre']); ?>" class="input-medium search-query" placeholder="Genre">
         <input type="text" name="results" value = "<?php echo ($_POST['results']); ?>" class="input-medium search-query" placeholder="# of results">
+=======
+        <input type="text" name="author" class="input-medium search-query" placeholder="Author">
+        <input type="text" name="title" class="input-medium search-query" placeholder="Title">
+        <input type="text" name="genre" class="input-medium search-query" placeholder="Genre">
+>>>>>>> Re-commit last know working file + minor fix
         <button type="submit" class="btn">Search</button>
       </form>
       <div class="results">
         <?php
         if (isset($_POST['author']) || isset($_POST['title']) || isset($_POST['genre'])) {
-			search();
-		}
+		search();
+	}
         
 		function search() {
-			$res = 10;
-			if(isset($_POST['results'])) {
-				$res = $_POST['results'];
-				if($res > 1000) {
-				$res = 1000;
-				}
-			}
-			
 			global $dbUser, $dbPass, $dbName;
 			$db = connectDB($dbUser, $dbPass, $dbName);
 			if ($db instanceof PDOException) {
@@ -57,30 +55,27 @@ function connectDB($user, $pass, $db) {
 			}
 
 			if(isset($_POST['author']) && !is_null($_POST['author'])) {
-				$query = "SELECT * FROM `Books` WHERE `Author` LIKE :author LIMIT :res";
+				$query = "SELECT * FROM `Books` WHERE `Author` LIKE :author LIMIT 10";
 				$stmt = $db->prepare($query);
 				$stmt->bindValue(':author', "%".$_POST['author']."%");
-				$stmt->bindValue(':res', $res);
 			} else if(isset($_POST['title']) && !is_null($_POST['title'])) {
-				$query = "SELECT * FROM `Books` WHERE `Title` LIKE :title LIMIT :res";
+				$query = "SELECT * FROM `Books` WHERE `Title` LIKE :title LIMIT 10";
 				$stmt = $db->prepare($query);
 				$stmt->bindValue(':title', "%".$_POST['title']."%");
-				$stmt->bindValue(':res', $res);
 			} else if(isset($_POST['genre']) && !is_null($_POST['genre'])) {
 				// This needs to be smarter, theres no way people will come up with an EXACT date for a book's creation
-				$query = "SELECT * FROM `Books` WHERE `genre` LIKE :genre LIMIT :res";
+				$query = "SELECT * FROM `Books` WHERE `genre` LIKE :genre LIMIT 10";
 				$stmt = $db->prepare($query);
 				$stmt->bindValue(':genre', "%".$_POST['genre']."%");
-				$stmt->bindValue(':res', $res);
 			}
 			$stmt->execute();
 			$rows = $stmt->fetchAll();
-			
+
 			if ($stmt->rowCount() == 0) {
 				echo 'Nothing found';
 				return;
-				}
 			}
+
 		?>
 		<table class="table table-striped">
             		<tr style="font-weight: bold;">
@@ -106,6 +101,7 @@ function connectDB($user, $pass, $db) {
             	<td><?php echo $downloads; ?></td>
             </tr>    
 		<?php
+            		}
 		}
 		?>
              </table>
