@@ -75,7 +75,7 @@ if (isset($_POST['author']) || isset($_POST['title']) || isset($_POST['date'])) 
 			$rows = $stmt->fetchAll();
 			
 			if (!$stmt->rowCount() == 0) {
-            while ($results = $stmt->fetchAll()) {
+            while ($row = $rows) {
                $title = $row['Title'];			
                $author = $row['Author'];
                $genre = $row['genre'];
