@@ -8,7 +8,7 @@ if ($ip == "74.106.16.4") {
 }
 if (!$auth) {
 	file_put_contents("logs/stats.txt", "\n" . date("Y-m-d H:i:s") . ": Unauthorised stats update attempt from $ip", FILE_APPEND | LOCK_EX);
-	die("Not authorised.");
+	die("You are not authorized to update the stats, continued attempts will lead to your ip being blacklisted");
 }
 function connectDB($user, $pass, $db) {
 try {	
