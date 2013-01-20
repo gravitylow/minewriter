@@ -77,7 +77,7 @@ if (isset($_POST['author']) || isset($_POST['title']) || isset($_POST['date'])) 
 			if(count($rows) == 0) {
 				echo ("Sorry, we couldn't find anything for your search.");
 				return;
-			}
+			}			
 		?>
 			<table class="table table-striped">
             	<tr style="font-weight: bold;">
@@ -89,21 +89,13 @@ if (isset($_POST['author']) || isset($_POST['title']) || isset($_POST['date'])) 
      		 	</tr>
         
         <?php	
-			foreach($rows as $row) {
-				$title = $row['Title'];
-				$author = $row['Author'];
-				$content = $row['Content'];
-				$date = $row['Date'];
-				$username = $row['Username'];
-				$IP = $row['IP'];
-				$license = $row['License'];
-				$nsfw = $row['nsfw'];
-				$flags = $row['Flags'];
-				$genre = $row['genre'];
-				$downloads = $row['downloads'];
-				if ($downloads == "") {
-					$downloads = 0;
-				}
+        foreach($rows as $row) {
+        	$title = $row['Title'];			
+        	$author = $row['Author'];
+        	$genre = $row['genre'];
+        	$date = $row['Date'];
+        	$downloads = $row['downloads'];
+        	}
 		?>
 			<tr>
             	<td><?php echo $title; ?></td>
