@@ -11,19 +11,18 @@ if (!$auth) {
 	die("You are not authorized to update the stats, continued attempts will lead to your ip being blacklisted");
 }
 function connectDB($user, $pass, $db) {
-try {	
-	return(new PDO("mysql:host=localhost;dbname=" . $db . ";charset=utf8", $user, $pass));
-} catch(PDOException $ex) {
-	return $ex;
-}
-
+	try {	
+		return(new PDO("mysql:host=localhost;dbname=" . $db . ";charset=utf8", $user, $pass));
+	} catch(PDOException $ex) {
+		return $ex;
+	}
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$db = connectDB($dbUser, $dbPass, $dbName);
 	if ($db instanceof PDOException) {
 		die ($db->getMessage());
-		}
+	}
 	$input = file_get_contents('php://input');
 	$input = substr($input, 5);
 	$input = urldecode($input);
