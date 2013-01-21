@@ -51,16 +51,15 @@ function connectDB($user, $pass, $db) {
 			if(isset($_POST['author']) && !is_null($_POST['author'])) {
 				$query = "SELECT * FROM `Books` WHERE `Author` LIKE :author LIMIT 10";
 				$stmt = $db->prepare($query);
-				$stmt->bindValue(':author', "%".$_POST['author']."%");
+				$stmt->bindValue(':author', "%".$_POST['author']."%", PDO::PARAM_ST);
 			} else if(isset($_POST['title']) && !is_null($_POST['title'])) {
 				$query = "SELECT * FROM `Books` WHERE `Title` LIKE :title LIMIT 10";
 				$stmt = $db->prepare($query);
-				$stmt->bindValue(':title', "%".$_POST['title']."%");
+				$stmt->bindValue(':title', "%".$_POST['title']."%", PDO::PARAM_ST);
 			} else if(isset($_POST['genre']) && !is_null($_POST['genre'])) {
-				// This needs to be smarter, theres no way people will come up with an EXACT date for a book's creation
 				$query = "SELECT * FROM `Books` WHERE `genre` LIKE :genre LIMIT 10";
 				$stmt = $db->prepare($query);
-				$stmt->bindValue(':genre', "%".$_POST['genre']."%");
+				$stmt->bindValue(':genre', "%".$_POST['genre']."%", PDO::PARAM_ST);
 			}
 			$stmt->execute();
 			$rows = $stmt->fetchAll();
@@ -71,7 +70,7 @@ function connectDB($user, $pass, $db) {
 			}
 
 		?>
-		<table class="table table-striped">
+		<table class="table table-striped table-hover">
             		<tr style="font-weight: bold;">
         			<td>Title</td>
         			<td>Author</td>
