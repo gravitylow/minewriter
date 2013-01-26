@@ -52,21 +52,25 @@ function connectDB($user, $pass, $db) {
 				$num_results = 10;	
 			}
 			
+			$stmt = null;
 			if(isset($_POST['author']) && !is_null($_POST['author'])) {
 				$query = "SELECT * FROM `Books` WHERE `Author` LIKE :author LIMIT :limit";
-				$stmt = $db->prepare($query);
 				$stmt->bindValue(':author', "%".$_POST['author']."%", PDO::PARAM_STR);
 				$stmt->bindValue(':limit', $num_results, PDO::PARAM_INT);
+				$stmt = $db->prepare($query);
 			} else if(isset($_POST['title']) && !is_null($_POST['title'])) {
 				$query = "SELECT * FROM `Books` WHERE `Title` LIKE :title LIMIT :limit";
-				$stmt = $db->prepare($query);
 				$stmt->bindValue(':title', "%".$_POST['title']."%", PDO::PARAM_STR);
 				$stmt->bindValue(':limit', $num_results, PDO::PARAM_INT);
+				$stmt = $db->prepare($query);
 			} else if(isset($_POST['genre']) && !is_null($_POST['genre'])) {
 				$query = "SELECT * FROM `Books` WHERE `genre` LIKE :genre LIMIT :limit";
-				$stmt = $db->prepare($query);
 				$stmt->bindValue(':genre', "%".$_POST['genre']."%", PDO::PARAM_STR);
 				$stmt->bindValue(':limit', $num_results, PDO::PARAM_INT);
+				$stmt = $db->prepare($query);
+			} else {
+				echo "Test";
+				return;
 			}
 			$stmt->execute();
 			$rows = $stmt->fetchAll();
