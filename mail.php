@@ -27,6 +27,13 @@ function hasHtml($str){
 		<?php
 		return;
 	}
+	if($content == null) {
+		?><script type="text/javascript">
+			window.alert("Invalid content, the name may only contain a-z, A-Z, 0-9, \"-\", \"_\" and spaces.");
+		</script>
+		<?php
+		return;
+	}
 	if(hasHtml($content) || hasHtml($email) || hasHtml($name)) {
 		?><script type="text/javascript">
 			window.alert("You cannot use HTML in this form!");
