@@ -3,12 +3,11 @@ require("../private/config.php");
 require("functions.php");
 
 function connectDB($user, $pass, $db) {
-    try {
-        return(new PDO("mysql:host=localhost;dbname=" . $db . ";charset=utf8", $user, $pass));
-    } catch(PDOException $ex) {
-        return $ex;
-    }
-
+	try {	
+		return(new PDO("mysql:host=localhost;dbname=" . $db . ";charset=utf8", $user, $pass));
+	} catch(PDOException $ex) {
+		return $ex;
+	}
 }
 ?>
 <!DOCTYPE html>
@@ -44,7 +43,7 @@ function connectDB($user, $pass, $db) {
 		function search() {
 			$db = connectDB($dbUser, $dbPass, $dbName);
 			if ($db instanceof PDOException) {
-				die ($db->getMessage());
+				die($db->getMessage());
 			}
 			$num_results = $_POST['results'];
 			if(!isset($_POST['results'])) {
