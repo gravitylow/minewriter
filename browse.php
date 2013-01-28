@@ -42,7 +42,6 @@ function connectDB($user, $pass, $db) {
 	}
         
 		function search() {
-			global $dbUser, $dbPass, $dbName;
 			$db = connectDB($dbUser, $dbPass, $dbName);
 			if ($db instanceof PDOException) {
 				die ($db->getMessage());
