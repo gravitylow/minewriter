@@ -48,9 +48,9 @@ function connectDB($user, $pass, $db) {
 			
 			$stmt = null;
 			if(isset($_POST['author']) && !is_null($_POST['author'])) {
-				$query = "SELECT * FROM `Books` WHERE `Author` LIKE :author LIMIT :limit";
+				$query = "SELECT * FROM `Books` WHERE `Author` = :author LIMIT :limit";
 				$stmt = $db->prepare($query);
-				$stmt->bindValue(':author', "%".$_POST['author']."%", PDO::PARAM_STR);
+				$stmt->bindValue(':author', $_POST['author'], PDO::PARAM_STR);
 				$stmt->bindValue(':limit', $num_results, PDO::PARAM_INT);
 			} else if(isset($_POST['title']) && !is_null($_POST['title'])) {
 				$query = "SELECT * FROM `Books` WHERE `Title` LIKE :title  LIMIT :limit";
