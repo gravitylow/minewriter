@@ -72,10 +72,10 @@ function connectDB($user, $pass, $db) {
 				echo "Test";
 				return;
 			}
-			echo $stmt;
+
 			$stmt->execute();
 			$rows = $stmt->fetchAll();
-			
+			print_r($rows);			
 			if ($stmt->rowCount() == 0) {
 				echo 'Nothing found';
 				return;
