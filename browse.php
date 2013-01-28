@@ -59,10 +59,10 @@ function connectDB($user, $pass, $db) {
 				$stmt->bindValue(':author', "%".$_POST['author']."%", PDO::PARAM_STR);
 				$stmt->bindValue(':limit', $num_results, PDO::PARAM_INT);
 			} else if(isset($_POST['title']) && !is_null($_POST['title'])) {
-				$query = "SELECT * FROM `Books` WHERE `Title` LIKE :title";
+				$query = "SELECT * FROM `Books` WHERE `Title` LIKE :title  LIMIT :limit";
 				$stmt = $db->prepare($query);
 				$stmt->bindValue(':title', "%".$_POST['title']."%", PDO::PARAM_STR);
-				//$stmt->bindValue(':limit', $num_results, PDO::PARAM_INT);
+				$stmt->bindValue(':limit', $num_results, PDO::PARAM_INT);
 			} else if(isset($_POST['genre']) && !is_null($_POST['genre'])) {
 				$query = "SELECT * FROM `Books` WHERE `genre` LIKE :genre LIMIT :limit";
 				$stmt = $db->prepare($query);
@@ -72,9 +72,10 @@ function connectDB($user, $pass, $db) {
 				echo "Test";
 				return;
 			}
+			echo $stmt;
 			$stmt->execute();
 			$rows = $stmt->fetchAll();
-
+			
 			if ($stmt->rowCount() == 0) {
 				echo 'Nothing found';
 				return;
