@@ -37,10 +37,6 @@ function connectDB($user, $pass, $db) {
       <div class="results">
         <?php
         if (isset($_POST['author']) || isset($_POST['title']) || isset($_POST['genre'])) {
-		search();
-	}
-        
-		function search() {
 			$db = connectDB($dbUser, $dbPass, $dbName);
 			if ($db instanceof PDOException) {
 				die($db->getMessage());
