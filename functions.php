@@ -173,6 +173,7 @@ function footer() {
 	<div class="container" style = "position: relative; top: 20px;">
 	<p class="muted credit" style = "display: inline"><a href="tos.php">Terms of Service</a> | <a href="policy.php">Privacy Policy</a></p> <p class = "muted credit pull-right" style = "display: inline"><a href = "https://github.com/milkywayz/minewriter/">GitHub</a></p>
 </div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 <?php }
 
 ?>
