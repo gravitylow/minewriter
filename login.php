@@ -110,6 +110,9 @@
       </div>
     </div>
     <?php footer(); ?>
-
+	<script src="/js/pwstrength.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(':password').pwstrength();
+	</script>
   </body>
 </html>
