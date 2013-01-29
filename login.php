@@ -28,7 +28,7 @@
 		    <div class="control-group">
 		      <label class="control-label" for="username">Username</label>
 		      <div class="controls">
-		        <input type="text" id="username" name="username" placeholder="Username" class="input-xlarge">
+		        <input type="text" id="username_login" name="username_login" placeholder="Username" class="input-xlarge">
 		        <!--TODO: Add link for account recovery-->
 		        <p class="help-block">Forget your username?</p>
 		      </div>
@@ -39,7 +39,7 @@
 		      <!-- Password-->
 		      <label class="control-label" for="password">Password</label>
 		      <div class="controls">
-		        <input type="password" id="password" name="password" placeholder="Password" class="input-xlarge">
+		        <input type="password" id="password_login" name="password_login" placeholder="Password" class="input-xlarge">
 		        <!--TODO: Add link for account recovery-->
 		        <p class="help-block">Forget your password?</p>
 		      </div>
@@ -86,7 +86,7 @@
 		    <div class="control-group">
 		      <label class="control-label" for="password">Password</label>
 		      <div class="controls">
-		        <input type="password" id="password" name="password" placeholder="Password" class="input-xlarge">
+		        <input type="password" id="password" name="password" placeholder="Password" class="input-xlarge"> 
 		        <p class="help-block">Password should be at least 6 characters</p>
 		      </div>
 		    </div>
@@ -112,7 +112,7 @@
     <?php footer(); ?>
 	<script src="/js/pwstrength.js" type="text/javascript"></script>
 	<script type="text/javascript">
-		$(':password').pwstrength();
+		$('#password').pwstrength();
 	</script>
   </body>
 </html>
