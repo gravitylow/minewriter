@@ -64,21 +64,21 @@ function connectDB($user, $pass, $db) {
 			} else if(isset($_POST['title']) && !is_null($_POST['title'])) {
 				$query = "SELECT * FROM `Books` WHERE `Title` LIKE :title LIMIT $num_results";
 				$stmt = $db->prepare($query);
-				$stmt->bindValue(':title', $_POST['title'].'%', PDO::PARAM_STR);
+				$stmt->bindValue(':title', $title.'%', PDO::PARAM_STR);
 				//$stmt->bindValue(':limit', $num_results, PDO::PARAM_INT);
 			} else if(isset($_POST['genre']) && !is_null($_POST['genre'])) {
 				$query = "SELECT * FROM `Books` WHERE `genre` LIKE :genre LIMIT $num_results";
 				$stmt = $db->prepare($query);
-				$stmt->bindValue(':genre', $_POST['genre'].'%', PDO::PARAM_STR);
+				$stmt->bindValue(':genre', $genre.'%', PDO::PARAM_STR);
 				//$stmt->bindValue(':limit', $num_results, PDO::PARAM_INT);
 			} else {
 				echo "Test";
 				return;
 			}
-			echo($stmt->debugDumpParams());
+			//echo($stmt->debugDumpParams());
 			$stmt->execute();
 			$rows = $stmt->fetchAll();
-			print_r($rows);			
+			//print_r($rows);			
 			if ($stmt->rowCount() == 0) {
 				echo 'Nothing found';
 				return;
