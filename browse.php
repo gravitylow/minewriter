@@ -74,6 +74,8 @@ function connectDB($user, $pass, $db) {
 			
 			if ($p > 0) {
 				$pn = $p / $num_resuls;
+			} else {
+				$pn = 1;
 			}
 			
 			if(isset($author)) { //ISSET will check it's not null
