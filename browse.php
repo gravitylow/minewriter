@@ -31,7 +31,7 @@ function connectDB($user, $pass, $db) {
         <input type="text" value = "<?php echo ($_POST['author']); ?>" name="author" class="input-medium search-query" placeholder="Author">
         <input type="text" name="title" value = "<?php echo ($_POST['title']); ?>" class="input-medium search-query" placeholder="Title">
         <input type="text" name="genre" value = "<?php echo ($_POST['genre']); ?>" class="input-medium search-query" placeholder="Genre">
-        <select name = "Limit">
+        <select name = "limit">
         	<option value = "10">10 results</option>
         	<option value = "25">25 results</option>
         	<option value = "50">50 results</option>
