@@ -106,9 +106,9 @@ function connectDB($user, $pass, $db) {
               			 $date = $row['Date'];
                			$downloads = $row['downloads'];		
 		?>
-			<tr onclick="document.location='read.php?id=<?php echo $row['ID'] ?>';">
-            	<td><?php echo $title; ?></td>
-           	 	<td><?php echo $author; ?></td>
+			<tr>
+            	<td><a href = "read.php?id=<?php echo $row['ID'] ?>"><?php echo $title; ?></a></td>
+           	 	<td><a href = "profile.php?user=<?php echo ($author); ?>"><?php echo $author; ?></a></td>
            	 	<td><?php echo $genre; ?></td>
            	 	<td><?php echo $date; ?></td>
             	<td><?php echo $downloads; ?></td>
