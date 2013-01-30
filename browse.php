@@ -1,4 +1,8 @@
 <?php
+$author = $_GET['author'];
+$title = $_GET['title'];
+$limit = $_GET['limit'];
+$genre = $_GET['genre'];
 require("../private/config.php");
 require("functions.php");
 
@@ -28,23 +32,19 @@ function connectDB($user, $pass, $db) {
       </div>
       <h2 class="big">Search</h2>
       <form method="get" class="form-search" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-        <input type="text" value = "<?php echo ($_POST['author']); ?>" name="author" class="input-medium search-query" placeholder="Author">
-        <input type="text" name="title" value = "<?php echo ($_POST['title']); ?>" class="input-medium search-query" placeholder="Title">
-        <input type="text" name="genre" value = "<?php echo ($_POST['genre']); ?>" class="input-medium search-query" placeholder="Genre">
+        <input type="text" value = "<?php echo ($author); ?>" name="author" class="input-medium search-query" placeholder="Author">
+        <input type="text" name="title" value = "<?php echo ($title); ?>" class="input-medium search-query" placeholder="Title">
+        <input type="text" name="genre" value = "<?php echo ($genre); ?>" class="input-medium search-query" placeholder="Genre">
         <select name = "limit">
-        	<option value = "10">10 results</option>
-        	<option value = "25">25 results</option>
-        	<option value = "50">50 results</option>
-        	<option value = "100">100 results</option>
+        	<option value = "10" <?php if ($limit == "10" || !isset($limit)) { ?>selected = "selected"<?php } ?>>10 results</option>
+        	<option value = "25" <?php if ($limit == "25") { ?>selected = "selected"<?php } ?>>25 results</option>
+        	<option value = "50" <?php if ($limit == "50") { ?>selected = "selected"<?php } ?>>50 results</option>
+        	<option value = "100" <?php if ($limit == "100") { ?>selected = "selected"<?php } ?>>100 results</option>
         </select>
         <button type="submit" class="btn">Search</button>
       </form>
       <div class="results">
         <?php
-        $author = $_GET['author'];
-	$title = $_GET['title'];
-	$limit = $_GET['limit'];
-	$genre = $_GET['genre'];
         if (isset($author) || isset($title) || isset($genre)) {
 			$db = connectDB($dbUser, $dbPass, $dbName);
 			if ($db instanceof PDOException) {
