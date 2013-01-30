@@ -71,9 +71,10 @@ function connectDB($user, $pass, $db) {
 			} else {
 				$num_results = 10;	
 			}
-			$ps = $p - $num_results;
-			if ($ps > 0) {
-				$pn = $ps / $num_results;
+			//$ps = $p - $num_results;
+			if ($p > 0) {
+				$pn = $p / $num_results;
+				$pn++;
 			} else {
 				$pn = 1;
 			}
