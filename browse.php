@@ -36,31 +36,41 @@ function connectDB($user, $pass, $db) {
       </form>
       <div class="results">
         <?php
-        if (isset($_POST['author']) || isset($_POST['title']) || isset($_POST['genre'])) {
+        $author = $_POST['author'];
+	$title = $_POST['title'];
+	$limit = $_POST['limit'];
+	$genre = $_POST['genre'];
+        if (isset($author) || isset($title) || isset($genre)) {
 			$db = connectDB($dbUser, $dbPass, $dbName);
 			if ($db instanceof PDOException) {
 				die($db->getMessage());
 			}
-			$num_results = (int) $_POST['results'];
-			if(!isset($_POST['results'])) {
+			$num_results = $_POST['results'];
+			if(isset($num_results) && is_int($num_results)) {
+				$num_results = (int) $num_results;
+				if ($num_results < 0 || $num_results > 101) {
+					$num_results = 10;
+				}
+					
+			} else {
 				$num_results = 10;	
 			}
-			$author = $_POST['author'];
+			
 			if(isset($author)) { //ISSET will check it's not null
-				$query = "SELECT * FROM `Books` WHERE `Author` LIKE :author";
+				$query = "SELECT * FROM `Books` WHERE `Author` LIKE :author LIMIT $num_results";
 				$stmt = $db->prepare($query);
 				$stmt->bindValue(':author', $author.'%', PDO::PARAM_STR);
 				//$stmt->bindValue(':limit', $num_results, PDO::PARAM_INT);
 			} else if(isset($_POST['title']) && !is_null($_POST['title'])) {
-				$query = "SELECT * FROM `Books` WHERE `Title` LIKE :title  LIMIT :limit";
+				$query = "SELECT * FROM `Books` WHERE `Title` LIKE :title LIMIT $num_results";
 				$stmt = $db->prepare($query);
 				$stmt->bindValue(':title', $_POST['title'].'%', PDO::PARAM_STR);
-				$stmt->bindValue(':limit', $num_results, PDO::PARAM_INT);
+				//$stmt->bindValue(':limit', $num_results, PDO::PARAM_INT);
 			} else if(isset($_POST['genre']) && !is_null($_POST['genre'])) {
-				$query = "SELECT * FROM `Books` WHERE `genre` LIKE :genre LIMIT :limit";
+				$query = "SELECT * FROM `Books` WHERE `genre` LIKE :genre LIMIT $num_results";
 				$stmt = $db->prepare($query);
 				$stmt->bindValue(':genre', $_POST['genre'].'%', PDO::PARAM_STR);
-				$stmt->bindValue(':limit', $num_results, PDO::PARAM_INT);
+				//$stmt->bindValue(':limit', $num_results, PDO::PARAM_INT);
 			} else {
 				echo "Test";
 				return;
