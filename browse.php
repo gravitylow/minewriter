@@ -47,7 +47,7 @@ function connectDB($user, $pass, $db) {
 			}
 			$author = $_POST['author'];
 			if(isset($author)) { //ISSET will check it's not null
-				$query = "SELECT * FROM `Books` WHERE `Author` LIKE :author LIMIT :limit";
+				$query = "SELECT * FROM `Books` WHERE `Author` LIKE :author";
 				$stmt = $db->prepare($query);
 				$stmt->bindValue(':author', $author.'%', PDO::PARAM_STR);
 				$stmt->bindValue(':limit', $num_results, PDO::PARAM_INT);
