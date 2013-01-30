@@ -50,7 +50,7 @@ function connectDB($user, $pass, $db) {
 				$query = "SELECT * FROM `Books` WHERE `Author` LIKE :author";
 				$stmt = $db->prepare($query);
 				$stmt->bindValue(':author', $author.'%', PDO::PARAM_STR);
-				$stmt->bindValue(':limit', $num_results, PDO::PARAM_INT);
+				//$stmt->bindValue(':limit', $num_results, PDO::PARAM_INT);
 			} else if(isset($_POST['title']) && !is_null($_POST['title'])) {
 				$query = "SELECT * FROM `Books` WHERE `Title` LIKE :title  LIMIT :limit";
 				$stmt = $db->prepare($query);
