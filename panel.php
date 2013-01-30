@@ -14,8 +14,8 @@
       <div class="content">
         <div class="page-header">
           <h1>Panel <small>Manage your account!</small></h1>
-		This is just a place holder for the account panel.
         </div>
+	This is just a place holder for the account panel.
       </div>
     </div>
       	<?php footer(); ?>
