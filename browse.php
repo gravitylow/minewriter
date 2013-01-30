@@ -104,9 +104,6 @@ function connectDB($user, $pass, $db) {
 				$stmt->bindValue(':genre', $genre.'%', PDO::PARAM_STR);
 				$count->bindValue(':genre', $genre.'%', PDO::PARAM_STR);
 				//$stmt->bindValue(':limit', $num_results, PDO::PARAM_INT);
-			} else {
-				echo "Test";
-				return;
 			}
 			//echo($stmt->debugDumpParams());
 			$stmt->execute();
