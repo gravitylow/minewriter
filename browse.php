@@ -91,7 +91,7 @@ function connectDB($user, $pass, $db) {
 			$count->execute();
 			$counter = $count->fetch();
 			$totalNum = (float) $counter[0];
-			$totalPages = $totalNum / $limit;
+			$totalPages = $totalNum / $num_results;
 			$rows = $stmt->fetchAll();
 			//print_r($rows);			
 			if ($stmt->rowCount() == 0) {
