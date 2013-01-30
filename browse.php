@@ -64,17 +64,23 @@ function connectDB($user, $pass, $db) {
 			if(isset($author)) { //ISSET will check it's not null
 				$query = "SELECT * FROM `Books` WHERE `Author` LIKE :author LIMIT $num_results";
 				$stmt = $db->prepare($query);
+				$count = $db->prepare("SELECT count(distinct `id`) FROM `Books` WHERE `Author` LIKE :author");
 				$stmt->bindValue(':author', $author.'%', PDO::PARAM_STR);
+				$count->bindValue(':author', $author.'%', PDO::PARAM_STR);
 				//$stmt->bindValue(':limit', $num_results, PDO::PARAM_INT);
 			} else if(isset($_POST['title']) && !is_null($_POST['title'])) {
 				$query = "SELECT * FROM `Books` WHERE `Title` LIKE :title LIMIT $num_results";
 				$stmt = $db->prepare($query);
+				$count = $db->prepare("SELECT count(distinct `id`) FROM `Books` WHERE `Title` LIKE :title");				
 				$stmt->bindValue(':title', $title.'%', PDO::PARAM_STR);
+				$count->bindValue(':title', $title.'%', PDO::PARAM_STR);
 				//$stmt->bindValue(':limit', $num_results, PDO::PARAM_INT);
 			} else if(isset($_POST['genre']) && !is_null($_POST['genre'])) {
 				$query = "SELECT * FROM `Books` WHERE `genre` LIKE :genre LIMIT $num_results";
+				$count = $db->prepare("SELECT count(distinct `id`) FROM `Books` WHERE `genre` LIKE :genre");
 				$stmt = $db->prepare($query);
 				$stmt->bindValue(':genre', $genre.'%', PDO::PARAM_STR);
+				$count->bindValue(':genre', $genre.'%', PDO::PARAM_STR);
 				//$stmt->bindValue(':limit', $num_results, PDO::PARAM_INT);
 			} else {
 				echo "Test";
@@ -82,6 +88,9 @@ function connectDB($user, $pass, $db) {
 			}
 			//echo($stmt->debugDumpParams());
 			$stmt->execute();
+			$count->execute();
+			$counter = $count->fetch();
+			die($counter[0]);
 			$rows = $stmt->fetchAll();
 			//print_r($rows);			
 			if ($stmt->rowCount() == 0) {
