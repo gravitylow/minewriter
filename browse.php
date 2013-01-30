@@ -56,7 +56,7 @@ function connectDB($user, $pass, $db) {
       </form>
       <div class="results">
         <?php
-        if (isset($author) || isset($title) || isset($genre)) {
+        if (isset($author) || isset($title) || isset($genre) || true) {
 			$db = connectDB($dbUser, $dbPass, $dbName);
 			if ($db instanceof PDOException) {
 				die($db->getMessage());
@@ -78,7 +78,11 @@ function connectDB($user, $pass, $db) {
 			} else {
 				$pn = 1;
 			}
-			
+			if(!isset($author) && !isset($genre) && !isset($author)) {
+				$query = "SELECT * FROM `Books` LIMIT $p,$num_results";
+				$stmt = $db->prepare($query);
+				$count = $db->prepare("SELECT count(distinct `id`) FROM `Books`");
+			}
 			if(isset($author)) { //ISSET will check it's not null
 				$query = "SELECT * FROM `Books` WHERE `Author` LIKE :author LIMIT $p,$num_results";
 				$stmt = $db->prepare($query);
