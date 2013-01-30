@@ -4,7 +4,7 @@ $title = $_GET['title'];
 $limit = $_GET['limit'];
 $genre = $_GET['genre'];
 $p = $_GET['p'];
-if (is_numeric($p) && !isset($p)) {
+if (is_numeric($p) && isset($p)) {
 	$p = (int) $p;
 	if ($p < 0) {
 		$p = 0;
