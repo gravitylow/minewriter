@@ -50,7 +50,7 @@ function connectDB($user, $pass, $db) {
 			if ($db instanceof PDOException) {
 				die($db->getMessage());
 			}
-			$num_results = $_POST['results'];
+			$num_results = $limit;
 			if(isset($num_results) && is_numeric($num_results)) {
 				$num_results = (int) $num_results;
 				if ($num_results < 0 || $num_results > 101) {
