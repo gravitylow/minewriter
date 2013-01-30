@@ -41,15 +41,15 @@ function connectDB($user, $pass, $db) {
 			if ($db instanceof PDOException) {
 				die($db->getMessage());
 			}
-			$num_results = $_POST['results'];
+			$num_results = (int) $_POST['results'];
 			if(!isset($_POST['results'])) {
 				$num_results = 10;	
 			}
-			
-			if(isset($_POST['author']) && !is_null($_POST['author'])) {
+			$author = $_POST['author'];
+			if(isset($author)) { //ISSET will check it's not null
 				$query = "SELECT * FROM `Books` WHERE `Author` LIKE :author LIMIT :limit";
 				$stmt = $db->prepare($query);
-				$stmt->bindValue(':author', $_POST['author'].'%', PDO::PARAM_STR);
+				$stmt->bindValue(':author', $author.'%', PDO::PARAM_STR);
 				$stmt->bindValue(':limit', $num_results, PDO::PARAM_INT);
 			} else if(isset($_POST['title']) && !is_null($_POST['title'])) {
 				$query = "SELECT * FROM `Books` WHERE `Title` LIKE :title  LIMIT :limit";
