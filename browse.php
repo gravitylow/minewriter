@@ -3,6 +3,15 @@ $author = $_GET['author'];
 $title = $_GET['title'];
 $limit = $_GET['limit'];
 $genre = $_GET['genre'];
+$p = $_GET['p'];
+if (is_numeric($p) && !isset($p) {
+	$p = (int) $p;
+	if ($p < 0) {
+		$p = 0;
+	}
+
+}
+
 require("../private/config.php");
 require("functions.php");
 
@@ -61,22 +70,26 @@ function connectDB($user, $pass, $db) {
 				$num_results = 10;	
 			}
 			
+			if ($p > 0) {
+				$pn = $p / $num_resuls;
+			}
+			
 			if(isset($author)) { //ISSET will check it's not null
-				$query = "SELECT * FROM `Books` WHERE `Author` LIKE :author LIMIT $num_results";
+				$query = "SELECT * FROM `Books` WHERE `Author` LIKE :author LIMIT $p,$num_results";
 				$stmt = $db->prepare($query);
 				$count = $db->prepare("SELECT count(distinct `id`) FROM `Books` WHERE `Author` LIKE :author");
 				$stmt->bindValue(':author', $author.'%', PDO::PARAM_STR);
 				$count->bindValue(':author', $author.'%', PDO::PARAM_STR);
 				//$stmt->bindValue(':limit', $num_results, PDO::PARAM_INT);
 			} else if(isset($_POST['title']) && !is_null($_POST['title'])) {
-				$query = "SELECT * FROM `Books` WHERE `Title` LIKE :title LIMIT $num_results";
+				$query = "SELECT * FROM `Books` WHERE `Title` LIKE :title LIMIT $p,$num_results";
 				$stmt = $db->prepare($query);
 				$count = $db->prepare("SELECT count(distinct `id`) FROM `Books` WHERE `Title` LIKE :title");				
 				$stmt->bindValue(':title', $title.'%', PDO::PARAM_STR);
 				$count->bindValue(':title', $title.'%', PDO::PARAM_STR);
 				//$stmt->bindValue(':limit', $num_results, PDO::PARAM_INT);
 			} else if(isset($_POST['genre']) && !is_null($_POST['genre'])) {
-				$query = "SELECT * FROM `Books` WHERE `genre` LIKE :genre LIMIT $num_results";
+				$query = "SELECT * FROM `Books` WHERE `genre` LIKE :genre LIMIT $p,$num_results";
 				$count = $db->prepare("SELECT count(distinct `id`) FROM `Books` WHERE `genre` LIKE :genre");
 				$stmt = $db->prepare($query);
 				$stmt->bindValue(':genre', $genre.'%', PDO::PARAM_STR);
@@ -129,7 +142,7 @@ function connectDB($user, $pass, $db) {
 		}
 		?>
              </table>
-             <p><em>Found <?php echo ($totalNum); ?> results, spanning <?php echo ($totalPages); ?> pages.</em></p>
+             <p><em>Found <?php echo ($totalNum); ?> results, spanning <?php echo ($totalPages); ?> pages. Page <?php echo($pn); ?>/<?php echo ($totalPages); ?>.</em></p>
       </div>
     </div>
   </div>
