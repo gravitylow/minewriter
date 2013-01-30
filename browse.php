@@ -27,7 +27,7 @@ function connectDB($user, $pass, $db) {
         <h1>Browse <small>Discover other MineWriter books!</small></h1>
       </div>
       <h2 class="big">Search</h2>
-      <form method="post" class="form-search" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+      <form method="get" class="form-search" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         <input type="text" value = "<?php echo ($_POST['author']); ?>" name="author" class="input-medium search-query" placeholder="Author">
         <input type="text" name="title" value = "<?php echo ($_POST['title']); ?>" class="input-medium search-query" placeholder="Title">
         <input type="text" name="genre" value = "<?php echo ($_POST['genre']); ?>" class="input-medium search-query" placeholder="Genre">
@@ -41,17 +41,17 @@ function connectDB($user, $pass, $db) {
       </form>
       <div class="results">
         <?php
-        $author = $_POST['author'];
-	$title = $_POST['title'];
-	$limit = $_POST['limit'];
-	$genre = $_POST['genre'];
+        $author = $_GET['author'];
+	$title = $_GET['title'];
+	$limit = $_GET['limit'];
+	$genre = $_GET['genre'];
         if (isset($author) || isset($title) || isset($genre)) {
 			$db = connectDB($dbUser, $dbPass, $dbName);
 			if ($db instanceof PDOException) {
 				die($db->getMessage());
 			}
 			$num_results = $_POST['results'];
-			if(isset($num_results) && is_int($num_results)) {
+			if(isset($num_results) && is_numeric($num_results)) {
 				$num_results = (int) $num_results;
 				if ($num_results < 0 || $num_results > 101) {
 					$num_results = 10;
