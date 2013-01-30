@@ -46,7 +46,6 @@ function connectDB($user, $pass, $db) {
 				$num_results = 10;	
 			}
 			
-			$stmt = null;
 			if(isset($_POST['author']) && !is_null($_POST['author'])) {
 				$query = "SELECT * FROM `Books` WHERE `Author` LIKE :author LIMIT :limit";
 				$stmt = $db->prepare($query);
@@ -66,7 +65,7 @@ function connectDB($user, $pass, $db) {
 				echo "Test";
 				return;
 			}
-
+			var_dump($db);
 			$stmt->execute();
 			$rows = $stmt->fetchAll();
 			print_r($rows);			
