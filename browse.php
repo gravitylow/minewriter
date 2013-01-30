@@ -90,7 +90,8 @@ function connectDB($user, $pass, $db) {
 			$stmt->execute();
 			$count->execute();
 			$counter = $count->fetch();
-			die($counter[0]);
+			$totalNum = (int) $counter[0];
+			$totalPages = ceil($counter / $limit);
 			$rows = $stmt->fetchAll();
 			//print_r($rows);			
 			if ($stmt->rowCount() == 0) {
@@ -127,6 +128,7 @@ function connectDB($user, $pass, $db) {
 		}
 		?>
              </table>
+             <p><em>Found <?php echo ($totalNum); ?> results, spanning <?php echo ($totalPages); ?> pages.</em></p>
       </div>
     </div>
   </div>
