@@ -65,7 +65,7 @@ function connectDB($user, $pass, $db) {
 				echo "Test";
 				return;
 			}
-			echo ($query);
+			echo($stmt->debugDumpParams());
 			$stmt->execute();
 			$rows = $stmt->fetchAll();
 			print_r($rows);			
