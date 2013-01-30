@@ -76,6 +76,7 @@ function connectDB($user, $pass, $db) {
 			
 			if(isset($author)) { //ISSET will check it's not null
 				$query = "SELECT * FROM `Books` WHERE `Author` LIKE :author LIMIT $p,$num_results";
+				die ($query);
 				$stmt = $db->prepare($query);
 				$count = $db->prepare("SELECT count(distinct `id`) FROM `Books` WHERE `Author` LIKE :author");
 				$stmt->bindValue(':author', $author.'%', PDO::PARAM_STR);
