@@ -129,24 +129,22 @@ function connectDB($user, $pass, $db) {
                     <td>Downloads</td>
      		 	</tr>
      		 <?php
-            		foreach($rows as $row) {
-              		 	$title = $row['Title'];			
-               			$author = $row['Author'];
-               			$genre = $row['genre'];
-              			 $date = $row['Date'];
-               			$downloads = $row['downloads'];		
-		?>
-			<tr>
-            	<td><a href = "read.php?id=<?php echo $row['ID'] ?>"><?php echo $title; ?></a></td>
-           	 	<td><a href = "profile.php?user=<?php echo ($author); ?>"><?php echo $author; ?></a></td>
-           	 	<td><?php echo $genre; ?></td>
-           	 	<td><?php echo $date; ?></td>
-            	<td><?php echo $downloads; ?></td>
-            </tr>    
-		<?php
-            		}
-		}
-		?>
+            foreach($rows as $row) {
+            	$title = $row['Title'];			
+				$author = $row['Author'];
+				$genre = $row['genre'];
+				$date = $row['Date'];
+				$downloads = $row['downloads'];		
+				?>
+				<tr>
+					<td><a href = "read.php?id=<?php echo $row['ID'] ?>"><?php echo $title; ?></a></td>
+					<td><a href = "profile.php?user=<?php echo ($author); ?>"><?php echo $author; ?></a></td>
+					<td><?php echo $genre; ?></td>
+					<td><?php echo $date; ?></td>
+					<td><?php echo $downloads; ?></td>
+				</tr>    
+		<?php }
+		} ?>
              </table>
              <p><em>Found <?php echo ($totalNum); ?> results, spanning <?php echo ($totalPages); ?> pages. Page <?php echo($pn); ?>/<?php echo ($totalPages); ?>.</em></p>
       </div>
