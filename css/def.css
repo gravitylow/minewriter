@@ -10,7 +10,7 @@ html, body {
 
 .top { position: absolute; background-color: rgba(0,0,0,0.1); width: 258px; top: 0px; left: 0px; right: 0px; border-top-left-radius: 5px; border-top-right-radius: 5px; background-image: linear-gradient(to bottom, #54B4EB, #2FA4E7); }
 .top > h4 { padding-left: 15px; color: white; }
-
+.password-verdict { margin-left: 15px; }
 /* STICKY FOOTER */
       html,
       body {
