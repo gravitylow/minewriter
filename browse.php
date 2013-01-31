@@ -222,13 +222,19 @@ function connectDB($user, $pass, $db) {
              <ul class="pager">
     		<li class="previous <?php if ($pn == 1) { ?>disabled<?php } ?>">
     			<?php
-    				$_GET['p'] = ($p - 1) * $num_results;
+    				$p1 = (int) $p;
+    		    		$p1--;
+    		    		$p2 = (int) $num_results;
+    				$_GET['p'] = $p1 * $p2;
     			?>
     			<a href="browse.php?<?php echo (http_build_query($_GET)); ?>">&larr; Previous</a>
     		</li>
     		<li class="next <?php if ($pn == $totalPages) { ?>disabled<?php } ?>">
     		    	<?php
-    				$_GET['p'] = ($p + 1) * $num_results;
+    		    		$p1 = (int) $p;
+    		    		$p1++;
+    		    		$p2 = (int) $num_results;
+    				$_GET['p'] = $p1 * $p2;
     			?>
     			<a href="browse.php?<?php echo (http_build_query($_GET)); ?>">Next &rarr;</a>
     		</li>
