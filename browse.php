@@ -16,7 +16,8 @@ if (is_numeric($p) && isset($p)) {
 
 require("../private/config.php");
 require("functions.php");
-
+include 'Mobile_Detect.php';
+$detect = new Mobile_Detect();
 function connectDB($user, $pass, $db) {
 	try {	
 		return(new PDO("mysql:host=localhost;dbname=" . $db . ";charset=utf8", $user, $pass));
@@ -45,7 +46,36 @@ function connectDB($user, $pass, $db) {
       <form method="get" class="form-search" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         <input type="text" value = "<?php echo ($author); ?>" name="author" class="input-medium search-query" placeholder="Author">
         <input type="text" name="title" value = "<?php echo ($title); ?>" class="input-medium search-query" placeholder="Title">
-        <input type="text" name="genre" value = "<?php echo ($genre); ?>" class="input-medium search-query" placeholder="Genre">
+        <select size='1' name = "genre" required>
+          		<?php if($detect->isiOS()) {?><option disabled="disabled">Genre</option><?php } else { ?><optgroup label='Genre'><?php } ?>
+					<option>Action and Adventure</option>
+					<option>Chick Lit</option>
+					<option>Children’s</option>
+					<option>Contemporary</option>
+					<option>Crime</option>
+					<option>Family Saga</option>
+					<option>Fantasy</option>
+					<option>Dark Fantasy</option>
+					<option>General Fiction</option>
+					<option>Historical Fiction</option>
+					<option>Horror</option>
+					<option>Humour</option>
+					<option>Literary Fiction</option>
+					<option>Lyrics</option>
+					<option>Military and Espionage</option>
+					<option>Multicultural</option>
+					<option>Mystery</option>
+					<option>Non-fiction</option>
+					<option>Religious and Inspirational</option>
+					<option>Romance</option>
+					<option>Science Fiction</option>
+					<option>Short Story Collections</option>
+					<option>Thrillers and Suspense</option>
+					<option>Western</option>
+					<option>Young Adult</option>
+					<option>Other</option>
+          		<?php if(!$detect->isiOS()) { ?></optgroup><?php } ?>
+          	</select>
         <select name = "limit">
         	<option value = "10" <?php if ($limit == "10" || !isset($limit)) { ?>selected = "selected"<?php } ?>>10 results</option>
         	<option value = "25" <?php if ($limit == "25") { ?>selected = "selected"<?php } ?>>25 results</option>
