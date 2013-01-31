@@ -183,7 +183,7 @@
         },
 
         progressWidget = function () {
-            return '<div class="progress contextElement"><div class="bar"></div></div>';
+            return '<div class="progress contextElement" style = "float: right; width: 400px; margin-top: 5px; margin-right: 30px;"><div class="bar"></div></div>';
         },
 
         methods = {
