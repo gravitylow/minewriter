@@ -86,7 +86,7 @@
 		    <div class="control-group">
 		      <label class="control-label" for="password">Password</label>
 		      <div class="controls">
-		        <input type="password" id="password" name="password" placeholder="Password" class="input-xlarge"> 
+		        <input type="password" id="password" name="password" placeholder="Password" class="input-xlarge"> <div id = "passwordmeter" style = "float: right;"></div>
 		        <p class="help-block">Password should be at least 6 characters</p>
 		      </div>
 		    </div>
@@ -112,7 +112,7 @@
     <?php footer(); ?>
 	<script src="/js/pwstrength.js" type="text/javascript"></script>
 	<script type="text/javascript">
-		$('#password').pwstrength();
+		$('#passwordmeter').pwstrength();
 	</script>
   </body>
 </html>
