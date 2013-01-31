@@ -22,7 +22,7 @@
                 same_as_username: "Your password cannot be the same as your username"
             },
             scores: [17, 26, 40, 50],
-            verdicts: ["Weak", "Normal", "Medium", "Strong", "Excellent"],
+            verdicts: ["Weak", "Normal", "Medium", "Good", "Strong"],
             showVerdicts: true,
             raisePower: 1.4,
             usernameField: "#username",
