@@ -183,7 +183,7 @@
         },
 
         progressWidget = function () {
-            return '<div class="progress"><div class="bar"></div></div>';
+            return '<div class="progress contextElement"><div class="bar"></div></div>';
         },
 
         methods = {
