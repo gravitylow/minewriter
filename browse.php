@@ -78,32 +78,74 @@ function connectDB($user, $pass, $db) {
 			} else {
 				$pn = 1;
 			}
-			if(!isset($author) && !isset($genre) && !isset($author)) {
+			if(!isset($author) && !isset($genre) && !isset($title)) { //ISSET will check it's not null
+				//No blanks filled
 				$query = "SELECT * FROM `Books` LIMIT $p,$num_results";
 				$stmt = $db->prepare($query);
 				$count = $db->prepare("SELECT count(distinct `id`) FROM `Books`");
 			}
-			if(isset($author)) { //ISSET will check it's not null
+			if(isset($author) && !isset($genre) && !isset($title)) {
+				//Author field filled
 				$query = "SELECT * FROM `Books` WHERE `Author` LIKE :author LIMIT $p,$num_results";
 				$stmt = $db->prepare($query);
 				$count = $db->prepare("SELECT count(distinct `id`) FROM `Books` WHERE `Author` LIKE :author");
 				$stmt->bindValue(':author', $author.'%', PDO::PARAM_STR);
 				$count->bindValue(':author', $author.'%', PDO::PARAM_STR);
 				//$stmt->bindValue(':limit', $num_results, PDO::PARAM_INT);
-			} else if(isset($_POST['title']) && !is_null($_POST['title'])) {
+			} else if(isset($title) && !isset($author) && !isset($genre)) {
+				//Title field filled
 				$query = "SELECT * FROM `Books` WHERE `Title` LIKE :title LIMIT $p,$num_results";
 				$stmt = $db->prepare($query);
 				$count = $db->prepare("SELECT count(distinct `id`) FROM `Books` WHERE `Title` LIKE :title");				
 				$stmt->bindValue(':title', $title.'%', PDO::PARAM_STR);
 				$count->bindValue(':title', $title.'%', PDO::PARAM_STR);
 				//$stmt->bindValue(':limit', $num_results, PDO::PARAM_INT);
-			} else if(isset($_POST['genre']) && !is_null($_POST['genre'])) {
+			} else if(isset($genre) && !isset($author) && !isset($title)) {
+				//Genre field filled
 				$query = "SELECT * FROM `Books` WHERE `genre` LIKE :genre LIMIT $p,$num_results";
 				$count = $db->prepare("SELECT count(distinct `id`) FROM `Books` WHERE `genre` LIKE :genre");
 				$stmt = $db->prepare($query);
 				$stmt->bindValue(':genre', $genre.'%', PDO::PARAM_STR);
 				$count->bindValue(':genre', $genre.'%', PDO::PARAM_STR);
 				//$stmt->bindValue(':limit', $num_results, PDO::PARAM_INT);
+			} else if(isset($author) && isset($title) && !isset($genre)) {
+				//Author and Title fields filled
+				$query = "SELECT * FROM `Books` WHERE `Author` LIKE :author AND `Title` LIKE :title LIMIT $p,$num_results";
+				$count = $db->prepare("SELECT count(distinct `id`) FROM `Books` WHERE `Author` LIKE :author AND `Title` LIKE :title");
+				$stmt = $db->prepare($query);
+				$stmt->bindValue(':author', $author.'%', PDO::PARAM_STR);
+				$stmt->bindValue(':title', $title.'%', PDO::PARAM_STR);
+				$count->bindValue(':author', $author.'%', PDO::PARAM_STR);
+				$count->bindValue(':title', $title.'%', PDO::PARAM_STR);
+			} else if(isset($author) && !isset($title) && isset($genre)) {
+				//Author and Genre fields filled
+				$query = "SELECT * FROM `Books` WHERE `Author` LIKE :author AND `genre` LIKE :genre LIMIT $p,$num_results";
+				$count = $db->prepare("SELECT count(distinct `id`) FROM `Books` WHERE `Author` LIKE :author AND `genre` LIKE :genre");
+				$stmt = $db->prepare($query);
+				$stmt->bindValue(':author', $author.'%', PDO::PARAM_STR);
+				$stmt->bindValue(':genre', $genre.'%', PDO::PARAM_STR);
+				$count->bindValue(':author', $author.'%', PDO::PARAM_STR);
+				$count->bindValue(':genre', $genre.'%', PDO::PARAM_STR);
+			} else if(!isset($author) && isset($title) && isset($genre)) {
+				//Title and Genre fields filled
+				$query = "SELECT * FROM `Books` WHERE `Title` LIKE :title AND `genre` LIKE :genre LIMIT $p,$num_results";
+				$count = $db->prepare("SELECT count(distinct `id`) FROM `Books` WHERE `Title` LIKE :title AND `genre` LIKE :genre");
+				$stmt = $db->prepare($query);
+				$stmt->bindValue(':title', $title.'%', PDO::PARAM_STR);
+				$stmt->bindValue(':genre', $genre.'%', PDO::PARAM_STR);
+				$count->bindValue(':title', $title.'%', PDO::PARAM_STR);
+				$count->bindValue(':genre', $genre.'%', PDO::PARAM_STR);
+			} else if(isset($author) && isset($title) && isset($genre)) {
+				//All fields filled
+				$query = "SELECT * FROM `Books` WHERE `Author` LIKE :author AND `Title` LIKE :title AND `genre` LIKE :genre LIMIT $p,$num_results";
+				$count = $db->prepare("SELECT count(distinct `id`) FROM `Books` WHERE `Author` LIKE :author AND `Title` LIKE :title AND `genre` LIKE :genre");
+				$stmt = $db->prepare($query);
+				$stmt->bindValue(':author', $author.'%', PDO::PARAM_STR);
+				$stmt->bindValue(':title', $title.'%', PDO::PARAM_STR);
+				$stmt->bindValue(':genre', $genre.'%', PDO::PARAM_STR);
+				$count->bindValue(':author', $author.'%', PDO::PARAM_STR);
+				$count->bindValue(':title', $title.'%', PDO::PARAM_STR);
+				$count->bindValue(':genre', $genre.'%', PDO::PARAM_STR);
 			}
 			//echo($stmt->debugDumpParams());
 			$stmt->execute();
