@@ -219,6 +219,20 @@ function connectDB($user, $pass, $db) {
 		<?php }
 		} ?>
              </table>
+             <ul class="pager">
+    		<li class="previous <?php (if $pn == 1) { ?>disabled<?php } ?>">
+    			<?php
+    				$_GET['p'] = ($p - 1) * $num_results;
+    			?>
+    			<a href="browse.php?<?php echo (http_build_query($_GET)); ?>">&larr; Previous</a>
+    		</li>
+    		<li class="next <?php (if $pn == $totalPages) { ?>disabled<?php } ?>">
+    		    	<?php
+    				$_GET['p'] = ($p + 1) * $num_results;
+    			?>
+    			<a href="browse.php?<?php echo (http_build_query($_GET)); ?>">Next &rarr;</a>
+    		</li>
+    	    </ul>
              <p><em>Found <?php echo ($totalNum); ?> results, spanning <?php echo ($totalPages); ?> pages. Page <?php echo($pn); ?>/<?php echo ($totalPages); ?>.</em></p>
       </div>
     </div>
