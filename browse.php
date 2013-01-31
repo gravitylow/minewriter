@@ -48,6 +48,7 @@ function connectDB($user, $pass, $db) {
         <input type="text" name="title" value = "<?php echo ($title); ?>" class="input-medium search-query" placeholder="Title">
         <select size='1' name = "genre" required>
           		<?php if($detect->isiOS()) {?><option disabled="disabled">Genre</option><?php } else { ?><optgroup label='Genre'><?php } ?>
+					<option value = "">Any</option>
 					<option>Action and Adventure</option>
 					<option>Chick Lit</option>
 					<option>Children&#39;s</option>
