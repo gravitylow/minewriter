@@ -222,7 +222,7 @@ function connectDB($user, $pass, $db) {
              <ul class="pager">
     		<li class="previous <?php if ($pn == 1) { ?>disabled<?php } ?>">
     			<?php
-    				$p1 = (int) $p;
+    				$p1 = (int) $pn;
     		    		$p1--;
     		    		$p2 = (int) $num_results;
     				$_GET['p'] = $p1 * $p2;
@@ -231,7 +231,7 @@ function connectDB($user, $pass, $db) {
     		</li>
     		<li class="next <?php if ($pn == $totalPages) { ?>disabled<?php } ?>">
     		    	<?php
-    		    		$p1 = (int) $p;
+    		    		$p1 = (int) $pn;
     		    		$p1++;
     		    		$p2 = (int) $num_results;
     				$_GET['p'] = $p1 * $p2;
