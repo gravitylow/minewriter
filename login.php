@@ -112,7 +112,7 @@
     <?php footer(); ?>
 	<script src="/js/pwstrength.js" type="text/javascript"></script>
 	<script type="text/javascript">
-		$('#passwordmeter').pwstrength();
+		$('#password').pwstrength();
 	</script>
   </body>
 </html>
