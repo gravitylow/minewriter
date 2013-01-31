@@ -22,26 +22,24 @@ $detect = new Mobile_Detect();
         <form name="myform" action="post.php" method="POST" style = "position: relative;">
         	  <div class = "well" style = "position: absolute; right: 0; width: 220px;">
         	  <?php topHeader("Formatting tools"); ?>
-          	<a class = "btn" onclick = '$("#writing").insertAtCaret("§l"); $("#writing").focus();' style = ""><i class = "icon-bold"></i></a> <a class = "btn" style = "" onclick = '$("#writing").insertAtCaret("§o"); $("#writing").focus();'><i class = "icon-italic"></i></a>
-          	 <a class = "btn" onclick = '$("#writing").insertAtCaret("§n"); $("#writing").focus();' style = ""><i class = "icon-underline"></i></a> <a class = "btn" style = "" onclick = '$("#writing").insertAtCaret("§m"); $("#writing").focus();'><i class = "icon-strikethrough"></i></a>
-          	 <a class = "btn" onclick = '$("#writing").insertAtCaret("§k"); $("#writing").focus();' style = ""><i class = "icon-magic"></i></a> <br style = "display: block; margin-bottom: 5px;" />
-          	 <a class = "btn" onclick = '$("#writing").insertAtCaret("§r"); $("#writing").focus();' style = ""><i class = "icon-undo"></i></a> <a class = "btn" style = "color: #000000;" onclick = '$("#writing").insertAtCaret("§0"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a> 
-          	 <a class = "btn" onclick = '$("#writing").insertAtCaret("§1"); $("#writing").focus();' style = "color: #0000AA;"><i class = "icon-sign-blank"></i></a> <a class = "btn" style = "color: #00AA00;" onclick = '$("#writing").insertAtCaret("§2"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a> 
-          	 <a class = "btn" onclick = '$("#writing").insertAtCaret("§3"); $("#writing").focus();' style = "color: #00AAAA;"><i class = "icon-sign-blank"></i></a><br style = "display: block; margin-bottom: 5px;" /><a class = "btn" style = "color: #AA0000;" onclick = '$("#writing").insertAtCaret("§4"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a> 
-          	 <a class = "btn" onclick = '$("#writing").insertAtCaret("§5"); $("#writing").focus();' style = "color: #AA00AA;"><i class = "icon-sign-blank"></i></a> <a class = "btn" style = "color: #FFAA00;" onclick = '$("#writing").insertAtCaret("§6"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a> 
-          	 <a class = "btn" onclick = '$("#writing").insertAtCaret("§7"); $("#writing").focus();' style = "color: #AAAAAA;"><i class = "icon-sign-blank"></i></a> <a class = "btn" style = "color: #555555;" onclick = '$("#writing").insertAtCaret("§8"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a> <br style = "display: block; margin-bottom: 5px;" />
-          	 <a class = "btn" onclick = '$("#writing").insertAtCaret("§9"); $("#writing").focus();' style = "color: #5555FF;"><i class = "icon-sign-blank"></i></a> <a class = "btn" style = "color: #55FF55;" onclick = '$("#writing").insertAtCaret("§a"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a> 
-          	 <a class = "btn" onclick = '$("#writing").insertAtCaret("§b"); $("#writing").focus();' style = "color: #55FFFF;"><i class = "icon-sign-blank"></i></a> <a class = "btn" style = "color: #FF5555;" onclick = '$("#writing").insertAtCaret("§c"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a> 
-          	 <a class = "btn" onclick = '$("#writing").insertAtCaret("§d"); $("#writing").focus();' style = "color: #FF55FF;"><i class = "icon-sign-blank"></i></a><br style = "display: block; margin-bottom: 5px;" /><a class = "btn" style = "color: #FFFF55;" onclick = '$("#writing").insertAtCaret("§e"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a>
-          	 <a class = "btn" onclick = '$("#writing").insertAtCaret("§f"); $("#writing").focus();' style = "color: #FFFFFF;"><i class = "icon-sign-blank"></i></a>
+				 <a class = "btn" onclick = '$("#writing").insertAtCaret("§l"); $("#writing").focus();' style = ""><i class = "icon-bold"></i></a> <a class = "btn" style = "" onclick = '$("#writing").insertAtCaret("§o"); $("#writing").focus();'><i class = "icon-italic"></i></a>
+				 <a class = "btn" onclick = '$("#writing").insertAtCaret("§n"); $("#writing").focus();' style = ""><i class = "icon-underline"></i></a> <a class = "btn" style = "" onclick = '$("#writing").insertAtCaret("§m"); $("#writing").focus();'><i class = "icon-strikethrough"></i></a>
+				 <a class = "btn" onclick = '$("#writing").insertAtCaret("§k"); $("#writing").focus();' style = ""><i class = "icon-magic"></i></a> <br style = "display: block; margin-bottom: 5px;" />
+				 <a class = "btn" onclick = '$("#writing").insertAtCaret("§r"); $("#writing").focus();' style = ""><i class = "icon-undo"></i></a> <a class = "btn" style = "color: #000000;" onclick = '$("#writing").insertAtCaret("§0"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a> 
+				 <a class = "btn" onclick = '$("#writing").insertAtCaret("§1"); $("#writing").focus();' style = "color: #0000AA;"><i class = "icon-sign-blank"></i></a> <a class = "btn" style = "color: #00AA00;" onclick = '$("#writing").insertAtCaret("§2"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a> 
+				 <a class = "btn" onclick = '$("#writing").insertAtCaret("§3"); $("#writing").focus();' style = "color: #00AAAA;"><i class = "icon-sign-blank"></i></a><br style = "display: block; margin-bottom: 5px;" /><a class = "btn" style = "color: #AA0000;" onclick = '$("#writing").insertAtCaret("§4"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a> 
+				 <a class = "btn" onclick = '$("#writing").insertAtCaret("§5"); $("#writing").focus();' style = "color: #AA00AA;"><i class = "icon-sign-blank"></i></a> <a class = "btn" style = "color: #FFAA00;" onclick = '$("#writing").insertAtCaret("§6"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a> 
+				 <a class = "btn" onclick = '$("#writing").insertAtCaret("§7"); $("#writing").focus();' style = "color: #AAAAAA;"><i class = "icon-sign-blank"></i></a> <a class = "btn" style = "color: #555555;" onclick = '$("#writing").insertAtCaret("§8"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a> <br style = "display: block; margin-bottom: 5px;" />
+				 <a class = "btn" onclick = '$("#writing").insertAtCaret("§9"); $("#writing").focus();' style = "color: #5555FF;"><i class = "icon-sign-blank"></i></a> <a class = "btn" style = "color: #55FF55;" onclick = '$("#writing").insertAtCaret("§a"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a> 
+				 <a class = "btn" onclick = '$("#writing").insertAtCaret("§b"); $("#writing").focus();' style = "color: #55FFFF;"><i class = "icon-sign-blank"></i></a> <a class = "btn" style = "color: #FF5555;" onclick = '$("#writing").insertAtCaret("§c"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a> 
+				 <a class = "btn" onclick = '$("#writing").insertAtCaret("§d"); $("#writing").focus();' style = "color: #FF55FF;"><i class = "icon-sign-blank"></i></a><br style = "display: block; margin-bottom: 5px;" /><a class = "btn" style = "color: #FFFF55;" onclick = '$("#writing").insertAtCaret("§e"); $("#writing").focus();'><i class = "icon-sign-blank"></i></a>
+				 <a class = "btn" onclick = '$("#writing").insertAtCaret("§f"); $("#writing").focus();' style = "color: #FFFFFF;"><i class = "icon-sign-blank"></i></a>
           </div>
           
             <div class = "well" style = "position: absolute; right: 0; top: 260px; width: 220px;">
             <?php topHeader("Book details"); ?>
-          	<input type = "text" placeholder = "Title" name = "title" required />
-          	<br />
-          	<input type = "text" placeholder = "Author" name = "author" required />
-          	<br />
+          	<input type = "text" placeholder = "Title" name = "title" required /><br />
+          	<input type = "text" placeholder = "Author" name = "author" required /><br />
           	<select size='8' name = "license" required>
           		<?php if($detect->isiOS()) {?><option disabled="disabled">Licensing</option><?php } else { ?><optgroup label='Licensing'><?php } ?>
           			<option vlue = "reserved">All rights reserved</option>
@@ -51,7 +49,6 @@ $detect = new Mobile_Detect();
           			<option vlue = "BY-SA">CC-BY-SA</option>
           			<option vlaue = "BY">CC-BY</option>
           			<option vlaue = "pd">Public domain</option>
-          			
           		<?php if(!$detect->isiOS()) { ?></optgroup><?php } ?>
           	</select><br />
           	<select size='1' name = "genre" required>
@@ -83,14 +80,12 @@ $detect = new Mobile_Detect();
 					<option>Young Adult</option>
 					<option>Other</option>
           		<?php if(!$detect->isiOS()) { ?></optgroup><?php } ?>
-          	</select>
-          	<br />
+          	</select><br />
           	<input type = "checkbox" name = "not_nsfw" checked = "checked"/> Suitable for all users <br /><br />
           	<button type = "submit" class = "btn btn-success">
           		<i class = "icon-plus"></i> Add book
           	</button>
           </div>
-          
           <div class = "well" style = "position: absolute; right: 0; top: 696px; width: 220px;">
           <?php topHeader("Submission information"); ?>
           	<a href="#myModal" role="button" class="btn btn-primary" data-toggle="modal" style = "margin-left: 16px;"><i class = "icon-info-sign"></i> Submission Guidelines</a>
