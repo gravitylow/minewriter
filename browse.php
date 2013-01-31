@@ -50,7 +50,7 @@ function connectDB($user, $pass, $db) {
           		<?php if($detect->isiOS()) {?><option disabled="disabled">Genre</option><?php } else { ?><optgroup label='Genre'><?php } ?>
 					<option>Action and Adventure</option>
 					<option>Chick Lit</option>
-					<option>Children’s</option>
+					<option>Children&#39;s</option>
 					<option>Contemporary</option>
 					<option>Crime</option>
 					<option>Family Saga</option>
