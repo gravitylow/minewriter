@@ -233,7 +233,7 @@ function connectDB($user, $pass, $db) {
     		<li class="next <?php if ($pn == $totalPages) { ?>disabled<?php } ?>">
     		    	<?php
     		    		$p1 = (int) $pn;
-    		    		$p1++;
+    		    		//$p1++;
     		    		$p2 = (int) $num_results;
     				$_GET['p'] = $p1 * $p2;
     			?>
