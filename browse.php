@@ -228,7 +228,7 @@ function connectDB($user, $pass, $db) {
     		    		$p2 = (int) $num_results;
     				$_GET['p'] = $p1 * $p2;
     			?>
-    			<a href="browse.php?<?php echo (http_build_query($_GET)); ?>">&larr; Previous</a>
+    			<a href="<?php if ($pn != 1) { ?>browse.php?<?php echo (http_build_query($_GET)); ?><?php } else { ?>#<?php } ?>">&larr; Previous</a>
     		</li>
     		<li class="next <?php if ($pn == $totalPages) { ?>disabled<?php } ?>">
     		    	<?php
@@ -237,7 +237,7 @@ function connectDB($user, $pass, $db) {
     		    		$p2 = (int) $num_results;
     				$_GET['p'] = $p1 * $p2;
     			?>
-    			<a href="browse.php?<?php echo (http_build_query($_GET)); ?>">Next &rarr;</a>
+    			<a href="<?php if ($pn != $totalPages) { ?>browse.php?<?php echo (http_build_query($_GET)); ?><?php } else { ?>#<?php } ?>">Next &rarr;</a>
     		</li>
     	    </ul>
              <p><em>Found <?php echo ($totalNum); ?> results, spanning <?php echo ($totalPages); ?> pages. Page <?php echo($pn); ?>/<?php echo ($totalPages); ?>.</em></p>
