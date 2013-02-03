@@ -74,7 +74,9 @@ function hasHtml($str){
 		<?php
 		return;
 	}
-	$message = "Name: " . $name . "\nEmail: " . $email . "\nID: " . $id . "\nReason: " . $content;
+	$message = "Name: " . $name . "\nEmail: " . 
+        $email . "\nID: " . $id . "\nLink: http://www.minewriter.net/read.php?id=" . $id .
+        "\nReason: " . $content;
 	mail($to,
 		$subject,
 		$message);
