@@ -1,26 +1,5 @@
 <?php
 require("functions.php"); 
-require("../private/config.php");
-
-function connectDB($user, $pass, $db) {
-	try {	
-		return(new PDO("mysql:host=localhost;dbname=" . $db . ";charset=utf8", $user, $pass));
-	} catch(PDOException $ex) {
-		return $ex;
-	}	
-}
-
-$db = connectDB($dbUser, $dbPass, $dbName);
-if ($db instanceof PDOException) {
-	die ($db->getMessage());
-}
-$booksAmt = 0;
-$query = "SELECT * FROM `Stats` WHERE 1";
-$stmt = $db->prepare($query);
-$stmt->execute();
-$row = $stmt->fetch();
-$booksAmt = $row['BookCount'] -1;
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,55 +7,68 @@ $booksAmt = $row['BookCount'] -1;
     <meta charset="utf-8">
     <title>MineWriter</title>
 	<?php headIncludes(); ?>
+	<style>
+	.image { 
+		position: relative; 
+		width: 100%;
+	}
+	.image h1 { 
+		position: absolute; 
+		top: 100px; 
+		left: 0px; 
+		width: 100%; 
+		font-size: 50px;
+	}
+	.image p { 
+		position: absolute; 
+		top: 180px; 
+		left: 0px; 
+		width: 100%; 
+	}
+	.image span { 
+		color: white; 
+		letter-spacing: -1px;  
+		background: rgb(0, 0, 0);
+		background: rgba(0, 0, 0, 0.7);
+		padding: 10px; 
+	}
+	</style>
   </head>
   <body>
     <?php navigation(); ?>
     <div id = "wrap">
     <div class="container">   
-    <div class="content">
-		<div class="leaderboard" style = "position: relative">  
-		<h1>MineWriter</h1>  
-			<p>Try out our user friendly authoring service!</p>
-			<p>Over <?php echo($booksAmt); ?> books written so far!</p>  
-			<p><a href="write.php" class="btn btn-primary">Try now!</a></p> 
-			<a class="thumbnail" href="#" style = "position: absolute; right: 25px; top: 30px;">
-			<img alt="260x180" src="http://i.imgur.com/0RWRs.png" style="width: 438px; height: 192px;" ></a>
-		</div>  				
-		<div class="row">
-		  <div class="span9">
-		    <h2>About the project</h2>
-		    <div class="row">
-		      <div class="span7">
-		      	<ul> 
-		      		<li><p>MineWriter was started on December, 20th 2012</p></li>
-		      		<li><p>Our aim is to provide a fun way for creative writers to bring their work to any server</p></li>
-		      		<li><p>Both MineWriter and MineReader are open-source and we welcome contributors</p></li>
-		      	</ul>
-		      </div>
-		      <div class="span2">		      
-		      </div>
-		    </div>
-		  </div>
-		</div>
+    <div class="content"><!---
+		<h1>MineWriter <small>A user friendly authoring service!</small></h1>
 		<?php divider(); ?>
-        <div class="row"> 
-        	<div class="span4">  
-				<h2>Server Owners</h2>  
-					<p>We want to make it as easy as possible for your players to author books and get them onto your server. Using the Bukkit plugin called MineReader, your players can get any book they want in game, it's that easy!</p>  
-					<p><a class="btn btn-primary" href="http://dev.bukkit.org/server-mods/minereader/">Get the plugin</a></p>  
-			</div>  
-			<div class="span4">  
-				<h2>Regular Players</h2>  
-					<p>Writing books and bringing them onto your favorite server is now easier then ever! If the server you play on doesn't have MineReader, suggest it to them! :D</p>  
-					<br /><p><a class="btn btn-primary" href="tutorial.php">Read the tutorial</a></p>  
-			</div>  
-			<div class="span4">  
-				<h2>Developers</h2>  
-					<p>Any developer is welcome to help us improve our website and minereader plugin, both are open sourced and on github</p>  
-					<br /><br /><p><a class="btn btn-primary" href="devs.php">Visit the API page</a></p>  
-			</div>	
-        </div> 	
-        <?php divider(); ?>       
+		-->
+		<div class="image">
+			<img src="img/banner.png">
+			<h1><span>MineWriter</span></h1>
+			<p><span>A user friendly authoring service!</span></p>
+		</div>
+		<br>
+		<div class="row">
+			<div class="span4">
+				<h4><img src="http://mag.racked.eu/resource/icons/340.1.png"> Write awesome books!</h4>
+				<p>Write books on our platform to get them on your favorite server! No need to write all your ideas and memories again and again.</p>
+				<a href="write.php" class="btn btn-primary">Start writing</a>
+			</div>
+			<div class="span4">
+				<h4><img src="http://mag.racked.eu/resource/icons/340.2.png"> Get them on your server!</h4>
+				<p>Simply install the MineReader plugin and receive any book you want ingame! Thats as easy as it could be.</p>
+				<a href="tutorial.php" class="btn btn-primary">Start using</a>
+			</div>
+			<div class="span4">
+				<h4><img src="http://mag.racked.eu/resource/icons/47.1.png"> Access our great libary!</h4>
+				<p>Access our big libary of books! We provide you access to a very easy API. Access all the books on your website or app.</p>
+				<a href="devs.php" class="btn btn-primary">Start accessing</a>
+			</div>
+		</div>
+		<br><br>
+		<h4>More about the MineWriter and MineReader project:</h4>
+		<p>MineWriter was started on December, 20th 2012. Our aim is to provide a fun way for creative writers to bring their work on any server! Both MineWriter and MineReader are open-source and we welcome contributors!</p>
+		<a href="about.php" class="btn btn-primary">Learn more about us</a> <a href="team.php" class="btn btn-primary">Meet the team</a>
     </div>
     </div>
        <?php footer(); ?>    
