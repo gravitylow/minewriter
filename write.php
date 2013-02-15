@@ -51,7 +51,7 @@ $detect = new Mobile_Detect();
           			<option vlaue = "pd">Public domain</option>
           		<?php if(!$detect->isiOS()) { ?></optgroup><?php } ?>
           	</select><br />
-          	<select size='1' name = "genre" required>
+          	<select size='1' name = "genre" id = "genre" required>
           		<?php if($detect->isiOS()) {?><option disabled="disabled">Genre</option><?php } else { ?><optgroup label='Genre'><?php } ?>
 					<option>Action and Adventure</option>
 					<option>Chick Lit</option>
@@ -81,7 +81,7 @@ $detect = new Mobile_Detect();
 					<option>Other</option>
           		<?php if(!$detect->isiOS()) { ?></optgroup><?php } ?>
           	</select><br />
-          	<input type = "checkbox" name = "not_nsfw" checked = "checked"/> Suitable for all users <br /><br />
+          	<input type = "checkbox" name = "not_nsfw" id="not_nsfw" checked = "checked"/> Suitable for all users <br /><br />
           	<button type = "submit" class = "btn btn-success">
           		<i class = "icon-plus"></i> Add book
           	</button>
@@ -173,8 +173,15 @@ insertAtCaret: function(myValue){
   })
 }
 });
+$("#genre").change(function () {
+	var value = $("select option:selected").text();
+	if(value == "Horror") {
+		alert("You chose a category, which might not be suitable for all users.");
+		$("#not_nsfw").attr('checked', false);
+	}
+})
 </script>
 <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
-	<?php footer(); ?>
+	<?php footerWithoutJQ(); ?>
   </body>
 </html>
