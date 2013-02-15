@@ -49,33 +49,7 @@ function connectDB($user, $pass, $db) {
         <select size='1' name = "genre">
           		<?php if($detect->isiOS()) {?><option disabled="disabled">Genre</option><?php } else { ?><optgroup label='Genre'><?php } ?>
 			<?php
-			$genres = array("Any",
-			"Action and Adventure",
-			"Chick Lit",
-			"Children&#39;s",
-			"Contemporary",
-			"Crime",
-			"Family Saga",
-			"Fantasy",
-			"Dark Fantasy",
-			"General Fiction",
-			"Historical Fiction",
-			"Horror",
-			"Humour",
-			"Literary Fiction",
-			"Lyrics",
-			"Military and Espionage",
-			"Multicultural",
-			"Mystery",
-			"Non-fiction",
-			"Religious and Inspirational",
-			"Romance",
-			"Science Fiction",
-			"Short Story Collections",
-			"Thrillers and Suspense",
-			"Western",
-			"Young Adult",
-			"Other");
+			$genres = array("Any","Action and Adventure","Chick Lit","Children&#39;s","Contemporary","Crime","Family Saga","Fantasy","Dark Fantasy","General Fiction","Historical Fiction","Horror","Humour","Literary Fiction","Lyrics","Military and Espionage","Multicultural","Mystery","Non-fiction","Religious and Inspirational","Romance","Science Fiction","Short Story Collections","Thrillers and Suspense","Western","Young Adult","Other");
 			
 			foreach ($genres as $val) {
 				if($val == "Any")
@@ -87,7 +61,7 @@ function connectDB($user, $pass, $db) {
     						echo "<option>".$val."</option>";
 				}
 			}
-			unset($value);
+			unset($val);
 			?>
           		<?php if(!$detect->isiOS()) { ?></optgroup><?php } ?>
           	</select>
