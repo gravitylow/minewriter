@@ -48,33 +48,47 @@ function connectDB($user, $pass, $db) {
         <input type="text" name="title" value = "<?php echo ($title); ?>" class="input-medium search-query" placeholder="Title">
         <select size='1' name = "genre">
           		<?php if($detect->isiOS()) {?><option disabled="disabled">Genre</option><?php } else { ?><optgroup label='Genre'><?php } ?>
-					<option value = "">Any</option>
-					<option>Action and Adventure</option>
-					<option>Chick Lit</option>
-					<option>Children&#39;s</option>
-					<option>Contemporary</option>
-					<option>Crime</option>
-					<option>Family Saga</option>
-					<option>Fantasy</option>
-					<option>Dark Fantasy</option>
-					<option>General Fiction</option>
-					<option>Historical Fiction</option>
-					<option>Horror</option>
-					<option>Humour</option>
-					<option>Literary Fiction</option>
-					<option>Lyrics</option>
-					<option>Military and Espionage</option>
-					<option>Multicultural</option>
-					<option>Mystery</option>
-					<option>Non-fiction</option>
-					<option>Religious and Inspirational</option>
-					<option>Romance</option>
-					<option>Science Fiction</option>
-					<option>Short Story Collections</option>
-					<option>Thrillers and Suspense</option>
-					<option>Western</option>
-					<option>Young Adult</option>
-					<option>Other</option>
+			<?php
+			$genres = array("Any",
+			"Action and Adventure",
+			"Chick Lit",
+			"Children&#39;s",
+			"Contemporary",
+			"Crime",
+			"Family Saga",
+			"Fantasy",
+			"Dark Fantasy",
+			"General Fiction",
+			"Historical Fiction",
+			"Horror",
+			"Humour",
+			"Literary Fiction",
+			"Lyrics",
+			"Military and Espionage",
+			"Multicultural",
+			"Mystery",
+			"Non-fiction",
+			"Religious and Inspirational",
+			"Romance",
+			"Science Fiction",
+			"Short Story Collections",
+			"Thrillers and Suspense",
+			"Western",
+			"Young Adult",
+			"Other");
+			
+			foreach ($genres as $val) {
+				if($val == "Any")
+					echo '<option value = "">'.$val."</option>";
+				else {
+					if($genre == $val)
+						echo "<option selected>".$val."</option>";
+					else
+    						echo "<option>".$val."</option>";
+				}
+			}
+			unset($value);
+			?>
           		<?php if(!$detect->isiOS()) { ?></optgroup><?php } ?>
           	</select>
         <select name = "limit">
