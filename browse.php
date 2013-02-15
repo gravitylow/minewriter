@@ -211,7 +211,7 @@ function connectDB($user, $pass, $db) {
 				?>
 				<tr>
 					<td><a href = "read.php?id=<?php echo $row['ID'] ?>"><?php echo $title; ?></a></td>
-					<td><a href = "profile.php?user=<?php echo ($author); ?>"><?php echo $author; ?></a></td>
+					<td><a href = "browse.php?author=<?php echo ($author); ?>"><?php echo $author; ?></a></td>
 					<td><?php echo $genre; ?></td>
 					<td><?php echo $date; ?></td>
 					<td><?php echo $downloads; ?></td>
