@@ -175,8 +175,8 @@ insertAtCaret: function(myValue){
 });
 $("#genre").change(function () {
 	var value = $("select option:selected").text();
-	if(value == "Horror") {
-		alert("You chose a category, which might not be suitable for all users.");
+	if(value == "Horror" || value == "Crime" || value == "Military and Espionage") {
+		alert("You chose a category, which might not be suitable for all users. \nCheck if your book is really suitable for everbody and enable the checkbox if so.");
 		$("#not_nsfw").attr('checked', false);
 	}
 })
