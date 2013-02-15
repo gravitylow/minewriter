@@ -60,7 +60,7 @@ $row = $stmt->fetch();
           </tr>
           <tr>  
             <td>Longest book</td>  
-            <td><?php echo($row['LongestBook']);?></td>  
+            <td><a href = "http://minewriter.net./browse.php?title="<?php echo($row['LongestBook']);?>><?php echo($row['LongestBook']);?></a></td>  
           </tr> 
           <tr>  
             <td>Longest book length</td>  
