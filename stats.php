@@ -44,15 +44,15 @@ $row = $stmt->fetch();
         <tbody>  
           <tr>  
             <td>Total Book Count</td>  
-            <td><?php echo($row['BookCount']);?></td>  
+            <td><?php echo($row['BookCount']);?> books</td>  
           </tr>  
           <tr>  
             <td>Total Characters in all books</td>  
-            <td><?php echo($row['TotalChars']);?></td>  
+            <td><?php echo($row['TotalChars']);?> chars</td>  
           </tr>  
           <tr>  
             <td>Average Characters per book</td>  
-            <td><?php echo($row['AverageChars']);?></td>  
+            <td><?php echo($row['AverageChars']);?> chars</td>  
           </tr>  
           <tr>  
             <td>Most common word</td>  
@@ -64,7 +64,7 @@ $row = $stmt->fetch();
           </tr> 
           <tr>  
             <td>Longest book length</td>  
-            <td><?php echo($row['LongestBookLength']);?></td>  
+            <td><?php echo($row['LongestBookLength']);?> chars</td>  
           </tr> 
           <tr>  
             <td>Most common license</td>  
@@ -73,6 +73,7 @@ $row = $stmt->fetch();
         </tbody>  
       </table>  
         <?php divider(); ?>     
+        <p>Last updated on <?php echo($row['Date']);?></p>
         <p>These stats are generated every 10 minutes using the query service.</p>  
     </div> 
     </div>
