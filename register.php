@@ -79,7 +79,7 @@ $hash = secureHash($username, $password);
 $ip = $_SERVER['REMOTE_ADDR'];
 
 //Add user to table
-$query = "INSERT INTO `Users` (`username`,`password`,`created`,`ip`,`access`,`email`) VALUES (?,?,NOW(),false,,?)";
+$query = "INSERT INTO `Users` (`username`,`password`,`created`,`ip`,`access`,`email`) VALUES (?,?,NOW(),?,false,?)";
 $stmt = $db->prepare($query);
 $stmt->bindParam(1, $username);
 $stmt->bindParam(2, $hash);
