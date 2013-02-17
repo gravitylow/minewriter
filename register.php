@@ -1,4 +1,7 @@
 <?php
+if($_SERVER['REQUEST_METHOD'] !== "POST")
+	die("Invalid request.");
+
 require("../private/config.php");
 require("functions.php");
 /*
@@ -73,8 +76,19 @@ foreach($row as $value) {
 	break;
 }
 $hash = secureHash($username, $password);
-//Insert add to table here.
+$ip = $_SERVER['REMOTE_ADDR'];
 
+//Add user to table
+$query = "INSERT INTO `Users` (`username`,`password`,`created`,`ip`,`access`,`email`) VALUES (?,?,NOW(),?,?,?)";
+$stmt = $db->prepare($query);
+$stmt->bindParam(1, $username);
+$stmt->bindParam(2, $hash);
+$stmt->bindParam(3, $ip);
+$stmt->bindParam(4, false);
+$stmt->bindParam(5, $email);
+$stmt->execute();
+
+//ToDo: Send email with link, will follow
 
 header("Location: login.php?e=11");
 die();
