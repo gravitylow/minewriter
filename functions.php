@@ -107,7 +107,7 @@ $parent = basename($_SERVER['PHP_SELF']);
 <?php } 
 function headIncludes() {?>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-<link href="//netdna.bootstrapcdn.com/bootswatch/2.1.1/cerulean/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/bootswatch/2.3.0/cerulean/bootstrap.min.css" rel="stylesheet">
 <link href="//netdna.bootstrapcdn.com/font-awesome-more/2.0/css/font-awesome.css" rel="stylesheet">
 <link href="css/def.css?<?php echo (time()); ?>" rel="stylesheet">
 <?php }
@@ -143,14 +143,14 @@ $parent = basename($_SERVER['PHP_SELF']);
 <?php } 
 function headIncludesURL() {?>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-<link href="//netdna.bootstrapcdn.com/bootswatch/2.1.1/cerulean/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/bootswatch/2.3.0/cerulean/bootstrap.min.css" rel="stylesheet">
 <link href="//netdna.bootstrapcdn.com/font-awesome-more/latest/css/font-awesome.css" rel="stylesheet">
 <link href="http://www.minewriter.net/css/def.css" rel="stylesheet">
 <?php }
 
 function headIncludesSubFolders() {?>
 <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
-<link href="//netdna.bootstrapcdn.com/bootswatch/2.1.1/cerulean/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/bootswatch/2.3.0/cerulean/bootstrap.min.css" rel="stylesheet">
 <link href="//netdna.bootstrapcdn.com/font-awesome-more/2.0/css/font-awesome.css" rel="stylesheet">
 <link href="../css/def.css" rel="stylesheet">
 <?php }
@@ -171,7 +171,9 @@ function footer() {
 </div>
 <div id="footer">
 	<div class="container" style = "position: relative; top: 20px;">
-	<p class="muted credit" style = "display: inline"><a href="tos.php">Terms of Service</a> | <a href="policy.php">Privacy Policy</a></p> <p class = "muted credit pull-right" style = "display: inline"><a href = "https://github.com/milkywayz/minewriter/">GitHub</a></p>
+		<p class="muted credit" style = "display: inline"><a href="tos.php">Terms of Service</a> | <a href="policy.php">Privacy Policy</a></p> <p class = "muted credit pull-right" style = "display: inline"><a href = "https://github.com/milkywayz/minewriter/">GitHub</a></p>
+		<noscript><p class="text-error">Javascript is deactivated! We highly recommmend you to switch Javascript on.</p></noscript>
+	</div>
 </div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 <?php }
@@ -182,7 +184,9 @@ function footerWithoutJQ() {
 </div>
 <div id="footer">
 	<div class="container" style = "position: relative; top: 20px;">
-	<p class="muted credit" style = "display: inline"><a href="tos.php">Terms of Service</a> | <a href="policy.php">Privacy Policy</a></p> <p class = "muted credit pull-right" style = "display: inline"><a href = "https://github.com/milkywayz/minewriter/">GitHub</a></p>
+		<p class="muted credit" style = "display: inline"><a href="tos.php">Terms of Service</a> | <a href="policy.php">Privacy Policy</a></p> <p class = "muted credit pull-right" style = "display: inline"><a href = "https://github.com/milkywayz/minewriter/">GitHub</a></p>
+		<noscript><p class="text-error">Javascript is deactivated! We highly recommmend you to switch Javascript on.</p></noscript>
+	</div>
 </div>
 <?php }
 
