@@ -40,6 +40,7 @@ if($password !== $confirm) {
 	header("Location: login.php?e=7");
 	die();
 }
+$email = filter_var($email, FILTER_SANITIZE_EMAIL);
 if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 	header("Location: login.php?e=8");
 	die();
@@ -75,10 +76,12 @@ foreach($row as $value) {
 	}
 	break;
 }
-$hash = secureHash($username, $password);
+$hash = secureHash($username, $password); //Used as password
+$code = md5(rand(0,1000).$email); //Used for activation link
 $ip = $_SERVER['REMOTE_ADDR'];
 
 //Add user to table
+//WAITING FOR COLUMN `code` FOR THE ACTIVATION CODE $code
 $query = "INSERT INTO `Users` (`username`,`password`,`created`,`ip`,`access`,`email`) VALUES (?,?,NOW(),?,false,?)";
 $stmt = $db->prepare($query);
 $stmt->bindParam(1, $username);
@@ -87,7 +90,33 @@ $stmt->bindParam(3, $ip);
 $stmt->bindParam(4, $email);
 $stmt->execute();
 
-//ToDo: Send email with link, will follow
+//Send email with verification link
+$link = "http://minewriter.net/verify.php?e=".$email."&c=".$code."";
+$mailtext = '<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>MineWriter</title>
+</head>
+<body>
+
+<h4>Verifiy your E-mail!</h4>
+<p>You successfully registered for MineWriter. To activate your account, please click on this link or paste it into your browser.<br>
+<a href="'.$link.'">'.$link.'</a><br><br>
+Thanks and enjoy writing!<br>
+The MineWriter-Team</p>
+
+</body>
+</html>';
+$header  = "MIME-Version: 1.0\r\n";
+$header .= "Content-type: text/html; charset=iso-8859-1\r\n";
+$header .= "From: no-reply@minewriter.net\r\n";
+$header .= "Reply-To: admin@minewriter.net\r\n";
+$header .= "X-Mailer: PHP ". phpversion();
+$subject = "Your MineWriter account";
+
+mail($email, $subject, $mailtext, $header);
+
 
 header("Location: login.php?e=11");
 die();
