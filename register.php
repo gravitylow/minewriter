@@ -111,7 +111,7 @@ The MineWriter-Team</p>
 $header  = "MIME-Version: 1.0\r\n";
 $header .= "Content-type: text/html; charset=iso-8859-1\r\n";
 $header .= "From: no-reply@minewriter.net\r\n";
-$header .= "Reply-To: admin@minewriter.net\r\n";
+$header .= "Reply-To: team@minewriter.net\r\n";
 $header .= "X-Mailer: PHP ". phpversion();
 $subject = "Your MineWriter account";
 
