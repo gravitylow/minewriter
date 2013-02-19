@@ -77,7 +77,7 @@ foreach($row as $value) {
 	break;
 }
 $hash = secureHash($username, $password); //Used as password
-$code = md5(rand(0,1000).$email); //Used for activation link
+$code = getRegCode(); //Used for activation link
 $ip = $_SERVER['REMOTE_ADDR'];
 
 //Add user to table
@@ -112,7 +112,7 @@ $header  = "MIME-Version: 1.0\r\n";
 $header .= "Content-type: text/html; charset=iso-8859-1\r\n";
 $header .= "From: no-reply@minewriter.net\r\n";
 $header .= "Reply-To: team@minewriter.net\r\n";
-$header .= "X-Mailer: PHP ". phpversion();
+//$header .= "X-Mailer: PHP ". phpversion();
 $subject = "Your MineWriter account";
 
 mail($email, $subject, $mailtext, $header);
