@@ -20,6 +20,7 @@
 		    <div id="legend">
 		      <legend class="">Login</legend>
 		    </div>
+		    <?php if ($_GET['e'] == 0) {?><div class = "alert-error alert"><i class = "icon-lock"></i> Your account has not been activated. Verify your E-mail first!</div><?php } ?>
 		    <?php if ($_GET['e'] == 1) {?><div class = "alert-error alert"><i class = "icon-lock"></i> Incorrect username or password.</div><?php } ?>
 		    <?php if ($_GET['e'] == 2) { if ($_GET['reason'] == "") { $_GET['reason'] = 'SW5hcHByb3ByaWF0ZSBjb25kdWN0'; }?><div class = "alert-error alert"><i class = "icon-ban-circle"></i> You have been banned: <?php echo (strip_tags(base64_decode($_GET['reason']))); ?></div><?php } ?>
 		    <?php if ($_GET['e'] == 3) {?><div class = "alert-error alert"><i class = "icon-envelope"></i> Please verify your email address before logging in.</div><?php } ?>
