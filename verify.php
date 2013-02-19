@@ -28,7 +28,7 @@ $stmt->execute();
 if ($stmt->rowCount() == 0)
 	die("You didn't register yet or your verification code was wrong.");
 
-$stmt = $db->prepare("UPDATE `Users` SET `access` = true WHERE `email` = ?");
+$stmt = $db->prepare("UPDATE `Users` SET `active` = true WHERE `email` = ?");
 $stmt->bindParam(1, $email);
 $stmt->execute();
 
