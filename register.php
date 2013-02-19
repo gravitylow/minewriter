@@ -82,12 +82,13 @@ $ip = $_SERVER['REMOTE_ADDR'];
 
 //Add user to table
 //WAITING FOR COLUMN `code` FOR THE ACTIVATION CODE $code
-$query = "INSERT INTO `Users` (`username`,`password`,`created`,`ip`,`access`,`email`) VALUES (?,?,NOW(),?,false,?)";
+$query = "INSERT INTO `Users` (`username`,`password`,`created`,`ip`,`access`,`email`,`code`) VALUES (?,?,NOW(),?,false,?,?)";
 $stmt = $db->prepare($query);
 $stmt->bindParam(1, $username);
 $stmt->bindParam(2, $hash);
 $stmt->bindParam(3, $ip);
 $stmt->bindParam(4, $email);
+$stmt->bindParam(5, $code);
 $stmt->execute();
 
 //Send email with verification link
