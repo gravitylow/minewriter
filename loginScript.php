@@ -14,25 +14,34 @@ function connectDB($user, $pass, $db) {
 }
 $db = connectDB($dbUser, $dbPass, $dbName);
 if ($db instanceof PDOException) {
-die ($db->getMessage());
+	die ($db->getMessage());
 }
+
 $username = strtolower($_POST['username']);
 $password = $_POST['password'];
-$hash = secureHash($username, $password); //This is a private function for security reasons
-$query = "SELECT * FROM milky_minewriter.Users WHERE username = :user";
-$stmt = $db->prepare($query);
+$hash = secureHash($username, $password);
+
+$stmt = $db->prepare("SELECT * FROM milky_minewriter.Users WHERE `username` = :user");
 $stmt->bindParam(':user', $username);
-//$stmt->bindParam(':password', $password);
 $stmt->execute();
 $row = $stmt->fetch();
-if ($row['id'] == null) { //No such user
+
+if ($stmt->rowCount() == 0) { //No such user
 	header("Location: login.php?e=1");
 	die();
-} else {
-	echo (checkHash($password, $row['password'], $username));
 }
+
+if(!checkHash($password, $row['password'], $username)) { //Incorrect password
+	header("Location: login.php?e=1");
+	die();
+}
+
+if($row['active'] == false) { //Email not verified, account not active
+	header("Location: login.php?e=0");
+	die();
+}
+
 session_start();
-die();
 $_SESSION['username'] = $username;
 $_SESSION['id'] = $row['id'];
 $_SESSION['access'] = $row['access'];
