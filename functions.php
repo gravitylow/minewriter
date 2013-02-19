@@ -8,6 +8,10 @@ function isLoggedIn() {
 	return isset($_SESSION['username']);
 }
 
+function getRegCode() {
+	return sha1(uniqid(mt_rand(), true));
+}
+
 function loginLink() {
 	if (isLoggedIn()) {
 		return "<a href='panel.php'>Panel</a>";
