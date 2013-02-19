@@ -37,7 +37,7 @@ if(!checkHash($password, $row['password'], $username)) { //Incorrect password
 }
 
 if($row['active'] == false) { //Email not verified, account not active
-	header("Location: login.php?e=0");
+	header("Location: login.php?e=15");
 	die();
 }
 
