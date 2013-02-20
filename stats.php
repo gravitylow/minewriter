@@ -60,7 +60,7 @@ $row = $stmt->fetch();
           </tr>
           <tr>  
             <td>Longest book</td>  
-            <td><a href = "http://minewriter.net./browse.php?title="<?php echo($row['LongestBook']);?>><?php echo($row['LongestBook']);?></a></td>  
+            <td><a href = "http://minewriter.net./browse.php?title=<?php echo($row['LongestBook']);?>"><?php echo($row['LongestBook']);?></a></td>  
           </tr> 
           <tr>  
             <td>Longest book length</td>  
@@ -73,7 +73,7 @@ $row = $stmt->fetch();
         </tbody>  
       </table>  
         <?php divider(); ?>     
-        <p>Last updated on <?php echo($row['Date']);?></p>
+        <!---<p>Last updated on <?php echo($row['Date']);?></p>--->
         <p>These stats are generated every 10 minutes using the query service.</p>  
     </div> 
     </div>
