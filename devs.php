@@ -18,7 +18,7 @@
               <div>
               	<h2 class="big">What is MineService?</h2>     
 					<ul>
-						<li class="big">MineService serves you a book from our DB from your query</li>
+						<li class="big">MineService allows developers to query our database for books</li>
 					</ul>   
 				<h2 class="big">What Markups are supported?</h2>     
 					<ul>
@@ -29,7 +29,7 @@
 					</ul>     
 				<h2 class="big">How to use?</h2>     
 					<ul>
-						<li class="big">You open a connection to http://minewriter.net/query.php</li>          
+						<li class="big">Open a connection to http://minewriter.net/query.php</li>          
 						<li class="big">Currently the three variables are author, title, and type.</li>
 						<li class="big">Example Query: http://minewriter.net/query.php?author=milkywayz&title=Wolfz&type=JSON</li>
 						<li class="big">You can also query based on id. It will need the id, and the type.</li>
@@ -38,8 +38,8 @@
                </div>
                <h2 class="big">Links</h2>     
 					<ul style = "list-style: none;">
-						<li class="big spaced"><a class="btn btn-success devButton" href="http://goo.gl/sRR9u">MineWriter Github</a></li>         
-						<li class="big spaced"><a class="btn btn-success devButton" href="http://goo.gl/cgj2T">MineReader Github</a></li> 
+						<li class="big spaced"><a class="btn btn-success devButton" href="http://goo.gl/sRR9u">MineWriter GitHub</a></li>         
+						<li class="big spaced"><a class="btn btn-success devButton" href="http://goo.gl/cgj2T">MineReader GitHub</a></li> 
 						<li class="big spaced"><a class="btn btn-success devButton" href="https://apigee.com/MineWriter/embed/console/MineService">Apigee Console</a></li> 
 					</ul>              
                </div>
@@ -49,3 +49,4 @@
 
   </body>
 </html>
+
