@@ -228,7 +228,7 @@ function connectDB($user, $pass, $db) {
     			<a href="<?php if ($pn != $totalPages) { ?>browse.php?<?php echo (http_build_query($_GET)); ?><?php } else { ?>#<?php } ?>">Next &rarr;</a>
     		</li>
     	    </ul>
-             <p><em>Found <?php echo ($totalNum); ?> results spanning <?php echo ($totalPages); ?> pages. Page <?php echo($pn); ?>/<?php echo ($totalPages); ?>.</em></p>
+             <p><em>Found <?php echo ($totalNum); ?> results, spanning <?php echo ($totalPages); ?> pages. Page <?php echo($pn); ?>/<?php echo ($totalPages); ?>.</em></p>
       </div>
     </div>
   </div>
@@ -236,4 +236,3 @@ function connectDB($user, $pass, $db) {
 </div>
 </body>
 </html>
-
